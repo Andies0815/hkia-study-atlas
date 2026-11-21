@@ -1,0 +1,173 @@
+[
+  {
+    "id": "p2-change",
+    "paper": "2",
+    "title": "Client要求即日改立面：先指示還是先評估？",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "Office contract施工中，client在會議要求更改已訂貨的立面材料，並說「不要影響原completion date」。承建商要求即日書面確認及保證全部費用與EOT。題目未提供合約版本或已修訂條款。",
+    "task": "用事件、權力、通知、證據、時間、金錢及決定七欄寫短答；先列尚欠資料。",
+    "checks": [
+      "確認contract form／edition／amendments及誰有權instruction",
+      "把client request與有效contractual instruction分開",
+      "核採購／取消訂貨、設計及programme因果影響",
+      "按適用notice及資料程序分別評估time／valuation／money",
+      "協調client決定及合法的設計／圖則程序",
+      "不承諾必然EOT或全額費用"
+    ],
+    "model": "Identify the operative contract and amendments, then confirm the authority and form of the instruction. Record the changed scope and procurement position and obtain the programme and cost evidence. Advise the client of the options and assess time and monetary consequences under their separate provisions. Do not promise unchanged completion or automatic compensation without the required assessment.",
+    "links": [
+      "variation",
+      "eot"
+    ]
+  },
+  {
+    "id": "p2-delay",
+    "paper": "2",
+    "title": "逾期與LAD：缺哪個判斷便不能下結論？",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "工程逾原completion date，client要求從下一期付款直接扣LAD。承建商曾提及遲交圖，但未清楚提供申請及證據。你有site meeting minutes、programme及drawing register。",
+    "task": "寫出要查的條款、文件、目前日期基準及certification／notice路徑；不要編notice日數。",
+    "checks": [
+      "確認current contractual completion date及已批EOT",
+      "將遲圖事件、相關activity、critical impact及實際延誤連起",
+      "核notice／particulars程序及decision權責",
+      "EOT與金錢entitlement分開",
+      "查non-completion certification、notice及deduction各前提",
+      "向client寫有條件結論而非立即扣款承諾"
+    ],
+    "model": "First establish the applicable completion date and the status of time assessments. Review the notices and the demonstrated effect of the alleged late information using the programme and contemporaneous records. Follow the operative contract’s non-completion, notice and deduction provisions before advising on LAD. Neither a delay allegation nor expiry of the original date alone resolves every contractual step.",
+    "links": [
+      "eot",
+      "lad"
+    ]
+  },
+  {
+    "id": "p2-complete",
+    "paper": "2",
+    "title": "已取得OP，是否等於Substantial Completion？",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "新建築已取得OP，但部分主要building services未完成testing，部分區域尚不可按原定用途安全使用。Client希望立即出completion certificate，並開始DLP。題目未提供合同completion定義。",
+    "task": "分開statutory occupation、contractual completion、possession及後續責任，寫出需要核實的證據。",
+    "checks": [
+      "OP與contract completion分開",
+      "查所用contract的completion standard及權責",
+      "列未完成works／testing、用途及安全影響",
+      "核partial possession或其他安排是否適用",
+      "查certificate與DLP／retention／risk後果而不一概同日",
+      "理由及outstandingitems要有紀錄"
+    ],
+    "model": "An OP addresses the statutory occupation position and does not by itself prove satisfaction of the contractual completion standard. Inspect and record the outstanding work and testing and assess their effect on the intended use. Apply the relevant certification or possession provisions and identify the separate consequences for defects, payment and risk.",
+    "links": [
+      "completion",
+      "closeout"
+    ]
+  },
+  {
+    "id": "p2-appointment",
+    "paper": "2",
+    "title": "學校A&A範圍不明：委任如何避免只剩一句全包？",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "Client要求以固定費用及固定工期處理舊校舍A&A，但現況圖未核實，opening-up、結構及消防升級範圍未定。Client亦要求建築師保證所有部門批准。",
+    "task": "寫出fee proposal／appointment應記錄的假設、範圍、調整及風險建議。",
+    "checks": [
+      "列現況調查及尚未確定事項",
+      "基本／額外服務與交付物界線",
+      "費用及programme假設與變更機制",
+      "設計協調及client決定所需資料",
+      "不把reasonable skill and care改成無條件批准保證",
+      "提出分階段工作及記錄方式"
+    ],
+    "model": "Define the scope, deliverables and investigation stage and identify the unresolved conditions. State the programme and fee assumptions and how additional services or changes will be agreed. Explain approval risks and the architect’s professional obligations without giving an unsupported guarantee of statutory approval.",
+    "links": [
+      "appointment",
+      "liability"
+    ]
+  },
+  {
+    "id": "p6-massing",
+    "paper": "6",
+    "title": "Paper6：先證明容量，再選massing",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "自編site5000m²，題設已給permitted GFA30000m²及SC40%，不用自行推斷法定上限。比較三幢20m×20m×20層與兩幢25m×25m×24層，假設每層整個floor plate均計GFA，沒有podium或concession。",
+    "task": "做required／provided表，畫兩方案site／massing示意，再列尚未驗證的限制。",
+    "checks": [
+      "方案A GFA24000、SC24%",
+      "方案B GFA30000、SC25%",
+      "同一面積基準比較而非只說B較大",
+      "補height、core／fire／RHP／151／152適用性",
+      "人車service及outdoorquality有具體比較",
+      "未驗條件標明，不能稱全部合規"
+    ],
+    "model": "A: 3×20×20×20 = 24,000 m², with footprint 1,200 m² and SC24%. B: 2×25×25×24 = 30,000 m², with footprint 1,250 m² and SC25%. Both meet the stated numerical ceilings. This does not establish full feasibility: compare height, circulation, environmental quality and the remaining statutory and brief constraints before selecting a scheme.",
+    "links": [
+      "site",
+      "151scope",
+      "152"
+    ]
+  },
+  {
+    "id": "p6-green",
+    "paper": "6",
+    "title": "Paper6：overall綠化夠，Primary仍不足",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "自編site5000m²，假設適用APP152基本greenery requirements，沒有single-family-house例外。Provided qualifying overall greenery1200m²，其中Primary Zone300m²；大部分綠化在高位屋頂，圖上未示common maintenance access。",
+    "task": "列required／provided，指出失敗項，畫出可以修正的布局方向與證據。",
+    "checks": [
+      "Primary required500m²，欠200",
+      "overall required1000m²，provided1200足數",
+      "Primary與overall的分母均為site area",
+      "把部分合資格綠化移到適用Primary位置，不雙重造假面積",
+      "查covered／specialfeatures折減及limits",
+      "補commonparts、access及area schedule"
+    ],
+    "model": "The basic minima are 500 m² in the Primary Zone and 1,000 m² overall. The stated overall provision is sufficient, but the Primary Zone is short by 200 m². Revise the location and qualifying provision and show the common access and counting schedule. Do not use high-level greenery alone to claim that both requirements are met.",
+    "links": [
+      "152",
+      "151"
+    ]
+  },
+  {
+    "id": "p7-use",
+    "paper": "7",
+    "title": "Paper7：用途改了，人數及圖紙要一起改",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "自編150m² UFA的office改為exhibition area，假設整個150m²均為該用途，且沒有其他actual-count basis。畫圖者只改房名，保留原出口及樓梯說明。",
+    "task": "計算兩種用途的人數基礎，列至少四項要重新在圖紙驗證的內容；不能只補一句comply with BO。",
+    "checks": [
+      "office150/9向上初估17；exhibition150/2=75",
+      "出口數／門及routes寬度",
+      "travel distance／route independence",
+      "staircapacity與grounddischarge",
+      "fireseparation及適用PPE特別要求",
+      "sanitary／ventilation／BFA及services"
+    ],
+    "model": "On the stated area basis, the preliminary office count is rounded up from 150/9 to 17, whereas the exhibition area gives 75 persons. Reassess the exits, route dimensions, travel distances, staircase discharge, fire separation and the applicable PPE provisions. Coordinate sanitary accommodation, ventilation and accessibility rather than changing only the room label.",
+    "links": [
+      "occupancy",
+      "discharge",
+      "smallfire"
+    ]
+  },
+  {
+    "id": "p7-section",
+    "paper": "7",
+    "title": "Paper7：平面塞得下，剖面仍未成立",
+    "kind": "自編練習；非歷年原題",
+    "scenario": "自編多層社區建築，平面安排看似完整；剖面卻把主要duct穿過beam，沒有維修通道，drainage無可行fall，樓梯在平面與剖面層數不符。你剩下30分鐘交卷。",
+    "task": "列一個可執行的修正次序，畫出需要一致的plan／section證據及未解假設。",
+    "checks": [
+      "先修影響安全及基本系統的硬衝突",
+      "核structuraldepth／clearheight／floorlevels",
+      "管井、falls、ductroute及plantmaintenance可行",
+      "stairrisers／landings及各層連接一致",
+      "修正面積表及受影響房間，不局部掩蓋",
+      "標明尚未驗的細節，交一套可讀圖"
+    ],
+    "model": "Identify the governing conflicts and establish a coordinated structural and services zone with consistent levels and clear heights. Resolve drainage falls and maintenance access and reconcile the staircase in plan and section. Update the affected spaces and schedules and clearly state any unresolved assumption; a general compliance note does not resolve a geometric conflict.",
+    "links": [
+      "smallfire",
+      "plant",
+      "thermal"
+    ]
+  }
+]

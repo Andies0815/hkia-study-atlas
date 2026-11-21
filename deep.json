@@ -1,0 +1,3330 @@
+[
+  {
+    "id": "occupancy",
+    "title": "Occupancy factor：先分用途與面積定義",
+    "group": "消防／人數",
+    "trigger": "改用途、人數評估或檢查MOE時。",
+    "checks": [
+      "UFA不是GFA、UFS或地盤面積；先按真正用途分區，不是按租約名稱一律選office。",
+      "一般人數＝UFA÷factor。餐廳用餐區與commercial kitchen、retail與公眾服務櫃檯應分開。",
+      "Table B1容許實際數人作可靠依據，但需要可接受證明；不是以平日員工名單任意降低法定設計需求。"
+    ],
+    "table": [
+      [
+        "用途",
+        "依Table B1"
+      ],
+      [
+        "Office",
+        "9m²／人"
+      ],
+      [
+        "Board／conference／function room（4a）",
+        "10m²／人；不可當assembly hall一律處理"
+      ],
+      [
+        "Retail B/F、G/F、1/F、2/F",
+        "3m²／人（含arcade及common areas）"
+      ],
+      [
+        "Retail 3/F及以上",
+        "4.5m²／人"
+      ],
+      [
+        "Café／restaurant dining／bar等",
+        "1m²／人"
+      ],
+      [
+        "Banking／betting hall公眾區",
+        "0.5m²／人"
+      ],
+      [
+        "Hotel／hostel／boarding house",
+        "bedspaces；dormitory另為3m²／人"
+      ],
+      [
+        "Warehouse／carpark／plant room",
+        "30m²／人（按相應類別）"
+      ]
+    ],
+    "documents": [
+      "分區用途／UFA圖及occupant-capacity schedule",
+      "床位／固定座位圖或可接受的actual-count資料",
+      "出口數量、寬度、travel distance及樓梯容量對照表"
+    ],
+    "trap": "用途只是同屬UC4，不代表factor相同。不要用每層需求直接當全幢樓梯discharge value。",
+    "scenario": "270m² office改成270m²用餐區，人數是否保持30？",
+    "answer": "No. The occupancy basis changes from 9m² per person to 1m² per person for the dining area, increasing the assessed capacity from 30 to 270 persons. Reassess exits, travel distances, staircase capacity and the applicable fire safety provisions.",
+    "sources": [
+      {
+        "title": "Fire Safety Code B4／Table B1",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/fs_code2011.pdf#page=34"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "discharge",
+    "title": "Discharge value：查表、折減、再比較",
+    "group": "消防／人數",
+    "trigger": "所服務各層／地庫的人數合計，與required staircases的能力比較。",
+    "checks": [
+      "地面以上及地庫的服務需求按B12.1、B12.2分別處理。每道梯按實際服務層數及闊度查表。",
+      "B3非sprinkler protected；B4全幢sprinkler protected。部分灑水共用未分隔梯按B12.5用B3。",
+      "闊度屬區間：1199mm仍在1050–<1200欄，不能向上當1200。>1800的表註與B14.5中央扶手分段要求一起看。"
+    ],
+    "table": [
+      [
+        "條件",
+        "處理"
+      ],
+      [
+        "B12.6上行逃生",
+        "查B3／B4後×0.8"
+      ],
+      [
+        "B12.7指定scissors staircase",
+        "兩層間無intermediate landing者×0.7；不可見剪刀梯便全部套用"
+      ],
+      [
+        "1200–<1350mm，10層，B3",
+        "582／道；每加一層再加38"
+      ],
+      [
+        "同寬10層，B4",
+        "822／道；每加一層再加38"
+      ],
+      [
+        "每層出口及門寬",
+        "另外查B7–B8／Table B2，不被總discharge value取代"
+      ]
+    ],
+    "documents": [
+      "每道樓梯闊度、服務層數及方向圖",
+      "B3／B4查表及適用折減計算",
+      "各受服務區occupant capacity合計及對照表"
+    ],
+    "trap": "39層、兩道1200mm指定無intermediate-landing剪刀梯：B3值不是582×39。應用[582＋29×38]×2×0.7＝2357.6；實際申報勿向上誇大容量。",
+    "scenario": "兩道1200mm梯服務10層，B3合計1164，能否容納1200人？",
+    "answer": "The total discharge value is 2 × 582 = 1164 before any applicable reduction, which is below 1200 persons. The staircase arrangement must be revised; compliance with exit numbers and widths must also be demonstrated.",
+    "sources": [
+      {
+        "title": "Fire Safety Code B12及Tables B3／B4",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/fs_code2011.pdf#page=49"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "thermal",
+    "title": "OTTV／RTTV：日期、用途、分母",
+    "group": "環境／節能",
+    "trigger": "Commercial／hotel外殼及住宅能源concession前置要求。",
+    "checks": [
+      "APP-67現行September2025修訂：2025-12-31起提交新圖／major revision，tower20、podium40W/m²。",
+      "住宅RTTV外牆14、屋頂4W/m²，各自平均，不能互相抵銷；不是每一幅個別外牆都必須低於同一平均上限。",
+      "APP-156住宅定義排除hotel、guesthouse、RCHE／RCHD等空調運作與一般住宅不同的處所；居民康樂設施按另定範圍查OTTV。"
+    ],
+    "table": [
+      [
+        "檢查",
+        "容易失分之處"
+      ],
+      [
+        "面積權重",
+        "相關外殼面積，不是整幢GFA或朝向數目簡單平均"
+      ],
+      [
+        "熱工SC",
+        "shading coefficient，不是site coverage"
+      ],
+      [
+        "遮陽投影",
+        "APP-67：≤1.5m合資格sunshade有SC／GFA處理；>750mm須量化證明；≤750mm對prescribed window obstruction另有安排"
+      ],
+      [
+        "文件",
+        "GBP能源設計承諾／計算；APP-156 provisional summary於consent前、final report於OP時（按適用要求）"
+      ]
+    ],
+    "documents": [
+      "按朝向及tower／podium或wall／roof分組的計算表",
+      "U-value、玻璃、shading及外殼面積資料",
+      "適用PNAP版本及報告／認證"
+    ],
+    "trap": "不能說hotel取得non-domestic PR便改用住宅RTTV；要按節能制度本身定義。舊21／50、24／56須看版本，不可當2026新圖現行值。",
+    "scenario": "外牆RTTV13、roof RTTV5，能否把兩者平均當9而合格？",
+    "answer": "No. External-wall and roof RTTV limits are separate. The roof result exceeds 4W/m² and must be addressed, notwithstanding compliance of the wall result.",
+    "sources": [
+      {
+        "title": "APP-67 paras.3、10、12",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP067.pdf"
+      },
+      {
+        "title": "APP-156",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP156.pdf"
+      },
+      {
+        "title": "Residential Energy Guidelines §2.1",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/Guidelines_DCREERB2014e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "site",
+    "title": "Site A／B／C：周界與合資格街道",
+    "group": "發展潛力",
+    "trigger": "先確定site boundary、specified streets及corner條件，再按高度查PR／SC。",
+    "checks": [
+      "Class B需corner site及兩條不少於4.5m的合資格街；兩街abut不少於總周界40%。",
+      "Class C需三條合資格街的corner條件及至少60%。未達C時，仍要重新測試是否有一對街符合B。",
+      "三街總abut58%不是直接以58≥40就判B；B檢查那兩街合計。相對兩街不自動是corner。"
+    ],
+    "table": [
+      [
+        "數據",
+        "要算甚麼"
+      ],
+      [
+        "周界",
+        "S＝整個site boundary長度；不按面積反推"
+      ],
+      [
+        "Class C候選",
+        "三街合資格abut總長÷S"
+      ],
+      [
+        "Class B候選",
+        "相應兩街合資格abut總長÷S"
+      ],
+      [
+        "街道不足4.5m",
+        "不能自動當合資格街；若其他街仍可構成合資格組合，另行檢查"
+      ],
+      [
+        "無prescribed street",
+        "另查B(P)R19(3)，不能自動套一般A類最大PR"
+      ]
+    ],
+    "documents": [
+      "有尺寸的site／street圖、所有abut長度及計算",
+      "土地控制／LSP及街道性質／闊度證明",
+      "分類、建築高度及PR／SC表"
+    ],
+    "trap": "周界比例正確但街道資格錯，仍會整題基準錯。完成分類後，OZP及lease也可能比BO更緊。",
+    "scenario": "三街總58%，但任何一對最多39%，是否Class B？",
+    "answer": "Not on those figures. The Class C 60% threshold is not met and no qualifying pair meets the Class B 40% threshold. Assess Class A subject to the remaining street and site conditions.",
+    "sources": [
+      {
+        "title": "B(P)R18A、19–21、First Schedule",
+        "url": "https://www.elegislation.gov.hk/hk/cap123F"
+      },
+      {
+        "title": "BD ADM-21 site parameters",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM021.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "tcp",
+    "title": "TCP：不是只計人頭",
+    "group": "監督／責任",
+    "trigger": "選工程類型及各AP／RSE／RGE／RC stream，按TM決定grade及最低frequency。",
+    "checks": [
+      "TM Table1先定grade／frequency，CoP Table8.1再選規模量值。Scale＝estimated measurable item÷basic value，cap2。",
+      "Scale<1可縮短每次投入但不能降低最低頻率；full-time須連續監督。Scale>1用input升級，不只是把每個grade人數一律乘scale向上取整。",
+      "按工序critical stages及批准／consent條件再加要求。只可按規則合併同時進行工程；較高grade替低grade仍須具相應資格經驗。"
+    ],
+    "table": [
+      [
+        "Table8.1項目",
+        "Basic value"
+      ],
+      [
+        "Demolition",
+        "每層最大floor area750m²"
+      ],
+      [
+        "Superstructure",
+        "total construction floor area20,000m²"
+      ],
+      [
+        "Curtain wall／cladding",
+        "aggregated surface area10,000m²"
+      ],
+      [
+        "ELS／pile wall",
+        "平均每月造價HK$8M"
+      ],
+      [
+        "Large bored／barrette piles",
+        "平均每月HK$19M；其他piles HK$9.5M"
+      ],
+      [
+        "A&A／Minor works",
+        "總造價HK$17.5M／HK$11M"
+      ],
+      [
+        "頻率等效投入",
+        "Level2＝1，L3＝2，L4＝4，L4.1＝8，L4.2＝12，L4.3＝16，L4.4＝20，L5＝25 man-days／月"
+      ]
+    ],
+    "documents": [
+      "Supervision Plan：各stream、grade、人名資格及頻率",
+      "Scale／Form C組合計算及施工並行安排",
+      "Critical-stage記錄、巡查紀錄及非符合事項處理"
+    ],
+    "trap": "GFA20,000不是所有工程的通用分母；ELS是平均月造價。25 man-days是full-time量化基準，不是每月只要湊25張巡查紙。",
+    "scenario": "Superstructure30,000m²、原Level4每週，scale1.5，是否仍每週但每次1.5天？",
+    "answer": "The adjusted input is 1.5 × 4 = 6 man-days per month. Upgrade using Tables 8.2 and 8.3 to the corresponding adequate frequency level, rather than retaining an inadequate minimum weekly frequency. Record the assessment and any permitted combination in Form C.",
+    "sources": [
+      {
+        "title": "Site Supervision CoP2024 §8及Tables8.1–8.3",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf#page=59"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "hotel",
+    "title": "酒店concession：兩種優惠不可混算",
+    "group": "Concession／用途",
+    "trigger": "Bona fide hotel申請B(P)R23A待遇，不是所有service apartment或住宿樓宇。",
+    "checks": [
+      "BA可按23A把酒店建築／部分作non-domestic計SC／PR，並對指定supporting及setting-down／pick-up設施作GFA處理。",
+      "APP-40看地點及規劃適合、reception／linen store等基本設施、中央冷氣及集中熱水、未來按Cap349持牌經營的證據。",
+      "可用酒店operator獲委任的確認作營運證據；100房或以上通常須按HKPSG提供parking及L/UL（交通個案評估仍重要）。"
+    ],
+    "table": [
+      [
+        "項目",
+        "不能混淆"
+      ],
+      [
+        "Unique integral supporting facilities",
+        "合理尺寸、實際位置、設計真實、只供staff、少濫用；一般不預期超酒店GFA5%，強理據可另考慮"
+      ],
+      [
+        "Administration／management office",
+        "不是23A unique supporting facilities"
+      ],
+      [
+        "中央AC／熱水plant room",
+        "按23(3)(b)合理房間另處理，APP-40註明相關APP-151前置／cap；不是一律套酒店5%"
+      ],
+      [
+        "Service apartment",
+        "APP-40明言不適用bona fide hotel concession的同等待遇"
+      ]
+    ],
+    "documents": [
+      "23A申請理據、planning及交通資料",
+      "基本酒店設施圖、supporting facility schedule及營運／持牌證據",
+      "GFA分項及將來用途控制"
+    ],
+    "trap": "「Hotel concessions不受151cap」不表示酒店內所有plant room及所有辦公室都無條件不計GFA。",
+    "scenario": "酒店行政office是否可放入5%的unique supporting exemption？",
+    "answer": "No. APP-40 excludes hotel administration and management offices from that category. Identify each facility and apply its own statutory basis and acceptance criteria.",
+    "sources": [
+      {
+        "title": "B(P)R23A",
+        "url": "https://www.elegislation.gov.hk/hk/cap123F"
+      },
+      {
+        "title": "APP-40 Hotel Development",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP040.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "hostel",
+    "title": "學生宿舍：限定計劃及限定條文",
+    "group": "Concession／用途",
+    "trigger": "APP-173 Hostels in the City：合資格現有commercial building／hotel改學生宿舍，EDB確認資格。",
+    "checks": [
+      "學生宿舍供居住，BO下仍屬domestic；優惠只針對指定SC／PR等規例，不能改寫所有用途分類。",
+      "可申請按non-domestic計regs19–22的SC／PR，並按25／28處理不設open space／service lane及reg45個別單位不設kitchen。",
+      "其他住宅要求（例如採光通風）及hostel／dormitory消防仍須滿足；不設獨立kitchen須看共享設施及計劃條件。"
+    ],
+    "table": [
+      [
+        "問題",
+        "要寫的證據"
+      ],
+      [
+        "是否入計劃",
+        "EDB eligibility confirmation；不能只憑租給學生"
+      ],
+      [
+        "現有樓宇條件",
+        "結構、淨高、採光通風、MOE／MOA及營運安排"
+      ],
+      [
+        "其他制度",
+        "Planning permission／適用Notes、lease、政府計劃承諾及批准條件另行處理"
+      ]
+    ],
+    "documents": [
+      "EDB確認及申請modification／exemption的文件",
+      "A&A圖、住宿及共享設施／管理方案、消防及採光計算",
+      "適用規劃及地契處理"
+    ],
+    "trap": "不能見「學生宿舍」便把新建項目或工廈自動當成APP-173合資格改裝；也不能以SC／PR非住宅待遇免除住宅採光。",
+    "scenario": "獲APP-173後，窗口可以按普通office不必住宅採光嗎？",
+    "answer": "No. The concession is confined to the specified regulations. Demonstrate the remaining domestic requirements and the fire safety requirements applicable to hostels or dormitories.",
+    "sources": [
+      {
+        "title": "APP-173 Hostels in the City",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP173.pdf"
+      },
+      {
+        "title": "EDB計劃入口",
+        "url": "https://www.edb.gov.hk/en/edu-system/postsecondary/policy-doc/studenthostel/index.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "rche",
+    "title": "安老院／殘疾人士院舍：待遇不等於GFA豁免",
+    "group": "Concession／用途",
+    "trigger": "APP-172一般modification與新發展incentive schemes是兩回事。",
+    "checks": [
+      "一般待遇可把指定RCHE／RCHD處所作non-domestic計regs19–22，並允許reg25不設open space；先滿足SWD無不利意見、FSD不反對及其他條件。",
+      "仍須結構安全、消防、淨高、天然採光通風及適用sanitary provisions；不得地庫或industrial building。",
+      "RCHE／RCHD樓面原則上仍計GFA；額外PR incentive限合資格新發展及方案條件，不是所有改裝都獲免費面積。"
+    ],
+    "table": [
+      [
+        "具體細節",
+        "適用要求"
+      ],
+      [
+        "院舍高度",
+        "一般不高於street level24m；SWD可按法定權力另准，須正式確認，不是AP自行同意"
+      ],
+      [
+        "RCHE淨高",
+        "SWD指引一般天花／假天花≥2.5m，樑底≥2.3m；另准須有依據"
+      ],
+      [
+        "SWD／FSD／BA",
+        "各自審視的資格、牌照、消防、建築要求不互相代替"
+      ]
+    ],
+    "documents": [
+      "SWD意見／資格、FSD意見及modification理據",
+      "院舍位置高度、通達、結構、採光及消防圖",
+      "若申請新發展incentive，另交該scheme所需資料"
+    ],
+    "trap": "不要把「treated non-domestic for PR」寫成「所有院舍GFA都exempt」。",
+    "scenario": "現有工廈改RCHE，是否只要申請APP-172就可行？",
+    "answer": "No. APP-172 requires the premises not to be situated in an industrial building and imposes other eligibility and safety conditions. The proposed premises do not qualify on that basis.",
+    "sources": [
+      {
+        "title": "APP-172",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP172.pdf"
+      },
+      {
+        "title": "SWD RCHE Guidance Jan2026",
+        "url": "https://www.swd.gov.hk/storage/asset/section/740/en/Guidance_Note_Eng_Jan_2026.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "mic",
+    "title": "MiC／JPN 8：GFA、SC、BH與三部門程序",
+    "group": "MiC／QC",
+    "trigger": "採用模組建造，並不改變BO適用性。",
+    "checks": [
+      "IPA處理系統／prototype的特定performance，不能代替site-specific GBP、foundation、superstructure及consent。",
+      "JPN8：MiC floor area10%GFA及每層SC；不受151overall cap。分母不是整幢GFA，已屬其他concession項目按定義處理。",
+      "BH放寬支持最多合資格MiC floors總層高4%；每層MiC area至少50%才算MiC floor。規劃minor relaxation及地契另行辦理。",
+      "原文索引S15即JPN8；本次加入中文／MiC／JPN 8別名、置頂入口及頁碼。JPN8處理優惠，factory QC另讀ADV36及APP158。"
+    ],
+    "table": [
+      [
+        "階段",
+        "具體設計風險"
+      ],
+      [
+        "工廠／臨時狀態",
+        "吊運、堆存及裝配荷載、穩定、tolerance，不只最終完成狀態"
+      ],
+      [
+        "接縫",
+        "Structural load path、cavity barrier／fire stopping、水密及耐久"
+      ],
+      [
+        "排水",
+        "模組內／現場接駁清晰界定；不得把維修需要的stack藏在無法到達位置"
+      ],
+      [
+        "文件",
+        "MiC面積及樓層schedule、approved details、製造／安裝方案及QC證據"
+      ]
+    ],
+    "documents": [
+      "System／prototype資料及必要IPA",
+      "Site-specific法定圖則及計算",
+      "s42／JPN8 concession及height資料",
+      "MiC Supervision Plan及QC記錄",
+      "s42 exemption申請及MiC area schedule；BH放寬AP certification用JPN8 AppendixA，隨building plans經centralised processing送PlanD／LandsD。"
+    ],
+    "trap": "IPA、廠方ISO9001或製造商認證，均不會免除AP／RSE／AS的項目責任。",
+    "scenario": "只有30%面積MiC的一層，能否把整層高度放入4%高度基數？",
+    "answer": "It does not meet the 50% MiC-floor threshold for that height-relaxation basis. Assess qualifying MiC floor area for GFA concessions separately from eligibility of the floor for height relaxation.",
+    "sources": [
+      {
+        "title": "JPN 8 paras5–15：MiC floor area／GFA／SC／BH（PDF pp2–5）",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/joint/JPN08.pdf"
+      },
+      {
+        "title": "ADV-36",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADV/ADV036.pdf"
+      }
+    ],
+    "quote": null,
+    "reviewed": "2026-11-16"
+  },
+  {
+    "id": "micqc",
+    "title": "MiC QC：誰去廠、何時交、抽多少",
+    "group": "MiC／QC",
+    "trigger": "ADV-36 Appendix B，與APP-158及工地監督要求配合。",
+    "checks": [
+      "MiC Supervision Plan至少在工廠生產開始前14日交，列各stream人名、資格、識別、巡查頻率、委任確認及聯絡資料。",
+      "AP及RSE各設QCST，RC設QCCT。最少AP T3-equivalent每週、RSE T3每週；RC T3每週＋T1 continuous。",
+      "Log book記生產、檢查、audit及testing；廠內留存，工地辦公室留副本供BD查閱。"
+    ],
+    "table": [
+      [
+        "Audit安排",
+        "具體時限／條件"
+      ],
+      [
+        "一般安排",
+        "AP、RSE及RC AS首批親身到廠；最少每月audit；每季親身，其間月份可按條件video"
+      ],
+      [
+        "Audit報告",
+        "每次完成後14日內交BD，分別由AP／RSE／AS認可，涵蓋QCST／QCCT監督"
+      ],
+      [
+        "AP／RSE替代安排",
+        "生產前1個月書面通知BA；首次仍親身到廠，其後交付現場每類模組至少1%抽查；現場audit後14日內交報告"
+      ],
+      [
+        "不是全員豁免",
+        "替代安排針對AP／RSE；不能據此取消RC AS及QCCT責任"
+      ]
+    ],
+    "documents": [
+      "MiC Supervision Plan及資格／委任資料",
+      "Factory QAS／認證及檢驗測試計劃",
+      "模組ID追蹤、材料／焊接／混凝土、耐火及排水測試",
+      "抽查、non-conformance、修復及覆驗紀錄"
+    ],
+    "trap": "1%是每一類交付模組，不是把全部混合後抽1%；video須符合Appendix B記錄條件，不能只交一張視像會議截圖。",
+    "scenario": "500個A類、100個B類，抽6個A類而零B類可否當1%？",
+    "answer": "No. The minimum sampling applies to each type. At least five A-type and one B-type modules are required on that numerical basis, with the prescribed scope of audit and records.",
+    "sources": [
+      {
+        "title": "ADV-36 Appendix B paras.4–9及Annex",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADV/ADV036.pdf#page=6"
+      },
+      {
+        "title": "APP-158",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP158.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "minor",
+    "title": "Minor works：class、type、item與實體要求",
+    "group": "Minor works",
+    "trigger": "先判是否building works，再判BO41 exempted／designated exempted／minor works／完整approval-consent。",
+    "checks": [
+      "合法minor works免prior approval及consent，但仍按簡化規定委任合資格人員、通知及完工證明。",
+      "Class I PBP＋PRC；II／III PRC。PBP及PRC須具該工程所需資格；不能因同是RMWC就承接所有class／type／item。",
+      "工程包含多項時逐項比對；有一部分超界，不能靠拆開日子或把名稱寫「維修」掩蓋。改用途及消防／通風限制不因minor程序消失。"
+    ],
+    "table": [
+      [
+        "類別",
+        "開工前",
+        "完工後"
+      ],
+      [
+        "I",
+        "至少7日前MW01、prescribed plans、details、photos及其他文件；PBP／PRC",
+        "14日內MW02、record plans、photos及其他文件"
+      ],
+      [
+        "II",
+        "至少7日前MW03、圖則／details／photos等；PRC",
+        "14日內MW04、record plans、photos等"
+      ],
+      [
+        "III",
+        "無開工前通知要求；仍委任PRC",
+        "14日內MW05、record plans或工程說明、photos等"
+      ]
+    ],
+    "documents": [
+      "明確item號碼及尺寸／位置／材料／荷載比對表",
+      "登記承建商資格查核、委任及法定文件",
+      "開工前及完工照片、record plans及相關證明"
+    ],
+    "trap": "「不影響主結構」不是萬能exemption。Partition、floor opening、drainage或window可有指定minor項目及條件；不能一律說小工程不用報。",
+    "scenario": "Class III承建商說毋須報開工，所以不用任何submission，是否正確？",
+    "answer": "No. A qualified PRC is still required, and the completion certification, record plans or description, photographs and other required documents must be submitted within 14 days after completion.",
+    "sources": [
+      {
+        "title": "BD MWCS introduction",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/introduction-to-minor-works-control-system/index.html"
+      },
+      {
+        "title": "I／II requirements",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/prescribed-professionals-contractors/index_mwcs_pres_class1_2.html"
+      },
+      {
+        "title": "III requirements",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/prescribed-professionals-contractors/index_mwcs_pres_class3.html"
+      },
+      {
+        "title": "Cap.123N",
+        "url": "https://www.elegislation.gov.hk/hk/cap123N"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "partition",
+    "title": "Minor works例題：加間隔牆不能只看承重",
+    "group": "Minor works",
+    "trigger": "以BD所列flat內新增partition wall為例，先比對完整item及例外。",
+    "checks": [
+      "新增牆的aggregate length per m² floor area是其中一個分級量值；不是只比較牆高。",
+      "官方摘要Class I item1.43：domestic新增牆長比>0.1m／m²；non-domestic>0.2m／m²，完整項目另有適用條件。",
+      "指定輕質牆可符合Class III item3.39／3.40，須全部條件同時符合，不是有一項合便揀較低class。"
+    ],
+    "table": [
+      [
+        "條件",
+        "3.39 domestic",
+        "3.40 non-domestic"
+      ],
+      [
+        "新增牆長／樓面面積",
+        "0.1–0.3m／m²",
+        "0.2–0.4m／m²"
+      ],
+      [
+        "牆高",
+        "≤3m",
+        "≤3.5m"
+      ],
+      [
+        "密度",
+        "≤650kg/m³",
+        "≤650kg/m³"
+      ],
+      [
+        "厚度",
+        "≤75mm",
+        "≤100mm"
+      ],
+      [
+        "承托樓板",
+        "≥125mm（3.39摘要所列）",
+        "按3.40完整item核對，不能自行抄domestic條件"
+      ]
+    ],
+    "documents": [
+      "新增牆長及floor area計算",
+      "牆高／厚度／密度證明及現有樓板資料",
+      "完整item排除條件及其他消防／採光／排水要求"
+    ],
+    "trap": "這是item比對示例，不是所有partition都一定Class I或III。門、走廊、天然採光及結構荷載仍要處理，不能把公用走火路縮窄。",
+    "scenario": "Domestic新增輕質牆只因厚度75mm，能否直接判III？",
+    "answer": "No. Verify all conditions of item 3.39, including the wall-length ratio, height, density and supporting slab thickness, together with all other applicable building requirements.",
+    "sources": [
+      {
+        "title": "BD Partition walls inside flats（含各item完整連結）",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/minor-works-items/index_mwcs_items_c23.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "schedule",
+    "title": "Scheduled Areas：是Schedule5的Area1–5",
+    "group": "岩土／地下設施",
+    "trigger": "不是把Area1稱成First Schedule；先用官方圖核對地盤與工程的位置。",
+    "checks": [
+      "GI proposal／GI works／GI report是不同階段；approval及consent在受管制工程開工前，不能只承諾完工補交報告。",
+      "Scheduled Area之外仍可能影響鐵路／隧道／斜坡；不是圖外便無責任。",
+      "RGE、RSE及AP按工程性質參與；Scheduled Areas1、2、4及Northshore Lantau指定區地基監督有額外RGE stream要求，非把所有Area一律配同一team。"
+    ],
+    "table": [
+      [
+        "Area",
+        "風險／主管",
+        "需要寫出的文件及動作"
+      ],
+      [
+        "1 Mid-Levels",
+        "斜坡、地下水、BEL；BD／GEO",
+        "RGE；GI圖及laboratory tests申請approval／consent；BEL評估先與BD協定，再提交受BEL約束的SF／foundation／ELS圖；展示excavation envelope"
+      ],
+      [
+        "2 NWNT",
+        "複雜地質／大理岩風險",
+        "按APP-61等做針對性GI、地質模型／空洞調查、基礎及相關監測；不只寫普通soil report"
+      ],
+      [
+        "3 Railway",
+        "鐵路設施安全；MTRCL及BD",
+        "鐵路與工程平剖面及標高、foundation／ELS／GI方案、結構／岩土／振動沉降影響、施工方法及監測／action levels；按APP-24協調"
+      ],
+      [
+        "4 Ma On Shan",
+        "大理岩地質及空洞等",
+        "按APP-61及適用規定評估地質、地基及監督"
+      ],
+      [
+        "5 Sewage tunnel",
+        "隧道相容性；DSD／GEO",
+        "GI需PartII管制；工程／隧道平剖面、荷載及開挖／地基影響、控制與監測。APP-62：gazetted route centreline100m內建築工程或Area5 GI，按集中處理轉DSD／GEO"
+      ]
+    ],
+    "documents": [
+      "官方scheduled-area圖及site overlay",
+      "針對被保護設施的location／level與impact assessment",
+      "Approval／consent、批准條件、supervision及monitoring plan"
+    ],
+    "trap": "APP-24一般鐵路保護範圍約30m只是guide，正式圖可較大／涵蓋整lot。Area5不是MTR審批。Northshore Lantau designated area不等於Schedule5 Area6。",
+    "scenario": "地盤在Area1，地下室開挖可否先設計好再問GEO BEL？",
+    "answer": "Obtain early RGE input and a provisional BEL from GEO, then submit the BEL assessment for BD agreement before plans constrained by the BEL. Show the excavation envelope and agreed limit on the site formation plans.",
+    "sources": [
+      {
+        "title": "BD Schedule5官方圖",
+        "url": "https://www.bd.gov.hk/en/resources/codes-and-references/scheduled-areas/index.html"
+      },
+      {
+        "title": "APP-30 Mid-Levels",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP030.pdf"
+      },
+      {
+        "title": "APP-24 railway",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP024.pdf"
+      },
+      {
+        "title": "APP-61",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP061.pdf"
+      },
+      {
+        "title": "APP-62 tunnels",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP062.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "forms",
+    "title": "BA4–BA14：申請、核證與簽署角色",
+    "group": "BA程序／簽署",
+    "trigger": "先辨委任、approval、consent、開工通知與completion；簽表身份不能互相代替。",
+    "checks": [
+      "以下列法定責任及簽署角色。適用的AP／RSE／RGE核證須各自作出；同一人兼任仍須以相應註冊身份處理。",
+      "Registered contractor的undertaking／completion certificate由其合資格AS代表，不是隨便項目經理簽。申請人簽署不代替專業核證。",
+      "表格內不同Part及適用選項仍以官方現行表為準；本次官方e-form下載端點未能讀取，以下不是逐欄轉錄的簽署清單。"
+    ],
+    "table": [
+      [
+        "Form",
+        "目的／時間",
+        "簽署與責任重點"
+      ],
+      [
+        "BA4",
+        "委任AP／RSE／RGE",
+        "委任方（業主／合資格授權代表）及獲委任專業人士的接受／聲明；不是委任RC"
+      ],
+      [
+        "BA5",
+        "申請approval及圖則製備證明",
+        "申請人申請；製備圖則的AP／RSE／RGE按相應部分核證，不是只由RC確認"
+      ],
+      [
+        "BA6",
+        "Stability certificate",
+        "AP及／或RSE就適用結構穩定性作專業核證；不能用owner簽代替"
+      ],
+      [
+        "BA7",
+        "事故／緊急工程通知",
+        "BO19程序由負責專業人士依適用情況通知；時限為授權前或開工後48小時內，以較早者為準"
+      ],
+      [
+        "BA8",
+        "Consent to commencement／carrying out",
+        "申請人以表內身份簽署；通常由項目專業團隊辦理。不是approval已批便可自動開工"
+      ],
+      [
+        "BA9",
+        "Renewal of consent",
+        "申請人申請續期；不是替未獲批圖則申請追認"
+      ],
+      [
+        "BA10",
+        "委任RC、開工通知、RC undertaking",
+        "RC確認委任、承擔責任並通知開工；由其AS簽署相應承建商部分。其他適用欄位依官方表格處理"
+      ],
+      [
+        "BA11",
+        "RC停止委任及已做部分核證",
+        "離任RC由AS通知及核證已施工部分；停止委任7日內交AP，不能由新RC冒簽"
+      ],
+      [
+        "BA12",
+        "Temporary OP／新temporary building等適用completion",
+        "RC、AP及適用RSE／RGE作各自完成核證；TOP只涵蓋准許的部分／條件"
+      ],
+      [
+        "BA13",
+        "新建築completion＋申請OP",
+        "RC由AS簽承建商證明，完工7日內交AP；AP及適用RSE／RGE各自核證並辦OP，不是業主單簽"
+      ],
+      [
+        "BA14",
+        "不產生新建築／street works completion",
+        "RC完成證明7日內交AP／RGE；AP、適用RSE／RGE各自核證；不是OP申請表"
+      ]
+    ],
+    "documents": [
+      "適用表格、有效委任及註冊身份",
+      "Approval／consent條件、supervision plan及開工資料",
+      "Completion／record plans、相關test reports及部門證明"
+    ],
+    "trap": "BA13是OP；BA14是非新建築等完工。不要把所有completion都叫BA14，也不要把交了BA10當已獲consent。BA8A concurrent consent另有適用程序。",
+    "scenario": "AP簽了BA14，是否可代替RC及RSE／RGE各自應作的completion核證？",
+    "answer": "No. Each responsible party must provide the certification applicable to its own role and scope of works. Submission of one certificate does not discharge the other parties from their statutory responsibilities.",
+    "sources": [
+      {
+        "title": "BD現行BA表格及官方e-forms",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      },
+      {
+        "title": "ADV-33提交資料",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADV/ADV033.pdf"
+      },
+      {
+        "title": "B(A)R Cap123A",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      },
+      {
+        "title": "APP-60 statutory form／provision對照",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP060.pdf"
+      },
+      {
+        "title": "PNRC2承建商證明及時限",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnrc/Pnrc02.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "commencement",
+    "title": "開工、完工、OP與CC：時間陷阱",
+    "group": "BA程序／簽署",
+    "trigger": "Approval、consent、notice、OP及lease compliance分別獨立。",
+    "checks": [
+      "一般BA10通知依B(A)R20；現行ADM-17有透過ESH並獲modification後不少於1日前的安排，不可直接一律改口「現在只需1日」。",
+      "同一安排並不取消R20(2)／(3)對TCP、資料及supervision plan不少於7日前的相關要求。",
+      "OP是BO下准許佔用；CC是LandsD確認地契發展義務的lease程序。OP不等於已取得CC；有OP也未必已履行所有地契條件。"
+    ],
+    "table": [
+      [
+        "節點",
+        "要核對"
+      ],
+      [
+        "Approval",
+        "圖則及條件；60／30日等時限須分初次／修改及適用情境"
+      ],
+      [
+        "Consent",
+        "前置條件、SP／SSSP及必要文件；不同工程階段分別處理"
+      ],
+      [
+        "Commencement",
+        "通知期、委任RC／TCP及現場控制"
+      ],
+      [
+        "Completion／OP",
+        "完成與approved plans相符、record plans、FSI及各適用證明；不把未批修改藏在as-built"
+      ],
+      [
+        "CC",
+        "地契設施、公共工程及其他development conditions，按LandsD要求完成"
+      ]
+    ],
+    "documents": [
+      "Consent與通知的分開日期表",
+      "Approved-amendment及record-plan對照",
+      "OP及CC各自所需的完成證據"
+    ],
+    "trap": "APP-13：record plans不能含未獲批修改。所謂「as-built」不是合法化偏離approved plans的工具。",
+    "scenario": "獲ESH BA10一日前modification，是否TCP／SP也只需一日前交？",
+    "answer": "No. The modification is subject to its stated scope and conditions. The separate requirements under B(A)R20(2) and (3) for TCP information and the supervision plan remain to be observed.",
+    "sources": [
+      {
+        "title": "ADM-17",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM017.pdf"
+      },
+      {
+        "title": "APP-13",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP013.pdf"
+      },
+      {
+        "title": "LandsD CC",
+        "url": "https://www.landsd.gov.hk/en/dev-control-compliance/compliance.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "s12a",
+    "title": "Section12A：改圖，不是發展許可",
+    "group": "規劃／申請",
+    "trigger": "申請改zone／Notes／規劃意向或發展限制，先核對申請資格及法定階段。",
+    "checks": [
+      "2023修例後申請人資格有限：registered owner之一、至少一位owner書面同意者、涉及Government land獲D of Lands同意者、public officer或指定public body。代理須有授權。",
+      "不能用12A重疊正在展示而未獲批准的新draft plan或相關amendments；相應意見應經representation程序提出。",
+      "TPB同意12A全部或部分後，須進入法定改圖展示及representation等程序；附的indicative proposal不是已獲批准發展。"
+    ],
+    "table": [
+      [
+        "提交內容",
+        "具體資料"
+      ],
+      [
+        "基本",
+        "S12A／EPASS表、資格／土地文件、代理授權、owner consent／notification資料（按適用要求）"
+      ],
+      [
+        "改圖",
+        "現行及擬議zone／Notes字句對照、location／site plan、界線、土地及規劃背景"
+      ],
+      [
+        "理由",
+        "Planning statement：為何改圖符合意向、公共利益及周邊相容性；indicative scheme及development schedule"
+      ],
+      [
+        "技術",
+        "按影響交TIA、drainage／sewerage、environment、VIA／AVA、landscape／tree、geotechnical等，不是每個申請盲交同一套"
+      ],
+      [
+        "公開程序",
+        "申請資料有行政公開查閱；不能與法定改圖階段representation混作同一程序"
+      ]
+    ],
+    "documents": [
+      "2026October Guidance Notes所列form／plans／SI及資格文件",
+      "Non-EPASS目前表格原件＋副本及4硬本＋1soft plans／SI等依para28；EPASS也不要假定完全不用硬本",
+      "回應部門意見及Further Information（PG32B）"
+    ],
+    "trap": "一位owner的consent可涉及申請資格，但不能據此說所有其他owner通知義務自動免除。TPB同意改圖不是等同s16批准或BA approval。",
+    "scenario": "12A已獲同意，能否即按indicative layout向BA當作已批規劃發展？",
+    "answer": "No. The accepted proposal proceeds through the statutory plan-making process. The indicative development proposal is not itself an approved development. Establish the effective plan provisions and any further permission required.",
+    "sources": [
+      {
+        "title": "S12A Guidance Notes Oct2026",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidance_Notes/S12A_GN_ENG_Oct_2026.pdf"
+      },
+      {
+        "title": "TPB application guide／PG31B、32B",
+        "url": "https://www.tpb.gov.hk/en/plan_application/apply.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "s16",
+    "title": "Section16：許可、文件與公眾意見",
+    "group": "規劃／申請",
+    "trigger": "Column2、Notes准許minor relaxation或其他適用permission機制。不是所有不符合都可s16。",
+    "checks": [
+      "先指明哪個zone、Column／Remark授權這項申請；未列用途先查Covering Notes、附屬／臨時安排及定義，不立即跳12A。",
+      "S16-I一般用途；S16-II只NT exempted house；S16-III指定rural／Regulated Areas≤3年temporary／renewal。Urban temporary不自動用III。",
+      "現行資料公布供查閱，首3星期可提出comments；一般自有效收件起2個月考慮，Further Information／deferment等按適用程序。"
+    ],
+    "table": [
+      [
+        "資料包",
+        "需要交代"
+      ],
+      [
+        "表格及土地",
+        "對應表、授權、land ownership／owner consent或notification依PG31B"
+      ],
+      [
+        "圖則／方案",
+        "Location、site、layout、sections／elevations、用途、GFA／PR／BH／SC、parking／L/UL及出入口"
+      ],
+      [
+        "Planning statement",
+        "符合意向、相容性、偏離參數理由及措施"
+      ],
+      [
+        "Supporting technical assessments",
+        "按具體影響交TIA、SIA／DIA、noise／air／environment、VIA／AVA、tree／landscape、geotechnical等"
+      ],
+      [
+        "批後",
+        "條件、完成期限、有效期；PG20A分辨哪些要在GBP approval前履行；不把全部條件拖到OP"
+      ]
+    ],
+    "documents": [
+      "申請表及完整plans／SI",
+      "適用technical checklist及部門所需資料",
+      "批准條件追蹤表及實施／管理承諾"
+    ],
+    "trap": "有planning permission不等於lease或BO已准；同一用途改樓層或運作方式，可能從Column1變Column2或違反Remark。",
+    "scenario": "Column1用途但高度超Notes上限，可否說無需任何planning application？",
+    "answer": "No. The use permission and development restriction are separate. Check whether the Notes provide for minor relaxation and seek permission under the applicable mechanism, with justification and impact assessments.",
+    "sources": [
+      {
+        "title": "S16 Guidance Notes Oct2026",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidance_Notes/S16_GN_ENG_Oct_2026.pdf"
+      },
+      {
+        "title": "PG20A條件履行",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/pg20a_e.pdf"
+      },
+      {
+        "title": "TPB forms／PG31B、32B",
+        "url": "https://www.tpb.gov.hk/en/plan_application/apply.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "cda",
+    "title": "CDA／MLP：總圖、分期、例外及批後",
+    "group": "規劃／申請",
+    "trigger": "依該CDA Notes、planning brief及PG18B檢查是否須以MLP申請。",
+    "checks": [
+      "一般完整發展依s16及s4A(2)交MLP與supporting information，批准MLP依s4A(3)存Land Registry供公眾查閱。",
+      "非單一業權須說明整體及分期可實施性，不能耗盡其他lot的發展潛力／通道或基建能力。",
+      "PG18B：綜合發展完成前，現有樓宇改用途一般不要求該套MLP及詳細評估，除非部門認為需要；temporary use不適用MLP要求；指定minor amendment一般不用詳細評估，仍按個案。"
+    ],
+    "table": [
+      [
+        "MLP／schedule",
+        "應有內容"
+      ],
+      [
+        "布局",
+        "整個CDA位置、building disposition、用途按block／floor、BH／storeys／podium、GFA及其他參數"
+      ],
+      [
+        "交通及公共設施",
+        "Ingress／egress、parking／L/UL、內路／EVA、public transport、GIC及utilities"
+      ],
+      [
+        "空地及環境",
+        "Public／private open space、NBA／setback、pedestrian links、master landscape及tree treatment"
+      ],
+      [
+        "實施",
+        "Phasing、development programme及非單一業權安排"
+      ],
+      [
+        "技術評估",
+        "按Notes／PG18B及影響：交通、環境、排水污水、視覺通風、樹木景觀及岩土等"
+      ]
+    ],
+    "documents": [
+      "MLP、development schedule及explanatory／planning statement",
+      "按需要的technical assessments",
+      "批後條件履行、必要revised MLP及Land Registry deposition"
+    ],
+    "trap": "不要把master layout plan與master landscape plan同樣簡寫MLP而混淆；CDA不是一律先s12A，也不是每項小改用途都盲目交全套MLP。",
+    "scenario": "CDA現有樓宇改用途，是否必須先做完整綜合重建MLP？",
+    "answer": "Check the applicable Notes and PG18B. The guideline generally dispenses with the specified MLP and detailed-assessment submission for a change of use in an existing building before comprehensive development, unless relevant departments consider it necessary. Any required planning permission remains a separate issue.",
+    "sources": [
+      {
+        "title": "TPB PG18B",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/pg18b_e.pdf"
+      },
+      {
+        "title": "TPB PG17A",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/pg17a_e.pdf"
+      },
+      {
+        "title": "PG20A",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/pg20a_e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "ozp",
+    "title": "OZP：R(A)、OU、C、I、G/IC、O、GB",
+    "group": "規劃／用途",
+    "trigger": "先用題目指定有效OZP及Notes；Master Schedule只是參考框架。",
+    "checks": [
+      "讀法：界線／sub-zone／annotation→Covering Notes→用途定義→Column1／2→Remarks→PR／BH／GFA／SC及NBA等限制。",
+      "Explanatory Statement幫助理解規劃意向，不取代Notes；BO用途分類、規劃用途、地契用途也不是同一套字典。",
+      "同一用途因樓宇類型、樓層、附屬性質、訪客模式不同，可能改變適用安排。"
+    ],
+    "table": [
+      [
+        "Zone",
+        "考試要指出的分別／陷阱"
+      ],
+      [
+        "R(A)",
+        "高密度住宅意向；看domestic／non-domestic／total PR及商業低層限制。不能把所有shop任意搬上住宅高層"
+      ],
+      [
+        "OU",
+        "必讀annotation：Business、Hotel、Mixed Use等不同。OU(B)須分Schedule I／II及industrial／I-O building；direct customer service office不一定等同back office"
+      ],
+      [
+        "C",
+        "商業意向；不是所有住宅／宿舍都許可。Hotel／flat／service apartment須按實際Notes及定義分辨"
+      ],
+      [
+        "I",
+        "工業用途及相容性；office、retail及訪客活動常有樓層／fire-separation／licensing等問題。工廈低層shop不等於上層也准"
+      ],
+      [
+        "G/IC",
+        "Government／Institution／Community用途；私營或收費不會單獨決定是否合法，要看實際activity及指定用途"
+      ],
+      [
+        "O",
+        "Open Space意向；附屬小設施不等於可作主要商業建築。工程／填土／挖掘及臨時用途亦看Notes"
+      ],
+      [
+        "GB",
+        "保育自然環境、限制城市擴散；PG10一般有不利發展推定，強理據不等於已獲准。用途及工程管制逐項查"
+      ]
+    ],
+    "documents": [
+      "題目OZP／Notes的具體Column及Remark定位",
+      "Use definition、building type／floor及實際運作說明",
+      "若申請，按planning impacts準備技術資料；lease／BO另外辦理"
+    ],
+    "trap": "不能把「OU」理解為任何其他用途。也不能把新Master Schedule條文直接當已套入所有現有OZP。",
+    "scenario": "OU(B)工廈中層改作直接接客旅行社，能否只因office就Column1？",
+    "answer": "Identify the applicable schedule for the industrial building and the restriction on direct customer services. Assess the actual operation against the relevant Notes and obtain permission where required, separately from lease and building controls.",
+    "sources": [
+      {
+        "title": "TPB Master Schedule",
+        "url": "https://www.tpb.gov.hk/en/resources/master_schedule_of_notes.html"
+      },
+      {
+        "title": "OU(B) PG22D",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/pg22d_e.pdf"
+      },
+      {
+        "title": "GB PG10",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/pg10_e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "exam",
+    "title": "Tricky短答：由題幹找限制，不靠猜配分",
+    "group": "考試／答題",
+    "trigger": "下列是依條文設計的練習，不是宣稱歷年原題或官方marking scheme。",
+    "checks": [
+      "已讀HKIA官方2022 Study Guide、2015／2017考官報告轉載，以及用戶上傳的2021–2025 SectionII原卷。題庫現有22組48小題；原卷題意重建、歷史報告改編及自編題分開標示。未取得MC及官方marking scheme。",
+      "每段用「結論→題幹事實→條文條件／計算→具體補救／文件」；不要只寫check BO／consult departments。",
+      "計算先列site／height／use／date，標分母及單位，再算。即使某個分類錯，也讓後續步驟可追蹤，而不是只寫一個最後答案。",
+      "2024／2025原卷現已由用戶上傳，可核對essay；沒有MC及官方marking scheme。2024及2025均為essay60分：Q1必答30，Q2–4任選兩題各15。"
+    ],
+    "table": [
+      [
+        "題幹提示",
+        "答題要轉成甚麼"
+      ],
+      [
+        "same area，change of use",
+        "occupancy factor及人數改變→門、出口、梯容量及其他實體要求重算"
+      ],
+      [
+        "部分有sprinkler，共用梯",
+        "B12.5不是直接選B4"
+      ],
+      [
+        "三街但abut不足60%",
+        "另檢查一對街的40%及corner條件，不用面積猜"
+      ],
+      [
+        "CDA現有樓宇改用途",
+        "PG18B例外＋實際Notes，不盲交完整MLP或先s12A"
+      ],
+      [
+        "BEAM Plus已註冊",
+        "問目前階段需要PA、CA或哪份energy／standard證據"
+      ],
+      [
+        "既有A&A改動已施工",
+        "record plan不是批准修改的代替品；釐清approved status及法律程序"
+      ]
+    ],
+    "documents": [
+      "為每題做conditions／calculation／documents／responsibility四格草稿",
+      "用具體defect及措施，不只羅列法例名稱",
+      "檢查兩條獨立限制是否都符合，例如PR與SC、面積與最小尺寸"
+    ],
+    "trap": "沒有看過完整試卷及作答，不能承諾某項必考或推算你精確失分位置；本工具用於可驗證的能力練習。",
+    "scenario": "如何把「需諮詢相關部門」寫成能核對的答案？",
+    "answer": "Identify the affected requirement and the responsible authority, then state the submission: for example, submit a traffic impact assessment and revised parking/loading layout to justify the shortfall to TD, and obtain the corresponding planning and lease approvals where required.",
+    "sources": [
+      {
+        "title": "HKIA official study／past-question／examiner-report入口",
+        "url": "https://www.hkia.net/en/professional-assessment/preparation"
+      },
+      {
+        "title": "HKIA官方2022 Study Guide",
+        "url": "https://hkia.net/upload/finder/file/PA/HKIA-ARB%20PA%20Paper%201%20Study%20Guide_2022.pdf"
+      },
+      {
+        "title": "2017考官報告轉載（原試卷未取得）",
+        "url": "https://www.scribd.com/document/483492986/Examiner-Report-PA2017"
+      },
+      {
+        "title": "2015考官報告轉載（歷史資料）",
+        "url": "https://www.scribd.com/document/483492989/Examiner-Report-PA2015"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "smallfire",
+    "title": "小細節也能失分：門、地庫、樓梯",
+    "group": "消防／人數",
+    "trigger": "數字只在相應條件下適用，不把不同用途、BFA與消防混為單一標準。",
+    "checks": [
+      "B13.1：跨exit的門，或occupant capacity超30的房間／樓層通往exit route的門，按條文處理向逃生方向開或雙向門view panel。Notifiable workplace另查B13.6。",
+      "B13.2：由內不用鎖匙即可開啟；common-area電鎖須配合fire alarm、斷電自動釋放及local manual override等要求。",
+      "門扇不能在swing時侵蝕required staircase landing的有效半徑。BFA清闊與消防門寬各自檢查，不能只取較小值。"
+    ],
+    "table": [
+      [
+        "條件",
+        "要記住的數值"
+      ],
+      [
+        "B13.4：房間／樓層人數>3",
+        "exit door至少750mm；另查TableB2及BFA，不能當所有門均只需750"
+      ],
+      [
+        "Required staircase一般踏步",
+        "每段2至16級；tread≥225mm、riser≤175mm；UC5a／5b另有較嚴數值"
+      ],
+      [
+        "UC5a踏步",
+        "tread≥280mm、riser≤150mm"
+      ],
+      [
+        "樓梯寬>1800mm",
+        "按B14.5用中央扶手分段，各段1050至1800mm"
+      ],
+      [
+        "Basement只設一出口的例外",
+        "B17.1需同時：深度不超3m、面積不超150m²、僅lavatory或plant room；不是所有細地庫都可單出口"
+      ]
+    ],
+    "documents": [
+      "帶門扇swing、有效淨闊及landing尺寸的平面圖",
+      "用途／人數及適用TableB2、BFA對照",
+      "Basement深度、面積、用途與出口圖"
+    ],
+    "trap": "「地庫150m²以下」只符合三項例外條件之一；餐廳或停車場不能只因小就套用lavatory／plant-room例外。",
+    "scenario": "140m²地庫餐廳、深2.5m，可否按小地庫例外只設一出口？",
+    "answer": "No. The B17.1 exception also requires use solely as a lavatory or plant room. The restaurant does not satisfy that condition, notwithstanding its area and depth.",
+    "sources": [
+      {
+        "title": "Fire Safety Code B13–14及B17",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/fs_code2011.pdf#page=51"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "bhu",
+    "title": "簡樸房：認證、期限、申請與工程分流",
+    "group": "簡樸房／新制度",
+    "trigger": "Cap658規管出租住宅分間單位；認證與Cap123工程批准分開。",
+    "checks": [
+      "適用私人住宅樓宇或綜合樓宇住宅部分。工廈分間單位不能只靠符合8m²便取得此住宅認證。",
+      "2026-3-1制度生效及開始認證；非法出租罪的s8於2027-3-1生效。寬限不是給所有新建分間單位。",
+      "合資格既存單位須按制度登記：主單位須在2025-7-4至10-3期間有有效分間單位租約，並符合申請條件。工程仍須判定一般批准／同意、minor works或真正豁免工程。"
+    ],
+    "table": [
+      [
+        "項目",
+        "條件／文件"
+      ],
+      [
+        "登記期",
+        "2026-3-1至2027-2-28；成功登記的合資格主單位獲36個月寬限"
+      ],
+      [
+        "寬限期",
+        "2027-3-1至2030-2-28；2029-9-1起最後6個月倒數期對未認證單位不得訂立新租約"
+      ],
+      [
+        "認證",
+        "BHU-01；業主或有業主書面同意的人；每個分間單位認證有效5年"
+      ],
+      [
+        "續期",
+        "屆滿前3至6個月交BHU-01A及新證明報告"
+      ],
+      [
+        "資料變更",
+        "知悉須申報變更後15日內BHU-02"
+      ],
+      [
+        "專業資格",
+        "指定專業人士包括RA、指定界別RPE及building division RPS；不是只有AP"
+      ]
+    ],
+    "documents": [
+      "申請表、指定專業人士證明報告、最新土地／業權登記紀錄",
+      "申請人身分及業主書面同意（適用時）",
+      "履行涉及單位／主單位的法定命令、通知或指示；附實測圖及工程合法性核查"
+    ],
+    "trap": "BHU recognition ≠ approval of building works。認證不能追認拆承重牆、侵佔公用地方或其他UBW，也不取代地契／規劃管制。",
+    "scenario": "2026年新分間單位可否自動享有至2030年的寬限？",
+    "answer": "No. Verify eligibility and valid grace-period registration. BHU recognition is separate from approval and consent under the Buildings Ordinance. Classify the proposed alteration works, appoint the required professionals and contractor, and complete the applicable statutory procedures before construction.",
+    "sources": [
+      {
+        "title": "官方認證及文件",
+        "url": "https://www.bhu.gov.hk/tc/regulatory-regime/recognition/"
+      },
+      {
+        "title": "生效及過渡",
+        "url": "https://www.bhu.gov.hk/tc/regulatory-regime/ordinance/"
+      },
+      {
+        "title": "簡樸房實務守則（2026年3月）",
+        "url": "https://www.bhu.gov.hk/forms/tc/CoP%20for%20BHU_TC.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "bhutech",
+    "title": "簡樸房：面積、高度、走廊、門與通風",
+    "group": "簡樸房／新制度",
+    "trigger": "不能只背8m²、2.3m；原入口防火門是否保留會改變走廊及分隔要求。",
+    "checks": [
+      "最低內部樓面面積8m²：沿圍封牆內面量，計內部間牆及柱；露台／騎樓按守則處理，窗台和僭建面積不能拿來湊數。這不是GFA或一般UFA公式。",
+      "經修飾地面至天花板／喉管底至少2.3m；橫樑／相應喉管底至少2m。守則高度量度不計假天花，勿用假天花替代結構天花的定義。",
+      "其餘最低標準：結構荷載、獨立廁所及防水、廁所以外供水點及洗滌盆、照明通風、供水／電力公司獨立水電錶；另有探測器及滅火設備要求。"
+    ],
+    "table": [
+      [
+        "情況",
+        "須指出的具體要求"
+      ],
+      [
+        "原主單位入口防火門保留／同等或較佳",
+        "內走廊淨闊≥0.75m；人數>30至200時≥0.85m。分間單位入口門須自掩及防煙；不是一律1小時門"
+      ],
+      [
+        "原入口門移除／耐火不足",
+        "內走廊淨闊≥1.05m；分間單位門及間隔須≥1小時耐火，門另須自掩、防煙"
+      ],
+      [
+        "直接開向樓宇公用走廊",
+        "依守則1小時門及分隔、防煙、自掩；檢查原有逃生路線"
+      ],
+      [
+        "走廊及樓梯",
+        "走廊淨高≥2m；水錶、設備不能侵佔淨闊。一般須通往至少兩條逃生梯，合規單梯樓例外"
+      ],
+      [
+        "L/V途徑一",
+        "符合B(P)R30–33、36適用要求"
+      ],
+      [
+        "L/V替代途徑4.8",
+        "每居住房間至少一可開啟窗，玻璃≥0.1m²並面向指定戶外空間；人工照明＋每小時5次室外換氣。冷氣不等於鮮風"
+      ],
+      [
+        "廁所替代安排4.8.3",
+        "人工照明＋5ACH，另查永久通風口／風管≥廁所面積1/20及其合法接通位置，不能只寫有抽氣扇"
+      ]
+    ],
+    "documents": [
+      "逐戶實測平面、剖面、門表、原入口門及逃生圖",
+      "荷載檢查；排水／防水／鮮風與排風及永久通風口資料",
+      "獨立水電錶及消防設備證明；如用光井，核對其尺寸及清潔維修通道"
+    ],
+    "trap": "0.75m不是所有劏房走廊的通用最低闊度；0.1m²玻璃亦不是所有住宅prescribed window的新通用標準。明火煮食須符合獨立廚房或獲准開放式廚房安排。",
+    "scenario": "原入口防火門拆掉，內走廊0.8m、各戶普通木門，可否靠加煙感器認證？",
+    "answer": "No. The original entrance fire protection has been removed. Apply the corresponding corridor and fire-separation provisions: provide at least 1.05m clear corridor width and the required one-hour partitions and self-closing smoke-sealed doors. Detectors do not substitute for these provisions.",
+    "sources": [
+      {
+        "title": "簡樸房守則4.2–4.8及消防圖例",
+        "url": "https://www.bhu.gov.hk/forms/tc/CoP%20for%20BHU_TC.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "unauthorised",
+    "title": "未批先建：停工、清拆、刑責及專業責任",
+    "group": "責任／違規／事故",
+    "trigger": "先判工程種類及法定例外，不把業主同意、規劃批准或BHU認證當作BO14批准。",
+    "checks": [
+      "BO14(1)：一般工程須先有圖則批准及開工同意；有approval但沒有consent仍不能任意施工。Minor works須走相應簡化程序，豁免工程亦須符合其實質條件。",
+      "立即評估安全，停止受影響的不合規工程、保護現場及鄰近物業；記錄與批准圖則的差異，由AP協調RSE／RGE及承建商作補救及法定呈報。",
+      "補交圖則或其後獲批不自動免除先前違法；罰款也不使僭建合法。不能先簽不實完工證書再補資料。"
+    ],
+    "table": [
+      [
+        "後果",
+        "考試具體寫法"
+      ],
+      [
+        "明知違反BO14(1)",
+        "BO40(1AA)：最高罰款$400,000及監禁2年；持續罪行每天另$20,000。須指出相應罪行元素，非每項UBW都自動同罪"
+      ],
+      [
+        "不遵從BO24清拆令、無合理辯解",
+        "最高$200,000、監禁1年及持續每天$20,000；命令與原未批先建是不同罪行"
+      ],
+      [
+        "行政執法",
+        "適用情況可停工、要求拆除／修復；命令可註冊於土地登記冊；政府代辦工程追討費用及附加費"
+      ],
+      [
+        "AP／RSE／RGE",
+        "刑事責任依實際違法、知情及作為判定；BO7紀律處分另行處理"
+      ],
+      [
+        "Registered contractor",
+        "BO13紀律及適用刑責；分判或委任TCP不消除法定責任"
+      ],
+      [
+        "民事及合約",
+        "專業疏忽、損害賠償、延誤及保險／合約後果須視事實"
+      ]
+    ],
+    "documents": [
+      "批准圖、consent及條件、BA10、現場照片／量度／時序",
+      "書面指示、監督／Form B紀錄、工程安全評估與整改方案",
+      "需呈報時的書面通知；適用修訂圖則、測試及完成證明"
+    ],
+    "trap": "2026年10月提出的提高BO罰則屬修例建議，不能直接當作現行最高刑罰。緊急工程也不是替一般未批先建補一個理由。",
+    "scenario": "已批GBP但未consent，業主要求先做承重結構，AP應如何回應？",
+    "answer": "Do not commence the works. Approval of plans does not constitute consent to commencement. Explain the statutory requirement, record the instruction, secure the site and complete the outstanding consent conditions and supervision arrangements. If unauthorised works have already occurred, assess safety, stop the affected works, document the deviation and take the necessary remedial and reporting action.",
+    "sources": [
+      {
+        "title": "BO14、24、40",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "BD未批先建刑責通函2023",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/circular/CL_CBOCEUBWA2023e.pdf"
+      },
+      {
+        "title": "2026-11-12清拆令判刑及最高罰則",
+        "url": "https://www.info.gov.hk/gia/general/202611/12/P2026111200235.htm"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "aprc",
+    "title": "AP與承建商：監督不是同一職責",
+    "group": "責任／違規／事故",
+    "trigger": "BO4、9及APP158：AP協調專業監督；RC組織並持續監督實際施工。",
+    "checks": [
+      "AP以專業身分統籌法定程序、圖則與監督，按規例及SP進行檢查並處理不合規及呈報；RSE／RGE負責各自專業範圍，不是AP代簽所有技術文件。",
+      "RGBC／RSC透過AS與其監督隊伍，負責工程實際施工、合規、施工方法及持續監督；BO9(5)、9(6)須按承建商類別讀。",
+      "按工作風險及SP部署TCP，不把AP每次到場等同RC持續監督，也不把僱用TCP當成heads of streams已免責。APP158要求按工程特性制定critical-task checklists。"
+    ],
+    "table": [
+      [
+        "角色",
+        "應做／不能混淆"
+      ],
+      [
+        "AP",
+        "整體協調；適用圖則與法定呈交；專業監督及通知BA重大事項"
+      ],
+      [
+        "RSE",
+        "結構設計、監督、測試及結構偏差評估"
+      ],
+      [
+        "RGE",
+        "岩土設計／報告及相關監督；executive與advisory角色按APP141"
+      ],
+      [
+        "AS／RC",
+        "現場施工、施工資源及持續監督；安排整改並確保照指示落實"
+      ],
+      [
+        "TCP",
+        "按資格、職級、stream、頻次及具體任務檢查，及時記錄／上報，不可代head作超越權限的設計批准"
+      ]
+    ],
+    "documents": [
+      "SP、SSSP、TCP任命／履歷及聯絡表、critical-task checklists",
+      "帶日期時間、位置、圖則版本、結果與簽署的巡查紀錄",
+      "必要修訂圖則、Form B、整改證據及監測資料"
+    ],
+    "trap": "Client同意、contract instruction或AP口頭「OK」不能修改法定批准圖則；site supervision、contract administration與職安法例是不同責任範圍。",
+    "scenario": "RC說AP每週巡查過，因此模板倒塌只應由AP負責，對嗎？",
+    "answer": "No. The contractor remains responsible for carrying out and continuously supervising the works through its site organisation. Professional supervision by the AP/RSE/RGE does not replace the contractor’s statutory duties. Assess each party’s actual acts, supervision and compliance with the approved plans and supervision plan.",
+    "sources": [
+      {
+        "title": "BO4、9",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "APP158施工質量監督",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP158.pdf"
+      },
+      {
+        "title": "APP141職責劃分",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP141.pdf"
+      },
+      {
+        "title": "Site Supervision CoP",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "tcpforms",
+    "title": "TCP要寫甚麼：SP、Form A／B／C",
+    "group": "責任／違規／事故",
+    "trigger": "先分監督計劃、個別檢查紀錄、不合規及合併安排，沒有一張表包辦全部。",
+    "checks": [
+      "TCP按獲委任stream、職級及任務親自檢查；紀錄須及時以本人姓名、職位及簽署作實，不是事後互相補簽。現場保留供查閱。",
+      "巡查紀錄應能重建：何日何時、何處、哪項工序／圖則版本、檢查數量／範圍、結果、偏差、安全影響、通知對象、指示、整改及再檢日期；按項目風險用照片／測試支持。",
+      "Form B不是每次巡查必填；Form C不是事故通報表。BA20只針對拆卸工程的TCP通知，不是所有工程TCP通用任命表。"
+    ],
+    "table": [
+      [
+        "文件",
+        "填寫／簽署及用途"
+      ],
+      [
+        "SP及Annex",
+        "各stream head安排人員、等級、頻次、職責及聯絡；任命／確認按守則要求"
+      ],
+      [
+        "Form A／AppendixII",
+        "實做任務紀錄：BD Ref、project、type of works、姓名、grade、frequency；按日期／星期逐項記S或NS並簽名，另附item descriptions"
+      ],
+      [
+        "Site inspection report",
+        "每次檢查的實際事項、結果、指示、跟進；TCP本人記錄及簽署"
+      ],
+      [
+        "Form B／AppendixIII Part1",
+        "不合規報告：發現TCP記錄缺失、位置、影響、日期及通知；沿stream上報"
+      ],
+      [
+        "Form B Part2",
+        "整改及覆檢：RC執行整改；相應專業人士核實／證明整改，附所需證據"
+      ],
+      [
+        "Form C／AppendixIV",
+        "TCP組合／合併安排：說明項目、職級、職務、時間及資源足夠，由相關heads確認；不是自行減員"
+      ]
+    ],
+    "documents": [
+      "按CoP附錄原表逐格填寫，勿憑自製摘要取代正式欄位",
+      "TCP CV／資格及任命確認、出勤、task checklists及檢查紀錄",
+      "Form B或適用例外的site report、monthly non-conformity summary及關閉證據"
+    ],
+    "trap": "TCP指令必須沿權責上報；發現設計問題不得自行批准改筋／改樁。即使承建商提出可施工方案，也須由有責任的專業人士評估及辦理必要修訂批准。",
+    "scenario": "要合併TCP與處理鋼筋偏差，各用哪份表？",
+    "answer": "Use Form C to demonstrate an acceptable combination of TCP duties and adequate supervision resources. Record and report the reinforcement deviation under the non-conformity procedure, using Form B where required. Obtain the responsible professional’s assessment and instruction, implement rectification and retain verification records before covering up.",
+    "sources": [
+      {
+        "title": "Site Supervision CoP5、10及附錄I–IV",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      },
+      {
+        "title": "正式表格入口",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "ncincident",
+    "title": "工地不合規／事故：不要一律背48小時",
+    "group": "責任／違規／事故",
+    "trigger": "先保護生命與工地，再分一般NC、迫切危險／重大安全事故、重大質量事故。",
+    "checks": [
+      "迫切危險立即採取保護措施，停止受影響工序、隔離／疏散／救援並通知相關head；不能等Form B或48小時才行動。其他部門的緊急及法定通報並不被BD程序取代。",
+      "安全事故的發現時間以heads／representatives／TCP最早知悉計，不可等AP讀到電郵才重新起計。monitoring action level達到／超過、鄰樓過量沉降等即使未倒塌也可能觸發重大事故程序。",
+      "工地意見若只是改善建議，寫入site report及發出有責任人的跟進；若已違反圖則／SP／安全要求，必須分類及按NC或事故程序處理，不可降格成「備註」。"
+    ],
+    "table": [
+      [
+        "類別",
+        "行動及時限"
+      ],
+      [
+        "極輕微、同次巡查即改正（5.8）",
+        "例：即清模板碎屑；符合例外時毋須Form B或該項TCP report，不可擴大至重大缺陷"
+      ],
+      [
+        "無實質安全關注、覆檢可在封閉前確認（5.6–7）",
+        "可免Form B，但記入site inspection report；指定整改／覆檢並確認後才cover up"
+      ],
+      [
+        "其他NC",
+        "Form B Part1→stream representative／head→適當專業指示→AS安排整改→Part2核實關閉"
+      ],
+      [
+        "迫切危險／重大安全事故",
+        "TCP／RSE／RGE／AS於發現後12小時內報AP；AP儘快且48小時內報BA；AS可直接報BA並副知AP"
+      ],
+      [
+        "迫切危險整改完成",
+        "相關人士儘快且12小時內報AP；AP儘快且48小時內通知BA；按10.5實施"
+      ],
+      [
+        "重大安全事故整改完成",
+        "AP依11.3在48小時內通知BA；保留調查及驗證資料"
+      ],
+      [
+        "重大質量事故（11.6–7）",
+        "相關人士5日內報AP；AP14日內報BA；AS可直接報BA並副知AP。若亦屬安全事故，採安全程序"
+      ],
+      [
+        "RC不遵從涉及實質安全關注的指示",
+        "AP知悉不遵從後48小時內報BA；不等待下次例會"
+      ]
+    ],
+    "documents": [
+      "現場位置、工程／批准圖則、發現時間、涉及人員及事故經過",
+      "傷亡／損害／風險、監測／測試／照片、即時保護措施及通知紀錄",
+      "調查原因、工程評估、整改／修訂設計、重開工條件、覆檢及完成通知"
+    ],
+    "trap": "12／48小時和5／14日不能互換。Form B不能代替重大事故書面呈報；法定report也不會自動授權重開工。",
+    "scenario": "發現混凝土重大質量問題但無安全事故，是否所有情況只需48小時報BD？",
+    "answer": "Classify the incident first. For a major/serious quality incident under section 11.6, the relevant person reports to the AP within five days and the AP reports to the BA within fourteen days of discovery. If it also involves a major safety incident or imminent danger, implement the immediate protective and safety-reporting procedures. Record rectification and verification separately.",
+    "sources": [
+      {
+        "title": "Site Supervision CoP5.5–5.8、10.5、11及12",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "urgent",
+    "title": "BO19緊急工程：BA7與後續，不是通用補批",
+    "group": "責任／違規／事故",
+    "trigger": "只限因意外／緊急情況須即時支撐、托底、拆卸或使既有樓宇／土地／街道工程安全的真正急需工程。",
+    "checks": [
+      "BO19(1)對急需工程容許不先取得consent；不能把條文讀成任何工程的圖則批准、委任及安全責任一律取消。工程限於即時排險所需。",
+      "負責業主／土地責任人／街道工程負責人交BA7：在授權急需工程之前，或開工後48小時內，兩者以較早者為準。B(A)R28另有獲聘AP及RC於48小時內以指定表格證明委任的要求。",
+      "緊急情況終止後BA可命停工，待取得所需consent。AP須儘快呈報緊急偏離SP及所做工程，並提交由相關heads準備的修訂SP及必要後續文件。"
+    ],
+    "table": [
+      [
+        "階段",
+        "答案要寫"
+      ],
+      [
+        "先判急需",
+        "事故／即時危險證據；只做必要排險"
+      ],
+      [
+        "通知及委任",
+        "BA7法定較早時點；AP／RC委任文件及適用48小時規定"
+      ],
+      [
+        "現場保護",
+        "支撐、封鎖、救援及鄰近物業保護；專業評估和監督"
+      ],
+      [
+        "SP偏離",
+        "因安全需要的偏離及緊急工程由AP儘快報BA，更新SP"
+      ],
+      [
+        "後續",
+        "記錄、測試、安全證明；按實際工程取得必要圖則批准／同意及完成證明"
+      ]
+    ],
+    "documents": [
+      "BA7、委任文件、危險／事故紀錄及工程範圍",
+      "臨時工程／支撐設計、施工監督、必要修訂圖則及SP",
+      "排險完成報告及後續正常工程程序"
+    ],
+    "trap": "課堂手寫「完成後14日內追認批准」不能從BO19推出為所有急需工程的通用期限，勿照背；也不要把BA7當一般事故表。",
+    "scenario": "業主為趕工，能否先做新樓基礎再用BA7補辦？",
+    "answer": "No. Section 19 concerns genuinely urgent works necessary as a result of an accident or emergency. Programme pressure is not such an emergency. Obtain the required approval and consent before the ordinary foundation works commence.",
+    "sources": [
+      {
+        "title": "BO19",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "B(A)R28",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      },
+      {
+        "title": "BA7及委任表",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      },
+      {
+        "title": "Site Supervision CoP",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "smallstructure",
+    "title": "AP免另聘RSE：B(A)R12的五項同時條件",
+    "group": "課堂／法定程序",
+    "trigger": "不是只要矮於10m即可；必須同時符合12(3)及(4)的界線。",
+    "checks": [
+      "一般基礎及結構詳圖、計算由RSE負責；小型結構例外容許AP制備及簽署相應文件，AP因此承擔相應責任。",
+      "高度≤10m、任何結構構件跨度≤6m、指定結構材料、淺層spread footing以及不得改動原RSE設計的現有結構，缺一不可。",
+      "不因此豁免其他適用的岩土、安全、圖則批准及consent要求；要明確指出題目哪項條件不符。"
+    ],
+    "table": [
+      [
+        "條件",
+        "上限／範圍"
+      ],
+      [
+        "高度",
+        "不超過10m"
+      ],
+      [
+        "構件跨度",
+        "任何結構構件不超過6m"
+      ],
+      [
+        "材料",
+        "木、砌體、鋼、素混凝土或鋼筋混凝土"
+      ],
+      [
+        "基礎",
+        "spread footing；承壓≤300kPa；基底在現有地面下≤2m"
+      ],
+      [
+        "既有結構",
+        "不得涉及改動由RSE設計的現有結構構件"
+      ]
+    ],
+    "documents": [
+      "尺寸、高度、跨度、材料、地基承壓及埋深資料",
+      "既有結構來源及改動範圍",
+      "AP簽署適用圖則／計算及其責任聲明"
+    ],
+    "trap": "6m是構件跨度限制，不是樓宇總闊；2m按existing ground level，不是任意設計完成地面。",
+    "scenario": "8m高、5m跨度，但樁基的新樓可否由AP依此例外代替RSE？",
+    "answer": "No. The exception requires qualifying spread footings as well as the other conditions. Piled foundations do not satisfy that condition. Appoint an RSE for the relevant foundation and structural submissions.",
+    "sources": [
+      {
+        "title": "B(A)R12(2)–(4)",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      },
+      {
+        "title": "APP141",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP141.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "performance",
+    "title": "Performance Review：不是APP155",
+    "group": "課堂／法定程序",
+    "trigger": "正確參考APP115；按BO17所施條件核證實際地質／施工表現與設計假設。",
+    "checks": [
+      "某些工程的圖則批准或consent條件會要求performance review，不是每個項目固定同一份報告。",
+      "利用實際開挖／地層／地下水、監測及測試檢查設計假設與工程表現；偏差須評估、採必要改善及修訂設計，不是只抄原設計計算。",
+      "按APP115及實際條件，在OP／TOP前令BA滿意；未履行可影響BO21(6)(f)下OP發出。"
+    ],
+    "table": [
+      [
+        "要素",
+        "呈交重點"
+      ],
+      [
+        "比較基準",
+        "批准設計假設、條件及監測trigger levels"
+      ],
+      [
+        "實際證據",
+        "ground／groundwater、construction records、movement及tests"
+      ],
+      [
+        "判斷",
+        "差異、原因及對樓宇／鄰近地段的影響"
+      ],
+      [
+        "收結",
+        "整改、設計review、必要修訂及專業結論"
+      ]
+    ],
+    "documents": [
+      "原approval／consent條件及設計假設",
+      "監測、GI、施工及測試紀錄與review報告",
+      "必要修訂圖則／補救證據及條件履行確認"
+    ],
+    "trap": "照片課堂題寫APP155，但APP155是signboard validation；不能按錯號背。Performance Review也不是對AP員工表現的評核。",
+    "scenario": "樓宇已完工但未交要求的performance review，BA14是否足以取得OP？",
+    "answer": "No. Fulfil the applicable performance-review condition and satisfy the BA before issue of the occupation permit. Completion certification does not replace the required verification of ground conditions, design assumptions and actual performance.",
+    "sources": [
+      {
+        "title": "APP115",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP115.pdf"
+      },
+      {
+        "title": "BO17及21",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "plant",
+    "title": "Plant rooms：哪類可不計GFA？哪類受cap？",
+    "group": "環境／Concession",
+    "trigger": "先辨實際用途，再找23(3)(b) disregard或23(3)(a) modification；名字寫plant room並不夠。",
+    "checks": [
+      "APP151 AppendixA的兩個勾號分別是前置條件與overall cap。可不計GFA、免cap、免前置條件是三個不同問題。",
+      "機房須真實、專用、規模合理，平面須有設備、維修／更換通道、淨高及服務範圍；辦公、倉存、可佔用備用空間不能因混放機器就整間不計。",
+      "APP151 Note2雖無固定PNAP面積百分比，仍只容許安裝及維修所必要、與發展相稱的最低面積；「無固定上限」不是無限放大。"
+    ],
+    "table": [
+      [
+        "分類及例子",
+        "GFA及APP151處理"
+      ],
+      [
+        "Mandatory／essential，另有尺寸限制（A2.1／Note1）",
+        "Lift machine room、TBE／mobile access／rooftop／intermediate telecom rooms、RS&MRC等；依APP35／84等個別限制，可不計的合資格面積不受overall10%cap"
+      ],
+      [
+        "Essential，無固定PNAP面積限制（A2.2／Note2）",
+        "Switch／meter／transformer／generator rooms；食水沖廁水tank／pump；污水處理；FSI專用房、消防水缸泵房、fire control centre、CO2、排煙及樓梯加壓fan、hose reel closet、集水／雨污廢水泵房等。按必要合理面積可不計；免cap"
+      ],
+      [
+        "冷氣／暖氣機房及AHU（A2.3／Note3）",
+        "Solely machinery／equipment；B(P)R23(3)(b)可disregard，但受APP151前置條件及10%cap"
+      ],
+      [
+        "APP42未有詳細佈置時的合理指標",
+        "A/C plant rooms≤全幢GFA1%；AHU≤所在樓層GFA4%。超過須充分理據，不是超過部分自動計或自動獲免"
+      ],
+      [
+        "住宅單位內進入的A/C room",
+        "先解釋為何不能從戶外／common area進入；須證明需要與大小。若獲接受，地台與主用房高差≥500mm、至少一邊開放且面向open air，圍封例外按APP42 para12"
+      ],
+      [
+        "Other non-essential（A20／Note4）",
+        "熱水boiler、酒店泳池／公共園景水景過濾房、SMATV等，依23(3)(a) modification；受前置條件及cap。SMATV房通常≤1.2m×1.2m並符合common-parts條件"
+      ],
+      [
+        "環保系統（A23／Note7）",
+        "雨水收集／灰水再用及太陽能電池房等，APP2 para4(f)可申請modification；受前置條件，但不受overall cap"
+      ],
+      [
+        "Pipe／air ducts及vertical risers",
+        "Essential network依A21免cap；non-essential network依A22受cap。須真正分配系統並可檢修，不能只標duct"
+      ]
+    ],
+    "documents": [
+      "設備佈置／schedule、必要容量計算及服務範圍",
+      "維修更換通道、淨高／通風／結構荷載及合規分隔",
+      "GFA exemption schedule逐項寫明法源、APP151行號、cap及pre-requisite；需要時BA16"
+    ],
+    "trap": "APP40 footnote1明文：酒店中央A/C及中央熱水機房按23(3)(b)，仍受APP151。23A酒店支援設施的免cap不能轉借給這些機房。",
+    "scenario": "酒店把central chiller room與administration office合稱BOH，能否整層按23A免GFA及cap？",
+    "answer": "No. Classify the spaces by their actual functions. The central A/C and hot-water plant rooms are considered under B(P)R23(3)(b), subject to the APP-151 prerequisites and cap. Administration offices are accountable. Only qualifying unique hotel supporting facilities may be considered under regulation 23A, subject to their own criteria.",
+    "sources": [
+      {
+        "title": "APP151 AppendixA Notes1–7及footnote",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf#page=6"
+      },
+      {
+        "title": "APP42 paras7–12及37",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP042.pdf"
+      },
+      {
+        "title": "APP2 paras4及plant criteria",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP002.pdf"
+      },
+      {
+        "title": "APP40 footnote1",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP040.pdf"
+      }
+    ],
+    "quote": "the minimum amount of GFA necessary"
+  },
+  {
+    "id": "club",
+    "title": "住宅Clubhouse：設施清單、雙重上限與2025新條件",
+    "group": "環境／Concession",
+    "trigger": "APP42 paras32–33＋APP104；不是APP151直接批准整個會所不計。",
+    "checks": [
+      "只供一般業主、住戶及其bona fide visitors使用，規模、淨高及active／passive mix須合理；營商、對外會員會所及商業餐廳不合資格。",
+      "主設施連所有voids、專用plant／泳池過濾房、covered courts及僅服務會所的附屬面積，須一起納入APP104 Table1，不能把專用機房再撥走規避上限。",
+      "同時檢查APP151前置條件及住宅部分10%overall cap；APP104上限內不等於overall cap還有空位，更不等於已獲BA批准。"
+    ],
+    "table": [
+      [
+        "項目",
+        "可申請及限制"
+      ],
+      [
+        "Active AppendixA",
+        "泳池、多用途／壁球／籃球／足球／網球／羽毛球場、兒童遊樂、games、室內golf、乒乓球、fitness／gym／weight training／aerobic／exercise、bowling、skating、volleyball、攀石、dance／yoga"
+      ],
+      [
+        "Passive AppendixA",
+        "Sitting／lounge、billiards、sauna／jacuzzi／spa、reading／study／library、function、computer／video game、music／karaoke；按規模及主功能關係衡量"
+      ],
+      [
+        "Ancillary AppendixA",
+        "Clubhouse管理／接待／staff room、first aid、changing／showers／toilets／stores，按相稱需要；不是整幢管理辦公室自動歸此類"
+      ],
+      [
+        "Snack／mini-bar／pantry",
+        "總面積≤10m²；須附屬休憩活動，非商業餐飲"
+      ],
+      [
+        "Kitchen",
+        "≤15m²，而且地盤沒有任何commercial floor space；仍須申請及符合附屬用途"
+      ],
+      [
+        "Domestic GFA D≤25,000m²",
+        "APP104上限=5%D"
+      ],
+      [
+        "25,000<D≤50,000",
+        "max(4.5%D, 1,250m²)"
+      ],
+      [
+        "50,000<D≤75,000",
+        "max(4%D, 2,250m²)"
+      ],
+      [
+        "75,000<D≤100,000",
+        "max(3.5%D, 3,000m²)"
+      ],
+      [
+        "100,000<D≤125,000",
+        "max(3%D, 3,500m²)"
+      ],
+      [
+        "D>125,000",
+        "max(2.5%D, 3,750m²)"
+      ],
+      [
+        "另項：住宅塔樓footprint下open-sided covered landscape／children play",
+        "不納入Table1 sliding scale；自身≤domestic GFA5%，受APP151前置條件，依A16不受overall cap；不能把室內gym改名套用"
+      ],
+      [
+        "2025-8-31起新圖／major revision",
+        "至少一個elderly-friendly toilet＋elderly fitness equipment，依BFA；若該廁所同時是required accessible toilet，須另加一項elderly-friendly facility（除fitness equipment外）"
+      ]
+    ],
+    "documents": [
+      "BA16及用途／佈置／淨高／GFA schedule、設施需要及營運限制",
+      "發展商／業主undertaking：DMC common area、用途、控制、營運、財政及維修；改動須更新undertaking及layout",
+      "OP申請前把undertaking及layout在Land Registry註冊並提供證據；approved plans披露concession資料",
+      "長者友善設施標示於圖則；另查OZP／lease及泳池等適用制度"
+    ],
+    "trap": "Table1各級是「百分比／固定面積取較大」而非取小，也不是累進逐段相加。5%會所、5%open-sided covered play及10%overall cap是不同限制。",
+    "scenario": "D=40,000m²，其他受cap項目3,000m²，會所申請1,600m²（含專用機房）。可全免嗎？",
+    "answer": "No. The APP-104 individual limit is max(4.5% × 40,000, 1,250) = 1,800m². However, the remaining APP-151 cap is 4,000 − 3,000 = 1,000m². Only up to 1,000m² remains within both numerical limits, subject to eligibility, prerequisites, the modification and undertaking conditions. The clubhouse plant area cannot be excluded from the individual-limit calculation.",
+    "sources": [
+      {
+        "title": "APP104 paras1–12、Table1及AppendixA",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP104.pdf"
+      },
+      {
+        "title": "APP42 paras28–33",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP042.pdf"
+      },
+      {
+        "title": "APP151 AppendixA items15及16",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf"
+      }
+    ],
+    "quote": "whichever is greater"
+  },
+  {
+    "id": "hotelboh",
+    "title": "酒店23A：可免BOH與必計FOH逐項表",
+    "group": "Concession／用途",
+    "trigger": "酒店免APP151 cap的，是合資格23A項目，不是所有酒店GFA concession。",
+    "checks": [
+      "23A可酌情按non-domestic SC／PR處理，並可不計合資格hotel supporting facilities及上落客區；要先通過APP40選址、基本設施、中央A/C及熱水、licensed hotel等條件。",
+      "獨有並構成正常酒店運作一部分的支援設施：位置實用、大小合理、設計真實、只供staff進入且不易濫用。一般不預期超酒店total GFA5%，超過須強理據。",
+      "APP40 AppendixA列BOH／FOH合計最低配套3%酒店total GFA；不是3%都免，也不是額外3%bonus。"
+    ],
+    "table": [
+      [
+        "空間",
+        "是否可按APP40／23A考慮不計"
+      ],
+      [
+        "合資格unique BOH",
+        "Linen store、laundry、carpentry workshop、mechanical／electrical workshop、dry goods／food／beverage／furniture stores、staff canteen、changing、rest room及合資格staff toilet"
+      ],
+      [
+        "Staff toilet例外",
+        "若屬admin／management office部分或僅服務該office，不能按該項免；AppendixA footnote3"
+      ],
+      [
+        "必計其他BOH",
+        "Administration／management office、purchasing／receiving office、security office"
+      ],
+      [
+        "必計FOH",
+        "Reception／lobby、shopping、dining、business centre、function rooms；必要配套≠可免GFA"
+      ],
+      [
+        "中央A/C／中央熱水機房",
+        "APP40 footnote1：按23(3)(b)，合理大小才考慮；受APP151前置及10%cap，非23A免cap"
+      ],
+      [
+        "服務式住宅",
+        "23A僅bona fide hotels，不適用service apartments"
+      ]
+    ],
+    "documents": [
+      "Hotel operator及擬領牌資料、設施schedule與staff-only access",
+      "23A支援設施的用途、面積、動線及防濫用說明",
+      "分開23A exemption、一般plant concession、FOH accountable及各自cap／基數"
+    ],
+    "trap": "酒店「需要有」reception及administration office，不代表它們可不計GFA；只供staff用也不足以令任何office成為unique BOH。",
+    "scenario": "酒店保安室與staff canteen均staff-only，是否兩者都可按23A免？",
+    "answer": "No. Staff-only access is only one criterion. Appendix A lists a qualifying staff canteen among the unique BOH facilities, whereas the security office remains accountable. Demonstrate the other acceptance criteria and reasonable area for any proposed exclusion.",
+    "sources": [
+      {
+        "title": "APP40 paras3、8、11及AppendixA／footnote1",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP040.pdf"
+      },
+      {
+        "title": "APP151 para5(f)",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "tcpformula",
+    "title": "TCP公式：量值→scale→投入→頻率／人手",
+    "group": "監督／責任",
+    "trigger": "新圖解實驗室提供實際工程量輸入；先由TM Table1選正確stream／grade及最低frequency。",
+    "checks": [
+      "S=min(estimated measurable value÷basic value,2)。先分total cost、average cost/month及area／number；不可用一個合約總價代替所有量值。",
+      "Notional input I0依Table8.2：L1=0.5（特定head兼TCP）、L2=1、L3=2、L4=4、L5=25 man-days/month。Adjusted input=S×I0；S<1不能減最低巡查頻率，full-time仍須連續監督。",
+      "S>1將投入向上配對Table8.2／8.3；weekly以上：4、8、12、16、20、25分別對每週1、2、3、4、5次及full-time。Full-time>25須加TCP或以合資格高grade投入組合，不能只標「每週六次」。"
+    ],
+    "table": [
+      [
+        "Table8.1工程",
+        "Basic value／量值"
+      ],
+      [
+        "Demolition",
+        "最大單層拆卸面積750m²"
+      ],
+      [
+        "GIFW",
+        "鑽機6台；無drillholes時同步trial pits／coreholes／slope surface strippings20個"
+      ],
+      [
+        "Site formation／斜坡、擋土牆或buried services repair",
+        "總造價$40M／$12M"
+      ],
+      [
+        "ELS／pile wall",
+        "平均每月$8M"
+      ],
+      [
+        "Tunnel／cap、footing、basement",
+        "總造價$47M"
+      ],
+      [
+        "Large-diameter bored／barrette piles",
+        "平均每月$19M"
+      ],
+      [
+        "其他樁",
+        "平均每月$9.5M"
+      ],
+      [
+        "Superstructure",
+        "總construction floor area20,000m²，不是扣concession後GFA"
+      ],
+      [
+        "Curtain wall／cladding",
+        "總表面積10,000m²"
+      ],
+      [
+        "A&A／minor／street works",
+        "總造價$17.5M／$11M／$12M"
+      ],
+      [
+        "例：30,000m²上蓋、原L4",
+        "S=1.5；I=6；向上配Table8.3→L4.1、每週2次（8 man-days/月）"
+      ],
+      [
+        "Form C合併",
+        "只同時施工可組合；Column6=S×Column5；合資格職責合計於Column9，再推人數／頻率；不得低於TM最低要求"
+      ]
+    ],
+    "documents": [
+      "TM Table1所選工程／stream／grade及最低frequency",
+      "Measurable-value及cost basis；Table8.1容許扣項要有資料",
+      "Form C及SP、資格／相關經驗、時間配置與critical-stage額外監督"
+    ],
+    "trap": "Scale factor不是所需人數。圖示不能只選面積就自動推定T1–T5；Form C的量值組合也不能消除full-time持續監督。",
+    "scenario": "上蓋10,000m²，scale0.5，原每週巡查可改為每兩週嗎？",
+    "answer": "No. The scale factor may reduce the duration per visit, but not the minimum frequency level in Table 1 of the Technical Memorandum. Maintain weekly visits and complete all essential inspection tasks. Full-time TCPs must continue to provide continuous supervision.",
+    "sources": [
+      {
+        "title": "Site Supervision CoP8.4–8.17、Tables8.1–8.3及FormC",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf#page=59"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "dew",
+    "title": "Designated Exempted Works：30項及數字界線",
+    "group": "小型工程／豁免",
+    "trigger": "正確名稱是designated exempted works（指定豁免工程），不是excepted works；BO41(3B)及Cap123N Schedule2。",
+    "checks": [
+      "一般Exempted Building Works依BO41(3)／(3C)；DEW是另列Schedule2的特定小規模工程；minor works列Schedule1，三者不能混用。",
+      "完全符合DEW描述及全部條件時，不須事先圖則批准／consent，也不須MWCS簡化程序、指定AP或registered contractor。仍須安全、合規及遵守其他法例、地契和DMC。",
+      "下表按官方現行30項逐項整理；動作、物料、位置及尺寸都屬資格，不能只符合一個數字便斷定。超標後先查Schedule1是否minor works；不是一律變ClassIII。",
+      "日常油漆、室內批盪、牆紙、非埋藏internal branch pipe或sanitary fitment更換可屬一般豁免；外牆／結構／排水改動不能只用「裝修」概括。"
+    ],
+    "table": [
+      [
+        "Item",
+        "工程",
+        "界線／易錯點"
+      ],
+      [
+        "1",
+        "樓板開孔",
+        "最大兩點距離≤150mm；新孔中心至其他現有孔中心≥450mm；不增加懸臂板荷載、不改其他結構"
+      ],
+      [
+        "2",
+        "依原設計還原樓板孔",
+        "孔最大兩點距離≤150mm；不加懸臂板荷載、不改其他結構"
+      ],
+      [
+        "3",
+        "按原設計更換GRP水缸",
+        "容量≤9m³、水頭≤2m；屋頂缸距屋頂邊>1.5m"
+      ],
+      [
+        "4",
+        "拆除GRP水缸",
+        "容量≤9m³；屋頂缸距邊>1.5m。不是新建水缸"
+      ],
+      [
+        "5",
+        "地面實心圍牆：建／改／修／拆",
+        "高≤1.1m；不作protective barrier"
+      ],
+      [
+        "6",
+        "地面網圍欄／金屬欄杆：修／拆",
+        "總高（連頂部）≤3m；如有實牆下部，其高≤1.1m；不作protective barrier"
+      ],
+      [
+        "7",
+        "外批盪／外牆磚／屋頂飾面：鋪／修／拆",
+        "外飾面最高點離相鄰地／屋頂≤3m；屋頂坡度≤1:4、非inaccessible roof；鋪／修後厚度不超原設計"
+      ],
+      [
+        "8",
+        "圍牆／樓宇入口金屬閘：建／改／修／拆",
+        "每扇≤100kg、闊≤1.2m；高≤2.2m；不加懸臂板荷載、不改其他結構"
+      ],
+      [
+        "9",
+        "挖掘",
+        "深度≤300mm"
+      ],
+      [
+        "10",
+        "貼外牆招牌：建／改（含換展示面）",
+        "展示面積≤1m²、無LED display system；突出≤150mm、任何部分距地≤3m；不加懸臂荷載／不改其他結構"
+      ],
+      [
+        "11",
+        "拆外牆招牌",
+        "面積≤1m²、無LED；突出≤600mm、任何部分距地≤3m。拆除與建造突出限值不同"
+      ],
+      [
+        "12",
+        "只拆BSI支架／金屬箱／通風管及支架",
+        "按官方所列地面／非懸臂簷篷或屋頂位置；支架／風管高≤1m。屋頂邊距>1.5m或有≥1.1m protective barrier；不涵蓋任意新建"
+      ],
+      [
+        "13",
+        "外牆冷氣／燈具支架：建／改／拆",
+        "突出≤600mm、最高點離地／屋頂≤3m；支承設備≤100kg；不跨街或common part、不加懸臂板荷載"
+      ],
+      [
+        "14",
+        "外牆簷篷：建／改／拆",
+        "非混凝土；突出≤500mm、最高點離地／屋頂≤3m；不跨街或common part、不加懸臂板荷載"
+      ],
+      [
+        "15",
+        "外牆晾衣架：建／改／拆",
+        "突出≤750mm、最高點離地／屋頂≤3m；不跨街或common part、不加懸臂板荷載"
+      ],
+      [
+        "16",
+        "地面網圍欄／金屬欄杆：建／改",
+        "總高≤3m、實牆下部≤1.1m、不作protective barrier；與item6修／拆分開"
+      ],
+      [
+        "17",
+        "地面外置杆：建／改／修／拆",
+        "含頂部高≤3m；建／改時含頂部但不計pedestal重量≤100kg"
+      ],
+      [
+        "18",
+        "屋頂網圍欄／金屬欄杆：建／改／修／拆",
+        "高≤1.1m、無實牆下部（pedestal除外）、不作protective barrier；不加懸臂荷載／不改其他結構；邊無≥1.1m barrier時距邊>1.5m"
+      ],
+      [
+        "19",
+        "屋頂杆：建／改／修／拆",
+        "含頂部高≤1.1m；不加懸臂荷載／不改其他結構；邊無≥1.1m barrier時距邊>1.5m；建／改多杆間距≥2.5m"
+      ],
+      [
+        "20",
+        "屋頂實心圍牆：建／改／修／拆",
+        "高≤500mm、厚≤100mm、密度≤650kg/m³；建／改加牆總長／屋頂面積≤0.3m/m²；不加懸臂荷載／不改其他結構；邊無≥1.1m barrier時距邊>1.5m"
+      ],
+      [
+        "21",
+        "合法地面實牆頂新增網欄／欄杆／杆",
+        "原實牆非UBW且高≤2.5m；合計連頂部高≤3m；網欄／欄杆不作protective barrier"
+      ],
+      [
+        "22",
+        "地面／屋頂外金屬風管及支架：建／改／拆",
+        "最高點離相鄰地面／屋頂≤900mm；不加懸臂板荷載；屋頂邊無≥1.1m barrier時距邊>1.5m"
+      ],
+      [
+        "23",
+        "外牆／非懸臂露台騎樓簷篷的金屬風管／支架",
+        "不加懸臂荷載；外牆突出≤750mm；平台上最大截面≤750mm、離平台高≤900mm；吊在底部最大截面≤750mm；最高點離地／屋頂≤3m。建／改時相關露台等不得跨街／common part"
+      ],
+      [
+        "24",
+        "地面戶外花槽／池／噴泉：建／改／修／拆",
+        "挖深≤300mm；建／改高度≤600mm，修／拆高度≤1.1m"
+      ],
+      [
+        "25",
+        "地面明渠：加／改／修／拆",
+        "深≤300mm，不能服務天然／人工斜坡或擋土牆"
+      ],
+      [
+        "26",
+        "外牆種植物金屬支架：建／改／修／拆",
+        "連植物加載≤100kg/m²牆面；突出≤300mm、最高點離地／屋頂≤3m；不跨街／common part、不加懸臂板荷載"
+      ],
+      [
+        "27",
+        "外牆窗花／擋風架：建／改／修／拆",
+        "突出≤300mm、最高點離地／屋頂≤3m；超出原洞投影邊緣≤300mm（角位除外）；不跨街／common part、不加懸臂板荷載"
+      ],
+      [
+        "28",
+        "外牆貓梯：建／改／修／拆",
+        "最高點離地／屋頂≤3m；踏棍突出≤300mm、闊≤500mm；不跨街、不加懸臂板荷載"
+      ],
+      [
+        "29",
+        "屋頂液態／膜防水：鋪／換",
+        "不涉及鋪／拆tile layer或screeding；連拆批盪地台不可只套本項"
+      ],
+      [
+        "30",
+        "招牌展示面：裝／改／換／拆",
+        "只限fabric sheeting或plastic展示面；不改任何其他結構。與拆整個招牌不同"
+      ]
+    ],
+    "documents": [
+      "實際動作、材料、位置、尺寸、重量、荷載與現有結構紀錄",
+      "逐項比對Schedule2描述及Part1一般規定；保留量度與照片",
+      "若不符，重新分類MWCS／一般工程並作相應委任／呈交；common parts先處理權限"
+    ],
+    "trap": "不需要MW通知不等於可以破壞逃生路線或法定protective barrier。屋頂低牆500mm也不能代替防墮欄杆。老英文指南的15項已不足以代表官方現行30項。",
+    "scenario": "外牆冷氣支架突出550mm、離地4m，是否DEW13？",
+    "answer": "No. Although the projection is within 600mm, the highest point exceeds the 3m limit above the roof or ground applicable to item 13. Check the relevant minor-works item and its complete conditions, or follow the ordinary approval-and-consent procedure as appropriate. Do not treat failure of the DEW test as automatic Class III qualification.",
+    "sources": [
+      {
+        "title": "BD現行30項索引",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index.html"
+      },
+      {
+        "title": "BO41",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "Cap123N Schedule2",
+        "url": "https://www.elegislation.gov.hk/hk/cap123N"
+      },
+      {
+        "title": "DEW 1官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_1.html"
+      },
+      {
+        "title": "DEW 2官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_2.html"
+      },
+      {
+        "title": "DEW 3官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_3.html"
+      },
+      {
+        "title": "DEW 4官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_4.html"
+      },
+      {
+        "title": "DEW 5官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_5.html"
+      },
+      {
+        "title": "DEW 6官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_6.html"
+      },
+      {
+        "title": "DEW 7官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_7.html"
+      },
+      {
+        "title": "DEW 8官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_8.html"
+      },
+      {
+        "title": "DEW 9官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_9.html"
+      },
+      {
+        "title": "DEW 10官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_10.html"
+      },
+      {
+        "title": "DEW 11官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_11.html"
+      },
+      {
+        "title": "DEW 12官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_12.html"
+      },
+      {
+        "title": "DEW 13官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_13.html"
+      },
+      {
+        "title": "DEW 14官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_14.html"
+      },
+      {
+        "title": "DEW 15官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_15.html"
+      },
+      {
+        "title": "DEW 16官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_16.html"
+      },
+      {
+        "title": "DEW 17官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_17.html"
+      },
+      {
+        "title": "DEW 18官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_18.html"
+      },
+      {
+        "title": "DEW 19官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_19.html"
+      },
+      {
+        "title": "DEW 20官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_20.html"
+      },
+      {
+        "title": "DEW 21官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_21.html"
+      },
+      {
+        "title": "DEW 22官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_22.html"
+      },
+      {
+        "title": "DEW 23官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_23.html"
+      },
+      {
+        "title": "DEW 24官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_24.html"
+      },
+      {
+        "title": "DEW 25官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_25.html"
+      },
+      {
+        "title": "DEW 26官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_26.html"
+      },
+      {
+        "title": "DEW 27官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_27.html"
+      },
+      {
+        "title": "DEW 28官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_28.html"
+      },
+      {
+        "title": "DEW 29官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_29.html"
+      },
+      {
+        "title": "DEW 30官方細則",
+        "url": "https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index_mwcs_works_30.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "s16amend",
+    "title": "s16批准後改圖：Class A／B／fresh s16",
+    "group": "規劃／改圖",
+    "trigger": "CDA已有MLP／規劃許可，不代表每次修改都重新s12A。",
+    "checks": [
+      "先找原s16／17／17B批准方案、批准條件及現行OZP。PG36C共有19類修改，不能以改動面積小就自行叫Class A。",
+      "以原批准方案比較；不能以上一次A／B修改後數字反覆累加。多項B修改宜同一申請處理，不可拼合不同獲准B方案。",
+      "Class A毋須再向TPB申請，但在building plans標明修改；Class B先循s16A(2)；不屬A或B則fresh s16。s12A是改法定圖則，不是一般改MLP。"
+    ],
+    "table": [
+      [
+        "檢查",
+        "結果／限制"
+      ],
+      [
+        "單位數減少",
+        "Category3 Class A"
+      ],
+      [
+        "單位數增加：一般A門檻",
+        "≤min(200個, 原批准數10%)；原批准條件不可已訂最高單位數"
+      ],
+      [
+        "一般B門檻",
+        "非A且增加≤min(500個, 原批准數20%)"
+      ],
+      [
+        "1200→1300",
+        "增加100=8.33%；符合A條件時A"
+      ],
+      [
+        "1200→1400",
+        "增加200=16.67%；一般B"
+      ],
+      [
+        "1200→1500",
+        "增加300=25%；超B的一般門檻，fresh s16"
+      ],
+      [
+        "其他修改",
+        "高度、總GFA、用途比例、parking、open space等各查對應category；沒有一個通用10%規則"
+      ],
+      [
+        "滿足批准條件而作修改",
+        "PG36C para8另處理；與主管部門協調，不能將任意設計更改包裝成履行條件"
+      ]
+    ],
+    "documents": [
+      "Form S16A：原獲許可的人提出；新業主可獲原申請人授權代表",
+      "原／新development schedule及有標示修改的MLP／building-plan extracts",
+      "說明各修改分類及比較基準；按影響更新交通、排水、環境、景觀等assessment，不是每案盲交全部",
+      "追蹤原有履行條件與開工期限；獲B批准不自動延長期限"
+    ],
+    "trap": "最大陷阱：舊版門檻、把Class A當BA批准、把同GFA當所有變更均A。B一般不適用owner consent／notification及public-inspection程序；不要抄fresh s16的程序。",
+    "scenario": "1200個單位的已批准CDA，GFA及SC不變，改1300／1500個，分別怎辦？",
+    "answer": "Compare each amendment against the original approved scheme and the applicable category in PG36C. The increase to 1,300 units is Class A if its conditions are satisfied. The increase to 1,500 exceeds the general Class B unit-number threshold and requires a fresh section 16 application. Review all concurrent changes and approval conditions separately.",
+    "sources": [
+      {
+        "title": "TPB PG36C paras2–8及AnnexI Category3",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+      },
+      {
+        "title": "TPB最新S16A表格與申請指引",
+        "url": "https://www.tpb.gov.hk/en/plan_application/apply.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "exemptdistinction",
+    "title": "BO不適用、exempted works、豁免／修改：三種答案",
+    "group": "BO／分類",
+    "trigger": "題目問buildings或works exempt from BO，不可答豁免GFA或窗戶要求。",
+    "checks": [
+      "先辨題目問整體BO適用範圍、免事先approval／consent的工程，還是特定條文豁免／修改。s41、minor works制度及s42的法律效果不同。",
+      "s41(3)一般是building內、不涉及結構的工程；排水、指定地區GI、site formation、minor works等有排除或獨立制度。屋頂新搭構築物不因「細」而自動屬此條。",
+      "DEW按Cap123N Schedule2逐項尺寸及條件；minor works按class／type／item走簡化程序；s19只為真正urgent works，不能事後拿來補一般違規工程。"
+    ],
+    "table": [
+      [
+        "題目用字",
+        "答題主軸"
+      ],
+      [
+        "BO不適用的buildings／works",
+        "BO41(1)逐項法定類別；不是所有政府土地上的私人建築均不適用"
+      ],
+      [
+        "不用一般approval／consent",
+        "41(3)／(3B)等適用條件；MW另按簡化制度"
+      ],
+      [
+        "窗、GFA、hotel concession",
+        "s42及相關規例／PNAP的特定豁免或修改；不代表BO整體不適用"
+      ]
+    ],
+    "documents": [
+      "指出確切section及工程範圍",
+      "列尺寸、位置、結構及排除條件",
+      "補上仍適用的安全、承建商及其他法例責任"
+    ],
+    "trap": "2025原卷Q1(b)同時問some or whole provisions及BA power；s41和s42均須分辨。合資格WC等s42例子未必不對題，但必須指出確切條文、法律效果及條件；不能只列concession名詞。",
+    "scenario": "2025Q1(b)要求解釋不同exemptions及各舉例。如何把s41與s42分清，而不把題目過度縮窄？",
+    "answer": "First identify whether the question concerns the application of the Ordinance, exemption from prior approval and consent, or modification of a particular provision. Cite section 41 for the relevant exempted category; a GFA concession or a section 42 modification does not exempt the project from the Ordinance as a whole.",
+    "sources": [
+      {
+        "title": "BD：A&A與法定豁免範圍",
+        "url": "https://www.bd.gov.hk/en/whats-new/press-releases/2011/0519-alteration-and-addition-works-must-comply-with-the-law.html"
+      },
+      {
+        "title": "BO及附屬法例官方索引",
+        "url": "https://www.bd.gov.hk/en/resources/codes-and-references/buildings-ordinance-and-related-subsidiary-legislation/index.html"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "spminimum",
+    "title": "SP：grade、stream、頻率、人數四件事",
+    "group": "監督／Form C",
+    "trigger": "問T3 full-time或要多少TCP，不能只答scale factor或L1–L5。",
+    "checks": [
+      "TM Table1先決定工程性質、各stream及TCP grade。scale只調監督投入，不把T3升成T5。",
+      "工程量／basic value不同量綱不能混：上蓋用construction floor area，ELS用平均每月造價，cap／footing用總造價。S取比值但最高2。",
+      "逐職位寫原投入、S×原投入、實際頻率及人數。S<1可縮短每次巡查時間，但獨立職位的最低頻率及full-time連續監督不能削減。",
+      "2025原卷已核：Q3是TCFA40000m²；AP stream T3、T4，adjusted inputs8、2。先前48000 site area是回憶資料，不能再當原題。"
+    ],
+    "table": [
+      [
+        "例子（獨立配置）",
+        "計算及結果"
+      ],
+      [
+        "上蓋TCFA30000；RC stream",
+        "S=1.5；T1：25×1.5=37.5→2名full-time；T3及T4各4×1.5=6→各1名每週2次"
+      ],
+      [
+        "同工程AP stream",
+        "T3：4×1.5=6→1名每週2次；T4：1×1.5=1.5→1名每兩週"
+      ],
+      [
+        "只給site area48000",
+        "不能自動當TCFA；題目須提供或能求相應measurable item"
+      ],
+      [
+        "每週notional4→adjusted6",
+        "向上配8：每週2次；不是每月6次"
+      ],
+      [
+        "符合資格後合併",
+        "同時工序、同stream先加adjusted inputs，再定實際配置；原full-time約束仍須保留"
+      ]
+    ],
+    "documents": [
+      "Form A適用SP／監督安排",
+      "Form C有組合時逐欄列工序、scale、grade、原投入、調整投入及人員安排",
+      "TCP名冊、資格及相關經驗證明；工地巡查、指示、跟進和結案記錄"
+    ],
+    "trap": "實驗室已提供逐stream表及兩職位組合；其人數是明示假設下的可行配置，不能稱為全工地法定最少總人數。Head不自動計作TCP。",
+    "scenario": "RC T3和T4各需6 man-days/月，可以未核資格就叫一名T4兼任嗎？",
+    "answer": "No. Verify that the proposed higher-grade TCP meets the qualifications and relevant experience for both duties. Record the combined adjusted input in Form C and provide adequate attendance without reducing any minimum or continuous-supervision requirement.",
+    "sources": [
+      {
+        "title": "TM Table1及Table2",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/TMSS2009_e.pdf"
+      },
+      {
+        "title": "CoP8.4–8.17、Tables8.1–8.3及FormC",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "mbis",
+    "title": "MBIS／MWIS：收到notice後才開始答程序",
+    "group": "既有樓宇／維修",
+    "trigger": "樓齡不是完成法定責任的證明；看通知範圍、人士及期限。",
+    "checks": [
+      "MBIS針對30年或以上，MWIS10年或以上，法定範圍有例外（如不多於3層的住宅樓宇）；達樓齡不等於每幢已被送達notice。",
+      "MBIS由Registered Inspector作prescribed inspection；有修葺需要時按制度聘registered contractor並由適當人士監督，完成後交證明及報告。",
+      "MWIS由Qualified Person檢查，修葺安排及證明按制度；不能把普通洗窗工當QP。檢查窗戶後未完成所需修葺不算結案。"
+    ],
+    "table": [
+      [
+        "MBIS檢查範圍",
+        "例"
+      ],
+      [
+        "外部及結構",
+        "外牆、外部構件、結構安全"
+      ],
+      [
+        "消防及衞生",
+        "means of escape、fire-resisting construction、排水"
+      ],
+      [
+        "僭建物",
+        "辨識相關UBW並按法定制度處理；不是RI檢查後自動合法化"
+      ]
+    ],
+    "documents": [
+      "notice及範圍／期限",
+      "RI／QP及承建商委任",
+      "inspection／repair reports、completion certificates及所需提交"
+    ],
+    "trap": "區分RI、QP、AP、RSE、registered contractor；不是每一制度都由AP簽同一表。",
+    "scenario": "窗戶已檢查但需要修理，業主能否只交inspection report便結案？",
+    "answer": "Complete the prescribed inspection and any required repair, using the prescribed personnel and supervision arrangements. Submit the relevant certificate and reports within the notice requirements; inspection alone does not discharge an outstanding repair obligation.",
+    "sources": [
+      {
+        "title": "MBIS／MWIS General Guidelines",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/GGMBISMWIS.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "readiness",
+    "title": "考前驗證：背甚麼、在哪裡查、怎樣證明會答",
+    "group": "考試／索引",
+    "trigger": "不用再以「看過一次」當掌握。每題留下可驗證的作答證據。",
+    "checks": [
+      "閉卷背判斷入口：site class條件；s12A／16／16A；domestic／non-domestic／composite；BO41／42／MW／urgent；approval不等於consent；OP不等於lease CC。",
+      "數值表改練定位：指定條文→表格→正確欄→例外→結論；例如discharge、sanitary fitments、FRR、TCP matrix。不是只記大概在哪本書。",
+      "每次限時答一個完整小題。揭答案前寫結論、法律／條件、套事實、程序及限制。隔48小時重做同題的變式，若仍能寫才算保留。"
+    ],
+    "table": [
+      [
+        "資料",
+        "考場策略"
+      ],
+      [
+        "BO及准許附例／CoP",
+        "以當屆official permitted list為準；熟悉章／表／form位置"
+      ],
+      [
+        "PNAP／JPN／OZP／TPB guidelines",
+        "reading list不等於可帶；未在當屆准許清單不能假設可攜"
+      ],
+      [
+        "個人註解／貼頁／影印本",
+        "遵守handbook對clean copies及附加材料的限制；不要自行假定整理筆記可帶"
+      ],
+      [
+        "信心檢核（本網站學習指標）",
+        "同題與變式均能在限時內：分類正確、算式量綱正確、例外正確、文件／人士正確、結論回答所問；不是官方及格標準"
+      ]
+    ],
+    "documents": [
+      "逐項比對當屆open-book list及candidate instructions",
+      "做個人錯誤表：錯分類／漏條件／錯數值／漏程序／時間不足",
+      "每週一組混合題；先獨立交完整答案，再查原文修正"
+    ],
+    "trap": "能回答同事追問與能在考試時間內主動列出得分條件是兩件事。優先練你2025三類實際失分：BO exemption分類、s16A、TCP／non-conformity行動。",
+    "scenario": "知道消防表在哪裡，但一題花15分鐘仍找不到正確欄，算掌握嗎？",
+    "answer": "Practise locating and applying the controlling table under time pressure. Record the selected provision, assumptions, calculation and conclusion. Re-test with changed facts rather than treating recognition of the topic as mastery.",
+    "sources": [
+      {
+        "title": "HKIA2026 April open-book list",
+        "url": "https://hkia.net/upload/finder/file/PA/15th_PA_Open_Book_Reference%20List_2026%20Apr.pdf"
+      },
+      {
+        "title": "HKIA PA Handbook July2025",
+        "url": "https://hkia.net/upload/finder/file/PA/PA%20Handbook_revised_2025%20July.pdf"
+      },
+      {
+        "title": "HKIA官方2022 Paper1 Study Guide",
+        "url": "https://hkia.net/upload/finder/file/PA/HKIA-ARB%20PA%20Paper%201%20Study%20Guide_2022.pdf"
+      }
+    ],
+    "quote": null
+  },
+  {
+    "id": "s16all",
+    "title": "s16後修改：19類別的A／B檢查表",
+    "group": "規劃／改圖",
+    "trigger": "不限於單位數；開啟圖解實驗室下方的完整分類表。",
+    "checks": [
+      "每一項變動分開對PG36C AnnexI。只有全部相關項目均符合A，才可整體按A處理；混有B或fresh-s16項目不能用一項A概括。",
+      "有些A分支要主管部門agreement：毋須TPB申請不等於毋須取得任何部門同意。保留函件、原／新schedule及有標示MLP。",
+      "百分比基準是original approved development，不以歷次A／B累加；減少GFA可能同時改用途mix、GIC、open space或分期，不能只看Cat2。"
+    ],
+    "table": [
+      [
+        "類別",
+        "A摘要",
+        "B／限制"
+      ],
+      [
+        "1 Site area／boundary",
+        "放線、批地／GBP審批時主管部門要求的界線調整；或site area與GFA相應減少",
+        "其他site area改動≤10%；兩類均不得藉加入須申請的不同zoning或構成material change"
+      ],
+      [
+        "2 Total GFA／PR",
+        "減少；合資格B(P)R22 bonus且OZP Notes容許；Cat1 A(a)引致增加另受條件約束",
+        "只限由Cat1 B引致增加≤min(6000m²,10%)，且OZP及批准條件均無PR／GFA限制；不是一般「加10%GFA」"
+      ],
+      [
+        "3 Units",
+        "減少；一般增加≤min(200,10%)且條件無最高單位數；site擴大且平均單位面積不變另有A(c)",
+        "非A的一般增加≤min(500,20%)；酒店房間亦屬units"
+      ],
+      [
+        "4 Blocks／disposition",
+        "改形、減幢數、minor移位：涉及環境緩解須獲同意；NTEH另限footprint在V zone／village environs比例不可下降",
+        "增加幢數；minor ancillary blocks可按備註不計。不是所有移位均自動A"
+      ],
+      [
+        "5 Height",
+        "減低；加層但不加absolute height且不超OZP層數；一般增高：原條件未定最高高度且不超現OZP；無OZP限高時一般≤10%，低樓（≤30m或10層）分支≤20%；JPN綠化設施另有分支",
+        "非A、OZP無限高：一般增高／層數≤20%，低樓分支≤30%；不增absolute height但超OZP層數另有B(c)。新增地庫若OZP要求申請，不能用A／B繞過"
+      ],
+      [
+        "6 SC",
+        "減少；增加但不超現OZP；OZP無SC限制時一般增加≤10%；JPN、法定bonus、特定site調整另有分支",
+        "非A且OZP無SC限制，增加≤20%。是原SC的百分比，不是加20個百分點"
+      ],
+      [
+        "7 Type／mix of uses",
+        "同一用途大類內；非住宅位置在非住宅部分內變動（不含GIC）；已批准非住宅大類互轉獲部門同意，或≤min(2000m²,10% ND GFA)；已批准D／ND互轉≤5%",
+        "已批准ND大類互轉超A但≤min(4000m²,20%)；已批准D／ND互轉≤10%；GIC轉其他ND另須同意且≤min(2000m²,10%)。兩類均不得違OZP GFA／PR"
+      ],
+      [
+        "8 Internal layout",
+        "內部配置變動：非環境緩解範圍，或涉及緩解但獲部門同意",
+        "此category沒有B；不符A不能自行套其他類的10%"
+      ],
+      [
+        "9 GIC",
+        "主管部門發起增加GIC",
+        "更改種類／位置／面積；非部門發起增加；部門發起刪除須交TPB。私人發起刪除：fresh s16"
+      ],
+      [
+        "10 Public open space",
+        "增加；合條件移位（轉至不同街／level／floor的部分≤5%）；active／passive轉換",
+        "減少但不低於OZP最低要求；包括私人發展內供公眾使用的open space"
+      ],
+      [
+        "11 Private open space",
+        "增加；減少但仍達HKPSG；非緩解範圍的移位或已取得同意",
+        "其他面積／位置改動；公眾用的私人土地open space改查Cat10"
+      ],
+      [
+        "12 Parking／transport",
+        "車位／LUL數量或種類：不低HKPSG或獲部門同意；內路、parking、EVA配置或出入口／運輸設施位置改動須按分支取得同意",
+        "非A的車位／LUL數量種類及出入口／運輸設施改動。TD同意與TPB程序分開記錄"
+      ],
+      [
+        "13 NBA／setback／gap",
+        "擴大；部門發起改位置或大小",
+        "非部門發起改位置或縮小；兩類均不可違現OZP相關限制"
+      ],
+      [
+        "14 Trees／landscape",
+        "多保留／種樹；部門同意景觀設計／實施時間改動；指定不良、病危或死樹移除",
+        "改指定保留樹；非A(c)的砍樹增加≤10%或保留樹減少≤10%。兩類不適用OVT；preservation不包括transplanting"
+      ],
+      [
+        "15 Recreation",
+        "私人康樂設施改動；公眾康樂設施改動獲部門同意",
+        "此category沒有B"
+      ],
+      [
+        "16 Ancillary utility",
+        "獲部門同意在發展內移位或刪除，例如RCP、STP、變電站",
+        "其他位置改動；不代表任意刪除都屬B"
+      ],
+      [
+        "17 Phasing",
+        "不涉及GIC／public open space的時間分期改動；涉及但獲部門同意",
+        "其他影響GIC／public open space供應的minor時間分期改動"
+      ],
+      [
+        "18 開工期限",
+        "沒有A",
+        "延期或累計延期不超原開工期限長度；另循適用延期指引"
+      ],
+      [
+        "19 履行條件期限",
+        "沒有A",
+        "履行批准條件的延期；不是自動延長，另核對適用指引"
+      ]
+    ],
+    "documents": [
+      "原批准書、原MLP、所有條件及有效期限",
+      "逐類amendment comparison及核對表",
+      "主管部門所需agreement及受影響assessment的更新；例如出入口TIA、緩解佈局noise／air／AVA、排水及landscape"
+    ],
+    "trap": "表是溫習摘要；特別是height、GFA及use mix有多個分支，須同讀原文provisos。A／B不是對BO規則的exemption。",
+    "scenario": "不增加GFA，只把noise-buffer block搬開，可直接叫internal layout Class A嗎？",
+    "answer": "No. Identify each affected category and verify the environmental-mitigation proviso. Obtain the relevant departmental agreement where required; unchanged total GFA does not by itself establish that the amendment is Class A.",
+    "sources": [
+      {
+        "title": "PG36C AnnexI：19類及remarks",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+      },
+      {
+        "title": "最新S16A GN",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidance_Notes/s16A_GN_eng_Oct_2026.pdf"
+      }
+    ]
+  },
+  {
+    "id": "gbpamend",
+    "title": "Class A／B與GBP：兩套審批程序",
+    "group": "規劃／建築／地契",
+    "trigger": "TPB分類先判；建築圖則是否須事先批准與consent另判。",
+    "checks": [
+      "Class A：不需再向TPB申請；在building plans標明Class A改動讓PlanD核對。已批准GBP受影響，AP安排amendment submission及其他專業圖則協調，不可沿用不符新方案的舊圖施工。",
+      "Class B：原許可獲批人或其授權代理以Form S16A申請。宜在送GBP前辦；如GBP階段才提出，可同時直接送TPB標示GBP extracts，並明列待批的s16A。送件可同時，批准不可互相替代。",
+      "BO一般route先辦amended approval及適用consent。若希望延後小修改送審，須已獲首次consent並獲s42(1)對B(A)R33(1)的modification，且不屬ADM19 AppG的排除項；不是AP單方面稱minor便可以先做。"
+    ],
+    "table": [
+      [
+        "環節",
+        "A",
+        "B"
+      ],
+      [
+        "規劃送件",
+        "不需S16A；GBP明示修改並證明符合A",
+        "Form S16A、授權、原新比較、標示MLP／圖、所需assessment"
+      ],
+      [
+        "部門同意",
+        "A分支要求agreement時仍需取得",
+        "按影響轉介部門；不獲接納或特定GIC刪除交TPB"
+      ],
+      [
+        "時限",
+        "原批准及履行期限仍適用",
+        "delegated一般6週通知；法定考慮2個月；不自動延期"
+      ],
+      [
+        "GBP／structural／drainage",
+        "依BO各自完成amendment及適用consent",
+        "規劃獲批後以一致方案取得建築批准及consent"
+      ],
+      [
+        "地契",
+        "原DLO批准圖受影響則另向LandsD釐清所需amendment approval；用途／強度等需lease modification時另辦",
+        "同左；TPB與BA均不能修改地契"
+      ],
+      [
+        "completion／OP",
+        "適用修改的批准及consent齊備，各專業圖則互相一致",
+        "同左"
+      ]
+    ],
+    "documents": [
+      "S16A普通paper route：1份簽妥form；圖及SI 3份hard＋1份soft；有代理則簽妥authorisation。EPASS仍按最新GN處理所需hard copies，並非一律零紙本",
+      "工程變更：按適用指定表格申請；s42修改用BA16；不可把S16A當BA表格",
+      "minor amendments deferred：現場存清楚記錄，施工前已符合法規／部門／地契；completion certification或OP／TOP前取得全部必要amended approval及consent"
+    ],
+    "trap": "ADM14是尚在審批的submission經case officer同意作minor修正；ADM19 paras28–31才是已consented works的deferred-submission安排。兩者均不等於Minor Works Control System。AppG亦排除偏離TPB批准scheme等情況，不能把Class A自動當作可defer。",
+    "scenario": "已獲TPB Class B批准，承建商可否即按新圖施工而不理仍未修改的GBP？",
+    "answer": "No. Acceptance of the Class B amendment does not constitute approval of amended building plans or consent to commence the amended works. Coordinate the amended GBP and other relevant plans, and obtain the requisite approval and consent under the Buildings Ordinance, unless a specifically applicable statutory or permitted arrangement provides otherwise.",
+    "sources": [
+      {
+        "title": "PG36C paras4、6、7",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+      },
+      {
+        "title": "S16A GN Oct2026 paras7–18、25、28",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidance_Notes/s16A_GN_eng_Oct_2026.pdf"
+      },
+      {
+        "title": "ADM19 paras2–3、28–31及AppG",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+      },
+      {
+        "title": "ADM14：審圖期間minor revisions",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM014.pdf"
+      },
+      {
+        "title": "BA16 streamlined modification circular",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/circular/CL_FSMSW2024e.pdf"
+      }
+    ]
+  },
+  {
+    "id": "legalwords",
+    "title": "法律英文：術語、條件及法律效果",
+    "group": "作答／用字",
+    "trigger": "不是寫得古雅，而是不要把不同權力、義務及程序混成同義詞。",
+    "checks": [
+      "答題先下具條件結論，再引用正確authority及法律route。沒有官方marking scheme，不能斷言某個口語字必然零分；但換字改變法律意思，確實會令結論失準。",
+      "shall／must表義務，may表權力或裁量；「符合數字上限」不能寫成BA shall grant concession。法例原詞與自行建議應分清。",
+      "以下英文是重建model wording，不是法例逐字引文。引用section時要確定；不知道號碼寧可準確寫法定程序，勿編造。"
+    ],
+    "table": [
+      [
+        "易混",
+        "準確區分"
+      ],
+      [
+        "TPB／PlanD／BA／BD／LandsD",
+        "TPB為規劃權力；PlanD可有delegated authority；BA為法定權力，BD為部門；LandsD處理地契"
+      ],
+      [
+        "permission／approval／consent",
+        "planning permission；approval of plans；consent to commencement of works"
+      ],
+      [
+        "exempted／modification／disregarded",
+        "豁免條文或事先程序；修改某條文；特定GFA處理。各自指出scope"
+      ],
+      [
+        "notice／application",
+        "give notice of an intended material change in use；不是把每項notice叫application for approval"
+      ],
+      [
+        "complies／may be permitted",
+        "已符合明確條件 vs 仍需裁量批准；subject to不應用來掩蓋缺失的必要判斷"
+      ],
+      [
+        "as-built／approved",
+        "as-built只說實際建成，不能寫as-built即已合法獲批"
+      ],
+      [
+        "supervision／execution",
+        "AP監督及履責；contractor執行工程及其監督責任，不能以委任TCP卸責"
+      ]
+    ],
+    "documents": [
+      "每題背主詞＋動詞＋object＋前置條件＋期限／結案",
+      "用one issue per sentence；計算後寫因此所需法律route",
+      "網站「法律英文句庫」有用途、易錯、English及可替換欄位"
+    ],
+    "trap": "不要背一大段「comply with all relevant regulations」取代具體條件；也不要用shall包裝本來屬may的裁量。",
+    "scenario": "把「BA approval is obtained, so work can start」改成法律意思準確的句子。",
+    "answer": "Approval of the plans alone does not authorise commencement of the works. Obtain the Building Authority’s consent to commencement, and satisfy the applicable pre-commencement conditions before the works commence.",
+    "sources": [
+      {
+        "title": "BO14(1) approval及consent官方案例",
+        "url": "https://www.bd.gov.hk/en/whats-new/press-releases/2025/0624-interior-designer-and-contractor-fined-260000-in-total-for-contravention-of-buildings-ordinance.html"
+      },
+      {
+        "title": "ADM19",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+      },
+      {
+        "title": "PG36C",
+        "url": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+      }
+    ]
+  },
+  {
+    "id": "151",
+    "title": "APP-151 prerequisites：7項要求＋3個提交階段",
+    "group": "環境／GFA concession",
+    "trigger": "適用July2025版；先按para10核對版本及AppendixA兩欄，不把所有GFA優惠一概套入。",
+    "checks": [
+      "記法：152＋156＋BEAM登記＋GBP目標／specific standards＋分階段文件＋overall cap＋individual criteria。APP152和156均有where applicable限制。",
+      "Gold0／Silver1／Bronze2：CA目標分別為Anticipated Gold／Silver／Bronze；後兩者另達1或2項AppendixC specific standards。不是註冊完成便等於達標。",
+      "HKGBC的registration acknowledgement、BSL的PA credit-summary acknowledgement、BSL的CA result是不同文件；申請superstructure consent之前與OP申請時亦是不同時點。",
+      "本版適用於2024-06-30或之後新GBP／major revision及先前disapproved而於該日後resubmit的GBP；較早approved GBP按para10及BO16(3)(d)處理，不能只憑考試年份倒套。"
+    ],
+    "table": [
+      [
+        "Para6項目",
+        "必須交代的內容"
+      ],
+      [
+        "(a) APP152",
+        "適用的separation、setback、greenery"
+      ],
+      [
+        "(b) APP156",
+        "D／composite適用的住宅能源效益要求"
+      ],
+      [
+        "(c) Registration",
+        "HKGBC確認BEAM Plus NB v2.0或以上完成登記的正式信件"
+      ],
+      [
+        "(d) GBP標示",
+        "CA目標rating及所選specific standards；Gold0／Silver1／Bronze2"
+      ],
+      [
+        "(e) 文件時點",
+        "consent前及OP時各有BEAM和energy文件；見下一章"
+      ],
+      [
+        "(f) Overall cap",
+        "適用時D／ND分開各10%，不是合起來互借"
+      ],
+      [
+        "(g) Individual criteria",
+        "每項green／amenity feature的相關PNAP／JPN條件仍須達成"
+      ]
+    ],
+    "documents": [
+      "GBP列CA目標及選定specific standards；登記確認信",
+      "consent前：PA credit-summary確認、AppendixB能源資料、適用APP156 provisional report摘要",
+      "OP時：CA結果、更新AppendixB及適用APP156 final report；selected standards按AppC交證明"
+    ],
+    "trap": "Para7：指定資料未先交便申請consent，modification會被撤銷。不得只寫「BEAM申請中」或「承諾日後取得證書」。",
+    "scenario": "已登記BEAM、符合10%cap，但未交PA確認便申請上蓋consent，可以嗎？",
+    "answer": "No. Registration alone does not satisfy the staged requirements. Submit the prescribed PA acknowledgement and energy information before applying for superstructure consent, and provide the required CA result and updated energy documents at the OP application stage.",
+    "sources": [
+      {
+        "title": "APP151 paras6–10（July2025）",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf"
+      },
+      {
+        "title": "APP156住宅能源效益",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP156.pdf"
+      },
+      {
+        "title": "APP152 SBD Guidelines",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP152.pdf"
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  {
+    "id": "151stages",
+    "title": "APP-151文件：誰發、交甚麼、何時交",
+    "group": "環境／GFA concession",
+    "trigger": "以申請文件為考點，不只背BEAM Plus名字。",
+    "checks": [
+      "GBP的CA目標及selected standards可以在OP申請前透過GBP amendment修改；不是口頭改目標。",
+      "AppendixB能源資料：domestic為common parts；non-domestic（包括hotel）為整幢。AP就能源評估及填表諮詢相關discipline的RPE。",
+      "Para9：OP後BD公開更新能源資料、CA結果，以及final report所載RTTV及住宅康樂設施OTTV等資料。"
+    ],
+    "table": [
+      [
+        "階段",
+        "BEAM／設計",
+        "能源資料"
+      ],
+      [
+        "GBP",
+        "HKGBC registration acknowledgement；GBP列CA目標及specific standards",
+        "符合APP156（適用時）及其他設計要求"
+      ],
+      [
+        "申請superstructure consent之前",
+        "BSL確認已妥善提交PA credit summary的信；與GBP目標一致",
+        "AppendixB預計energy performance／consumption；適用APP156 provisional report摘要"
+      ],
+      [
+        "申請OP時",
+        "BSL CA result證明達GBP目標；specific standards依AppC完成證明",
+        "更新AppendixB；適用APP156 final energy-efficiency report"
+      ]
+    ],
+    "documents": [
+      "GBP目標、登記信與PA確認逐份核對；注意HKGBC與BSL發信不同",
+      "CA結果不是自行聲明；OP資料應與完工狀況及批准GBP一致",
+      "各specific standard有其分階段圖則／undertaking／證明，不可用同一份general undertaking包辦"
+    ],
+    "trap": "「before consent application」不是「consent發出之前才補」；「at OP application」亦不能一概延至OP發出後。",
+    "scenario": "問申請上蓋consent前須交甚麼，答final CA certificate是否對題？",
+    "answer": "Submit the BSL acknowledgement of satisfactory submission of the PA credit summary, the prescribed estimated energy information and the applicable provisional energy-efficiency report summary before the consent application. The CA result and final energy documents belong to the OP stage.",
+    "sources": [
+      {
+        "title": "APP151 para6(e)、7–9及AppB",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf"
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  {
+    "id": "151standards",
+    "title": "APP-151 AppendixC：Gold0／Silver1／Bronze2",
+    "group": "環境／GFA concession",
+    "trigger": "specific standards不是六項全部都必須做；亦不是自行說有設計便算符合。",
+    "checks": [
+      "Anticipated Gold不需額外specific standard；Silver至少1項，Bronze至少2項。選定項目在GBP說明，並按各AppendixC1–C6具體要求證明。",
+      "AppC所列BIM與MiMEP是不同項目；MiMEP不是MiC，也不因採MiC而自動取得BIM／MiMEP standard。"
+    ],
+    "table": [
+      [
+        "項目",
+        "證明／易錯"
+      ],
+      [
+        "C1 Enhanced greenery",
+        "按加強綠化具體條件；不是只達APP152基本最低綠化便當加強"
+      ],
+      [
+        "C2 Health and well-being",
+        "選定設計及適用證書／undertaking，按該分支提交"
+      ],
+      [
+        "C3 Enhanced natural ventilation",
+        "light-well設計及／或NVTC證明，按適用分支辦"
+      ],
+      [
+        "C4 BIM",
+        "按所需GBP、framing及後續amendments提供BIM；OP前有completed drainage model要求"
+      ],
+      [
+        "C5 MiMEP",
+        "multi-trade integrated MEP；按指定範圍與證明要求"
+      ],
+      [
+        "C6 Elderly-friendly",
+        "按長者友善設計各項要求及證據；不是只提供一個扶手"
+      ]
+    ],
+    "documents": [
+      "按AppendixC分階段矩陣選定所需圖則、證明及undertaking",
+      "適用undertaking按要求在Land Registry註冊",
+      "每一項用原文C1–C6判，不以此摘要代替細則"
+    ],
+    "trap": "不能說所有項目都必須Gold；也不能把Bronze解作不用額外設計。",
+    "scenario": "Anticipated Silver並已做一般APP152綠化，能否直接當完成C1？",
+    "answer": "Not automatically. The selected standard must satisfy its own detailed requirements in Appendix C. Basic compliance with APP-152 does not by itself demonstrate enhanced greenery provision.",
+    "sources": [
+      {
+        "title": "APP151 para6(d)、AppendixC1–C6",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf"
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  {
+    "id": "151scope",
+    "title": "APP-151兩欄判斷：prerequisites與10%cap",
+    "group": "環境／GFA concession",
+    "trigger": "先問可否符合該優惠，再分「受前置」與「受cap」，不要把不受cap當自動GFA exemption。",
+    "checks": [
+      "AppendixA有兩個獨立欄位。Domestic、non-domestic各按自身GFA算cap；未用完的住宅cap不能任意轉給非住宅。",
+      "Mandatory／essential plant與non-essential plant不同；即使沒有面積數值上限，也只准合理必要且與發展相稱的面積，不能把剩餘面積冠名plant room。",
+      "MiC的JPN8 concession不放入APP151 overall cap；仍要s42申請並符合JPN8／planning／lease及MiC技術要求。"
+    ],
+    "table": [
+      [
+        "例子",
+        "APP151 prerequisites",
+        "10%overall cap／其他限制"
+      ],
+      [
+        "A/C／AHU non-essential plant",
+        "是",
+        "是；尚須APP2／42及合理必要面積"
+      ],
+      [
+        "住宅會所及專用附屬面積",
+        "是",
+        "是；APP104 individual cap另計"
+      ],
+      [
+        "Communal sky garden",
+        "是",
+        "不受overall cap；JPN／APP122 acceptance criteria另計"
+      ],
+      [
+        "JPN8 MiC concession",
+        "AppA此項不列入para6／7前置",
+        "不受overall cap；不能當所有MiC項目無其他要求"
+      ],
+      [
+        "Hotel concession（23A）",
+        "AppA該項不列入para6／7前置",
+        "不受overall cap；APP40及法定資格另計"
+      ],
+      [
+        "Mandatory／essential plant",
+        "AppA相關類別不列該前置",
+        "不受overall cap；必要用途及面積合理性仍查"
+      ]
+    ],
+    "documents": [
+      "GFA concession schedule：逐項列法源、面積、是否受前置及是否受cap",
+      "D／ND各自cap表與individual limits",
+      "APP151外的planning／lease及特定acceptance criteria"
+    ],
+    "trap": "不受cap只回答一個問題。不存在「未用完10%所以任何房間都可不計GFA」的權利。",
+    "scenario": "10%cap尚有空間，能把普通辦公室改名AHU room便不計GFA嗎？",
+    "answer": "No. Available cap does not create an entitlement to concession. Demonstrate the actual qualifying use, reasonable area and compliance with the applicable prerequisites and individual acceptance criteria.",
+    "sources": [
+      {
+        "title": "APP151 paras4–5及AppA兩欄",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP151.pdf"
+      },
+      {
+        "title": "APP2 plant room criteria",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP002.pdf"
+      },
+      {
+        "title": "APP104會所限額",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP104.pdf"
+      },
+      {
+        "title": "JPN8 MiC優惠",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/joint/JPN08.pdf"
+      }
+    ],
+    "reviewed": "2026-11-16"
+  },
+  {
+    "id": "152",
+    "title": "APP-152：三項設計要求、門檻及提交圖",
+    "group": "環境／GFA concession",
+    "trigger": "不是把separation、setback、greenery三個名詞寫出便完。先判是否觸發，再列provided／required。",
+    "checks": [
+      "Separation觸發：site≥20000m²；或site<20000m²而continuous projected façade Lp≥60m。Standalone residential blocks≤15m有指定豁免。兩個design requirements是Lp及S／P，不可只驗其中一項。",
+      "Separation分low（0–20m）、middle（20–60m）、high（>60m）zones；Level Zero按定義，毗連不同街標高時用最低街的mean level。不是綠化的Primary Zone15m。",
+      "Setback看street<15m；標準15m×15m通風corridor以街中心線7.5m量，不是每個site都要退7.5m。另有podium-garden45°方案及para9、AppE條件。",
+      "Greenery的基本觸發為site≥1000m²；single-family-house-only site不適用該要求。恰好20000m²按≥20000一欄；Primary Zone是沿街15m高範圍。",
+      "AppD可計綠化要驗位置、可見／通達、覆蓋、量度及折減。可搬動而未固定／建入的花盆不計；不是畫成綠色便計。",
+      "指定special greening features的合計貢獻不超required overall greenery的30%，並用適用折減；vertical greening亦在該組內。不可藉垂直面積無限放大來補足基本綠化。"
+    ],
+    "table": [
+      [
+        "項目",
+        "Required／怎樣驗"
+      ],
+      [
+        "Lp",
+        "每assessment zone按5×mean street-canyon width U求permissible Lp；U不是直接等於路闊"
+      ],
+      [
+        "P：site<20000，Lp觸發",
+        "Table1一般each plane≥20%；AppB3.3只有一plane達指定情況另處理"
+      ],
+      [
+        "P：site≥20000；H≤60",
+        "Plane1≥20%，Plane2≥25%"
+      ],
+      [
+        "P：site≥20000；H>60",
+        "Plane1≥20%，Plane2≥33.3%"
+      ],
+      [
+        "P組成／S",
+        "最少2/3由IS；最多1/3 PE。基本edge S≥7.5m；兩facades之間補足IS用≥15m，變寬／其他情況另查AppB"
+      ],
+      [
+        "Setback標準方案",
+        "street<15m；15m高以下距street centreline≥7.5m。對稱直線街例：自boundary退(15−street width)/2"
+      ],
+      [
+        "Greenery1000≤site<20000",
+        "Primary≥10% site area；overall≥20%"
+      ],
+      [
+        "Greenery site≥20000",
+        "Primary≥15%；overall≥30%"
+      ],
+      [
+        "綠化：common parts",
+        "應指定為common parts；維修／更換access須由common parts到達，inaccessible roof planters亦須維修通道"
+      ],
+      [
+        "綠化：位置及可見性",
+        "Primary greenery應面向或從street／public pedestrian way／public open space可見；較高區按AppD要求對公眾／訪客／住戶可見"
+      ],
+      [
+        "綠化：special features",
+        "AppD3列covered greenery、water feature、grass paving、特定屋頂planter、vertical及陡坡綠化等；合計≤required overall的30%，折減及位置逐項查"
+      ],
+      [
+        "綠化：water feature",
+        "不是swimming pool／jacuzzi；指定情況按50%折減，不能一律當花圃全計"
+      ],
+      [
+        "綠化：vertical",
+        "按合資格panel／frame立面量；climbing／weeping frames>7.5m部分不計，下面已計入的soil area不得重複計"
+      ],
+      [
+        "綠化：維護及限制",
+        "irrigation／drainage及roof荷載／防水須處理；適用DMC／undertaking及Land Registry註冊條件在OP前完成"
+      ]
+    ],
+    "documents": [
+      "AppF separation：1:500 layout（周邊街／建築、footprints、IS、PE、projection planes及各zones）；plans／elevations／sections與U、Lp、S、P比較計算",
+      "Setback：block plan、所有街闊及標高；1:100 plan／section與setback calculations",
+      "Greenery：位置、common access及街／公共步道資料；逐處綠化schedule／calculation／diagram；OP時更新並交200dpi PDF",
+      "AppD10適用條件：綠化用途限制及common parts在DMC等文件列明；相關undertaking於申請OP之前在Land Registry註冊。"
+    ],
+    "trap": "Primary10%不是overall20%的10%；兩者分母均為site area。Permeability是投影立面面積，不是綠化site coverage，也不是走火或消防separation distance。",
+    "scenario": "5000m² site、12m直線街，標準setback多少？Primary及overall最低綠化多少？",
+    "answer": "For the standard setback section, the building up to 15 m above street level must be at least 7.5 m from the street centreline. A symmetric 12 m street therefore gives a 1.5 m setback from the boundary. The basic greenery minima are 500 m² in the Primary Zone and 1,000 m² overall, subject to all applicable counting and access requirements.",
+    "sources": [
+      {
+        "title": "APP152 paras3–15及Tables1–2",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP152.pdf"
+      },
+      {
+        "title": "APP152 AppA–F：definitions／measurement／submissions",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP152.pdf"
+      }
+    ],
+    "reviewed": "2026-11-16"
+  }
+]

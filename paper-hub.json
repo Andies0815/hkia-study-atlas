@@ -1,0 +1,592 @@
+{
+  "version": "2026-11-16",
+  "guide": "https://www.hkia.net/upload/finder/file/PA/HKIA-ARB%20PA%20Paper%202%20Study%20Guide_2021.pdf?v9.5737359849=",
+  "handbook": "https://www.hkia.net/upload/finder/file/PA/PA%20Handbook_revised_2025%20July.pdf?v9.5712664830=",
+  "preparation": "https://hkia.net/en/professional-assessment/preparation",
+  "openbook": "https://hkia.net/en/whats-on/3/information/detail/783",
+  "scope": "本輪新增跨卷學習入口、主題及作答練習；非完整三卷教材。Paper2／6／7歷年試卷只確認官方目錄，試開2025連結轉Microsoft登入，未讀正文；不作歷年命題統計。",
+  "papers": [
+    {
+      "id": "2",
+      "name": "合約與專業實務",
+      "english": "CONTRACTS & PROFESSIONAL PRACTICE",
+      "duration": "3小時 · MC＋Essay",
+      "intro": "把條款變成事件、權責、文件及決定。先辨合約與版本，再處理時間、金錢及專業責任。",
+      "status": "官方Guide主題索引＋自編情境",
+      "focus": [
+        "合約管理及各方權責",
+        "委任、收費、專業操守與責任",
+        "採購、招標及爭議處理"
+      ],
+      "sources": [
+        "p2-guide",
+        "handbook",
+        "openbook"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "基地設計",
+      "english": "SITE DESIGN",
+      "duration": "4小時 · Drawing",
+      "intro": "由brief及地盤限制，推導多幢建築布局、massing、環境與流線；用圖及面積表展示判斷。",
+      "status": "考綱導向練習＋共用法規",
+      "focus": [
+        "多幢建築的布局及三維量體",
+        "車、人、服務及消防流線",
+        "環境品質與基本法規限制"
+      ],
+      "sources": [
+        "handbook",
+        "past-directory"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "建築設計",
+      "english": "BUILDING DESIGN",
+      "duration": "6小時 · Drawing",
+      "intro": "把功能、走火、採光、結構及機電放進同一套平面與剖面；不以文字承諾代替圖紙解決。",
+      "status": "考綱導向練習＋共用法規",
+      "focus": [
+        "功能組織與空間品質",
+        "結構及機電與設計整合",
+        "影響基本布局的法規與環境要求"
+      ],
+      "sources": [
+        "handbook",
+        "past-directory"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "p2-guide",
+      "title": "HKIA Paper2 Study Guide（2021，49頁）",
+      "url": "https://www.hkia.net/upload/finder/file/PA/HKIA-ARB%20PA%20Paper%202%20Study%20Guide_2021.pdf?v9.5737359849=",
+      "status": "已讀目錄、版本說明及部分情境",
+      "note": "舊版2005 With Quantities／2006 Without Quantities作基礎。本站以原創問題與索引連回Guide，不搬印全文。"
+    },
+    {
+      "id": "handbook",
+      "title": "HKIA Handbook July2025 AppendixD",
+      "url": "https://www.hkia.net/upload/finder/file/PA/PA%20Handbook_revised_2025%20July.pdf?v9.5712664830=",
+      "status": "已讀Paper2／6／7考綱",
+      "note": "Paper2 pp30–31；Paper6 p39；Paper7 p40。當屆安排及更新公告另查。"
+    },
+    {
+      "id": "openbook",
+      "title": "HKIA Paper2 Open-book更新（2026-04-01）",
+      "url": "https://hkia.net/en/whats-on/3/information/detail/783",
+      "status": "已讀官方公告",
+      "note": "相關標準合約2023及2025 editions均列為可攜版本；可攜版本不等於題目指定版本。"
+    },
+    {
+      "id": "past-directory",
+      "title": "HKIA Preparation：歷年卷、reports及workshop",
+      "url": "https://hkia.net/en/professional-assessment/preparation",
+      "status": "僅確認目錄；部分連結需登入",
+      "note": "Study Guide欄列Paper1–5；沒有確認獨立Paper6／7 Study Grid。歷年題幹、brief、圖紙及評分未讀，不假造model answers。"
+    }
+  ],
+  "past": [
+    {
+      "paper": "2",
+      "year": 2019,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "2",
+      "year": 2020,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "2",
+      "year": 2021,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "2",
+      "year": 2022,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "2",
+      "year": 2023,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "2",
+      "year": 2024,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "2",
+      "year": 2025,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2019,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2020,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2021,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2022,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2023,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2024,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "6",
+      "year": 2025,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2018,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2019,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2021,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2022,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2023,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2024,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    },
+    {
+      "paper": "7",
+      "year": 2025,
+      "status": "官方目錄已列；正文未讀",
+      "url": "https://hkia.net/en/professional-assessment/preparation"
+    }
+  ],
+  "versions": [
+    [
+      "2021 Study Guide",
+      "2005 With Quantities／2006 Without Quantities",
+      "只作歷史教學基礎，不把clause number倒套新版"
+    ],
+    [
+      "2023 Edition",
+      "2026-04公告列為可攜",
+      "本網站未逐條核對合約全文；練習須自行記錄適用條款"
+    ],
+    [
+      "2025 Edition",
+      "2026-04公告列為可攜",
+      "同上；不聲稱與2023所有notice／certificate程序相同"
+    ],
+    [
+      "題目及Particular Conditions",
+      "以實際題設及所用合約為準",
+      "先讀amendments／appendix；不得只憑封面年份判全部程序"
+    ]
+  ],
+  "contractTopics": [
+    {
+      "id": "appointment",
+      "title": "委任與服務邊界",
+      "guidePage": 6,
+      "question": "服務範圍、交付物、時間、費用及額外服務如何訂明？",
+      "steps": [
+        "先列client brief、服務與不包括事項、階段及時間假設；把不確定工作另記。",
+        "分辨contract of appointment與building contract，不把建築師當承建商。",
+        "Scope或programme變更時說明追加工作及費用處理的依據與記錄。"
+      ],
+      "english": "Confirm the agreed scope, deliverables and programme assumptions. Identify the additional services and record the basis on which the appointment and remuneration are to be adjusted."
+    },
+    {
+      "id": "liability",
+      "title": "專業責任與設計協調",
+      "guidePage": 8,
+      "question": "有錯誤是否就等於建築師須負全部賠償？",
+      "steps": [
+        "分開duty、breach、causation及可追討損失；勿只憑有缺陷便判所有責任。",
+        "列設計協調及資訊傳遞的時間線，核誰知道甚麼、何時應採取行動。",
+        "提出立即減損及修正方案；不要用卸責聲明取代履責。"
+      ],
+      "english": "Identify the relevant duty and alleged breach, and assess causation and the loss claimed. Review the coordination records and advise on immediate corrective and mitigation measures."
+    },
+    {
+      "id": "conduct",
+      "title": "專業操守與利益衝突",
+      "guidePage": 10,
+      "question": "委託人要求有利自己的認證時，怎樣分開服務與獨立判斷？",
+      "steps": [
+        "識別角色與衝突，說明需披露及處理的事項。",
+        "分清向client提供建議與履行certification／assessment職能。",
+        "以適用Code、appointment及contract核實具體責任；保留記錄。"
+      ],
+      "english": "Identify and manage the conflict of interest and distinguish advice to the client from the contractual assessment or certification function. Record the relevant facts and reasons for the professional decision."
+    },
+    {
+      "id": "procurement",
+      "title": "採購及合約選擇",
+      "guidePage": 12,
+      "question": "工程範圍、數量及現況不確定時如何選form？",
+      "steps": [
+        "比較design certainty、quantity risk、時間及價格確定性，不只背合約名稱。",
+        "With／without quantities與其他procurement route的風險分配須按實際條款核。",
+        "說明建議及條件；查哪些資料仍要調查，不能一律用lump sum。"
+      ],
+      "english": "Compare the available procurement and pricing arrangements against the certainty of design, quantities, time and risk allocation. State the assumptions and reasons for the recommended route."
+    },
+    {
+      "id": "tenderers",
+      "title": "承建商遴選及招標評估",
+      "guidePage": 15,
+      "question": "最低價是否足以決定推薦？",
+      "steps": [
+        "比較能力、相關經驗、資源、財務及投標符合程度。",
+        "對qualifications／exclusions按同一基準處理，不私下更改競爭條件。",
+        "列推薦、風險、澄清及client決定所需資料。"
+      ],
+      "english": "Assess capability and tender compliance as well as price. Resolve qualifications on a consistent basis and provide a reasoned recommendation with the remaining risks clearly identified."
+    },
+    {
+      "id": "documents",
+      "title": "招標文件與界面",
+      "guidePage": 18,
+      "question": "如何避免圖、specification及scope互相矛盾？",
+      "steps": [
+        "列drawings、specification、pricing／quantity documents及conditions各作用。",
+        "核設計／work-package interfaces、責任邊界及暫定資料。",
+        "發現不一致時走適用clarification／instruction程序，勿憑習慣假設優先順序。"
+      ],
+      "english": "Identify the inconsistency and the affected scope. Apply the contractual document-priority and clarification provisions rather than assuming that one document always overrides another."
+    },
+    {
+      "id": "award",
+      "title": "Award與合約成立",
+      "guidePage": 21,
+      "question": "Letter of intent與正式contract各授權甚麼？",
+      "steps": [
+        "核offer／acceptance、terms、授權範圍及未決條件。",
+        "若先行工作，寫清scope、limit、payment、insurance及有效期，不稱LOI等於全部contract。",
+        "正式文件與附件一致；保留授權及接納證據。"
+      ],
+      "english": "Establish what has been accepted and what work has actually been authorised. Clarify the scope, financial limits and conditions of any interim instruction and complete the outstanding contract documentation."
+    },
+    {
+      "id": "commence",
+      "title": "開工與possession",
+      "guidePage": 24,
+      "question": "合約commencement與BA consent是否同一件事？",
+      "steps": [
+        "核contract dates、possession、保險、擔保及必要開工文件。",
+        "另查BO approval／consent及site conditions，不以合同日期取代法定批准。",
+        "記延遲交地／資訊的實際影響及通知，為後續time assessment留證。"
+      ],
+      "english": "Distinguish the contractual commencement and possession arrangements from statutory consent. Verify the required documents and record any impediment and its demonstrated effect on progress."
+    },
+    {
+      "id": "variation",
+      "title": "指示與Variation",
+      "guidePage": 26,
+      "question": "Client一句改設計，是否已是有效contract instruction？",
+      "steps": [
+        "辨發出指示的authority、形式及適用確認程序；先分client request與architect instruction。",
+        "記變更scope、時間、圖號及原因；與QS核valuation所需證據。",
+        "時間與金錢分開評估，保留programme／site／cost records，不先答必有EOT或全額補償。"
+      ],
+      "english": "Confirm the authority and form of the instruction and identify the changed work. Record its time and cost implications and assess each entitlement under the applicable provisions and supporting evidence."
+    },
+    {
+      "id": "quality",
+      "title": "材料、工藝及不符合",
+      "guidePage": 28,
+      "question": "不符specification但client願意接受，是否可以不理？",
+      "steps": [
+        "識別specified requirement、test及批准樣板；查是否涉及法定安全。",
+        "區分contractual acceptance、rectification及適用valuation，不以client同意取代BO。",
+        "指示、覆檢及證據完整；涉及proprietary systems核interface及測試。"
+      ],
+      "english": "Identify the specified requirement and the extent of non-conformity. Determine the available contractual action and any statutory constraint, issue the appropriate instruction and verify the resulting work."
+    },
+    {
+      "id": "lad",
+      "title": "Non-completion與LAD",
+      "guidePage": 30,
+      "question": "逾原completion date是否可立即扣款？",
+      "steps": [
+        "核目前合約completion date及EOT評估，分清延誤事實與責任。",
+        "查適用non-completion certification、notice及deduction程序，不跳到扣款。",
+        "按合同權力及所需文件處理；不從通用記憶填notice日數。"
+      ],
+      "english": "Establish the applicable completion date and assess outstanding time matters. Follow the contractual certification, notice and deduction provisions before advising on any proposed recovery of liquidated damages."
+    },
+    {
+      "id": "completion",
+      "title": "Substantial Completion與defects",
+      "guidePage": 32,
+      "question": "OP、交匙、使用、SC及DLP如何分清？",
+      "steps": [
+        "核合同定義、未完工程及缺陷是否影響安全／實際使用。",
+        "Statutory OP與contractual completion分開判；partial possession等按條款辦。",
+        "把certificate、defects、retention、risk／insurance的相關後果逐項查，不一概同日發生。"
+      ],
+      "english": "Assess completion against the contractual standard and the actual outstanding work. Distinguish the statutory occupation position from contractual certification and address possession, defects and the consequential obligations separately."
+    },
+    {
+      "id": "eot",
+      "title": "Extension of Time",
+      "guidePage": 36,
+      "question": "有延誤事件便自動有同等天數EOT嗎？",
+      "steps": [
+        "核事件是否屬合同可考慮原因，以及notice／particulars程序。",
+        "核programme、critical activities、實際causal impact、重疊及mitigation證據。",
+        "說明評估及決定的理由；EOT與loss／expense的依據及證據分開。"
+      ],
+      "english": "Identify the contractual event and procedural requirements, then assess its demonstrated effect on the completion date using the programme and contemporaneous records. Consider the time and monetary issues separately."
+    },
+    {
+      "id": "recovery",
+      "title": "追趕進度與Acceleration",
+      "guidePage": 40,
+      "question": "要求追回延誤是否就是無償加速指示？",
+      "steps": [
+        "分辨contractor自身恢復進度義務與client要求改變完成日期／投入。",
+        "先查原因、programme與實際可行措施，再核權力及價款／工期協議。",
+        "把措施、費用、風險及取得同意的範圍記清楚。"
+      ],
+      "english": "Distinguish recovery of culpable delay from a proposed change to the completion requirements. Establish the authority, feasibility and agreed commercial basis of any acceleration measure before implementation."
+    },
+    {
+      "id": "determination",
+      "title": "Determination及違約程序",
+      "guidePage": 42,
+      "question": "不滿承建商表現，是否可以即時終止？",
+      "steps": [
+        "核default事實、contract ground及有權行動的人。",
+        "查notice、service、cure等逐項前置，不能靠一封情緒信取代。",
+        "先分析錯誤終止風險、site security及文件／付款後果；按適用合同及法律取得所需建議。"
+      ],
+      "english": "Verify the contractual ground, authority and procedural preconditions before taking any determination action. Preserve the evidence and assess the consequences of a wrongful or premature determination."
+    },
+    {
+      "id": "dispute",
+      "title": "爭議處理",
+      "guidePage": 44,
+      "question": "有爭議是否只能arbitration？",
+      "steps": [
+        "核合同爭議程序及適用法例，確認哪個程序、何種決定及時限。",
+        "分清談判、mediation、adjudication、arbitration及litigation的作用；新制度須核適用範圍。",
+        "記issue、records、relief及需保留的權利，不先承諾結果。"
+      ],
+      "english": "Identify the applicable dispute-resolution mechanism and any statutory requirements. Define the issues, preserve the records and comply with the relevant procedural steps without assuming that all disputes follow the same route."
+    },
+    {
+      "id": "closeout",
+      "title": "Defects close-out及Final Certificate",
+      "guidePage": 46,
+      "question": "DLP時間過了是否代表可出全部final文件？",
+      "steps": [
+        "核defects instructions及rectification證據、各certificate前提。",
+        "協調final account、未決claims、records及contractual procedures。",
+        "說明已確認與未決事項及依據，不以日曆屆滿代替驗證。"
+      ],
+      "english": "Verify that the applicable close-out and certification conditions have been satisfied, including the status of defects and outstanding account matters. Do not treat expiry of a period alone as proof that all final obligations have been discharged."
+    }
+  ],
+  "shared": [
+    {
+      "topic": "151",
+      "name": "APP-151：優惠前置",
+      "p1": "資格、文件、cap及裁量的文字判斷",
+      "p6": "列清面積假設及concession schedule；不先用盡未證實優惠",
+      "p7": "把機房／會所／公共空間的實際用途及面積放入圖紙"
+    },
+    {
+      "topic": "151scope",
+      "name": "APP-151：cap與個別條件",
+      "p1": "逐項分類受前置／受cap與individual limit",
+      "p6": "D／ND分開面積表；用同一計算基礎檢查方案",
+      "p7": "空間改用途時重核GFA accountability及相關條件"
+    },
+    {
+      "topic": "152",
+      "name": "APP-152：separation／setback／greenery",
+      "p1": "觸發條件、分母、量度及提交資料",
+      "p6": "塔樓間隙、Lp、zone、沿街退縮及Primary／overall綠化配置",
+      "p7": "Podium／tower平剖面相符；量度線、可計綠化及通達表達"
+    },
+    {
+      "topic": "site",
+      "name": "Site class／development potential",
+      "p1": "街道、corner、周界比例及適用強度",
+      "p6": "建立site／PR／SC／高度約束及面積預算",
+      "p7": "各層GFA／SC與整體方案、層數及剖面一致"
+    },
+    {
+      "topic": "occupancy",
+      "name": "用途與人數",
+      "p1": "選正確occupancy basis及面積定義",
+      "p6": "用途分區及人流、入口與疏散策略",
+      "p7": "以實際房間及用途列人數、出口需求及闊度"
+    },
+    {
+      "topic": "discharge",
+      "name": "MOE與樓梯容量",
+      "p1": "查表及適用折減後比較需求",
+      "p6": "先預留core及疏散出口位置，避免後期塞不下",
+      "p7": "畫完整exit route／discharge，核樓梯服務樓層及容量"
+    },
+    {
+      "topic": "ozp",
+      "name": "Planning／lease與brief",
+      "p1": "Notes、permission及lease分開判",
+      "p6": "明列hard constraints及需證實假設",
+      "p7": "不要用設計意圖代替題目要求的用途分隔與限制"
+    },
+    {
+      "topic": "mic",
+      "name": "MiC及建築系統",
+      "p1": "IPA、優惠、QC及各機關作用",
+      "p6": "模數、運輸／吊裝及massing整合的可行性",
+      "p7": "模組接縫、結構／機電界面及空間尺寸的整合"
+    }
+  ],
+  "designLessons": {
+    "6": [
+      {
+        "title": "01 先把brief轉成控制表",
+        "action": "把題目分成不能改的限制、需達到的數量、可以比較的設計選擇。",
+        "deliver": [
+          "site area、可建範圍、用途及height datum",
+          "GFA／SC／programme／設施面積預算",
+          "入口、EVA、服務及鄰接環境限制"
+        ],
+        "trap": "不要未確定面積及core便開始畫漂亮量體。"
+      },
+      {
+        "title": "02 先驗兩個布局，才深化一個",
+        "action": "以相同programme比較位置、朝向、空隙及戶外空間；記清取捨。",
+        "deliver": [
+          "每個option的massing及site plan",
+          "車、人、服務、消防的動線分層",
+          "日照、風、噪音及鄰接關係的具體回應"
+        ],
+        "trap": "不要把箭嘴當成已解決流線；要有入口、連接點及必要尺度。"
+      },
+      {
+        "title": "03 151／152落在面積及投影圖",
+        "action": "適用才核對concession與SBD條件；先有required，再列provided。",
+        "deliver": [
+          "分D／ND的GFA及concession schedule",
+          "各適用zone的Lp／P／S驗算與示意",
+          "沿街setback剖面及Primary／overall綠化schedule"
+        ],
+        "trap": "不要把separation的20m low zone與15m Primary Zone混用。"
+      },
+      {
+        "title": "04 限時交付檢查",
+        "action": "以題目指定圖紙為準，在到時前完成能讀懂的一套方案。",
+        "deliver": [
+          "site plan與massing／section互相一致",
+          "面積表及關鍵尺度與圖相符",
+          "標明假設、北向、level及必要量度"
+        ],
+        "trap": "官方未提供的marking scheme不以網站自訂checklist冒充。"
+      }
+    ],
+    "7": [
+      {
+        "title": "01 功能先有關係，再有房間",
+        "action": "按使用者、營運、保安及服務拆流程，決定要相鄰或分隔的空間。",
+        "deliver": [
+          "public／staff／service及無障礙路徑",
+          "room schedule、capacity及adjacency",
+          "主入口、vertical core及service interface"
+        ],
+        "trap": "不能只按面積塞房而沒有可用的空間比例及門位。"
+      },
+      {
+        "title": "02 MOE與health在平面同時驗",
+        "action": "每次改房間用途或partition，回查人數、出口、採光及通風。",
+        "deliver": [
+          "完整escape route、出口／樓梯及ground discharge",
+          "prescribed-window方向、面積及適用RHP示意",
+          "sanitary／drainage與BFA配置"
+        ],
+        "trap": "不能只在圖邊寫「comply with BO」當作解決。"
+      },
+      {
+        "title": "03 結構、機電與剖面整合",
+        "action": "把柱網、跨度、樓層高度、管井及機房畫成能協調的系統。",
+        "deliver": [
+          "column／wall／core與功能一致",
+          "主要duct／pipe／drainage及maintenance routes",
+          "section顯示樓板、淨高、層高及必要plant space"
+        ],
+        "trap": "平面能塞下，不代表剖面淨高或走管可行。"
+      },
+      {
+        "title": "04 空間、外牆與環境一致",
+        "action": "將朝向、遮陽、開窗、綠化及構造反映在立面／剖面。",
+        "deliver": [
+          "材料／envelope選擇及其設計理由",
+          "適用151／152／thermal條件的證明",
+          "所有圖紙的門窗、levels及樓梯一致"
+        ],
+        "trap": "本頁工作表不是完整法規檢查；精確要求連回共用章節。"
+      }
+    ]
+  }
+}

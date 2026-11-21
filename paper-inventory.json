@@ -1,0 +1,135 @@
+{
+  "notice": "用戶上傳2021–2025 SectionII掃描原卷；五年essay均60分：Q1必答30，Q2–4任選兩題各15；建議110分鐘。下表是題意與測試方向分析，非官方model answer。附件不含MC。",
+  "years": {
+    "2021": [
+      [
+        "Q1",
+        "30",
+        "細分住宅／商業與商住重建；首次GBP",
+        "L&V／MOE；R(A) Notes；permitted-vs-provided；GBP附件及schedules"
+      ],
+      [
+        "Q2",
+        "15",
+        "Hotel concession、BFA與消防判圖；優惠面積改café",
+        "23A／APP40資格與面積分類；不得只因health／safety可行便略過GFA"
+      ],
+      [
+        "Q3",
+        "15",
+        "AP stream T3職責；QB1–QB5；五項現場不符合",
+        "QC具體檢查；危害理由；專業分工與修正跟進"
+      ],
+      [
+        "Q4",
+        "15",
+        "舊工廈拆卸：canopy、屋頂構築物、疑似asbestos、party wall",
+        "拆卸程序；公眾保護；調查／紀錄；環境程序；鄰地保護"
+      ]
+    ],
+    "2022": [
+      [
+        "Q1",
+        "30",
+        "工廈改住宅",
+        "land use／development potential／health／safety；每項挑戰須加解決方向"
+      ],
+      [
+        "Q2",
+        "15",
+        "office租戶改動：lobby、magnetic locks、partition、dental clinic sinks",
+        "逐項合規與可替代設計；approval／consent或其他法定route"
+      ],
+      [
+        "Q3",
+        "15",
+        "OP準備及五份文件",
+        "工程符合、FSD／water證明、vehicular run-in；文件及負責部門"
+      ],
+      [
+        "Q4",
+        "15",
+        "屋頂storeroom的s24 order與s44 appeal",
+        "查合法性；處理命令；不遵辦後果；逐一評估上訴理由"
+      ]
+    ],
+    "2023": [
+      [
+        "Q1",
+        "30",
+        "OU Mixed Use；67%商業＋33%住宅；basement parking",
+        "lease／BO／OZP；composite／total PR；無vehicular run-in安排"
+      ],
+      [
+        "Q2",
+        "15",
+        "CDA三lots與公共service lane合併",
+        "MLP範圍；三項technical studies四欄；新lease；lane extinguishment"
+      ],
+      [
+        "Q3",
+        "15",
+        "foundation completion→superstructure commencement",
+        "BA14／records／tests；RSC／RSE／AP分工；下一階段approval及consent"
+      ],
+      [
+        "Q4",
+        "15",
+        "open kitchen、store→bedroom、fitments、拆partition、duplex stair",
+        "可否做／法定route／不跟程序後果；按工程實際內容分類"
+      ]
+    ],
+    "2024": [
+      [
+        "Q1",
+        "30",
+        "學術樓改student hostel：top-floor conversion／vertical extension",
+        "composite intensity；health；structure；MOA"
+      ],
+      [
+        "Q2",
+        "15",
+        "shop→永久public exhibition",
+        "R(A) Column2；s16；PPE；occupancy；health"
+      ],
+      [
+        "Q3",
+        "15",
+        "excavation坡度／crane／鄰地footings損壞",
+        "T3行動；AP監督；non-compliance及通知"
+      ],
+      [
+        "Q4",
+        "15",
+        "roof meeting room；refuge floor dining；curtain wall",
+        "lease／statutory controls；refuge功能；facade工程"
+      ]
+    ],
+    "2025": [
+      [
+        "Q1",
+        "30",
+        "development potential／dedication／不同exemptions",
+        "site class；composite；bonus SC／GFA；s41／42"
+      ],
+      [
+        "Q2",
+        "15",
+        "CDA1200→1300／1500；Area2 foundation commencement",
+        "PG36C；s16A；GI／foundation approval與consent"
+      ],
+      [
+        "Q3",
+        "15",
+        "TCFA40000的AP stream；選三項non-compliance",
+        "T3／T4；scale2；adjusted8／2；現場指示及驗證"
+      ],
+      [
+        "Q4",
+        "15",
+        "office→residential／retail／roof restaurant／serviced apartments",
+        "development intensity與health；用途與concession不可混"
+      ]
+    ]
+  }
+}

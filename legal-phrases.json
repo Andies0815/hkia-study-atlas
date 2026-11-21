@@ -1,0 +1,206 @@
+{
+  "version": "2026-11-14",
+  "notice": "以下是建議答題句，不是逐字法例引文或官方marking scheme。每句須填入題目事實及條件；用字準確不代表只靠一句便完成答案。",
+  "phrases": [
+    {
+      "topic": "結論／範圍",
+      "term": "on the facts stated／insofar as",
+      "avoid": "It should be OK.",
+      "english": "On the facts stated, the proposal is not feasible insofar as the permitted development intensity is concerned, because [calculation / controlling restriction].",
+      "why": "指出不可行的具體範圍；不能把只驗PR的答案擴大成全項目合法性結論。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "規劃A",
+      "term": "falls within／no further application",
+      "avoid": "No approval is needed.",
+      "english": "The proposed amendment falls within Category [X] of Class A amendments under TPB PG-No. 36C, provided that [specific proviso]. No further application to the Town Planning Board is required for that amendment.",
+      "why": "限於該項規劃修改；不是一切批准均不需。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "規劃A／GBP",
+      "term": "highlight／facilitate checking",
+      "avoid": "Just tell BD.",
+      "english": "The Class A amendments should be highlighted on the building plans to facilitate checking by the Planning Department. The amended building plans remain subject to the applicable requirements under the Buildings Ordinance.",
+      "why": "明確說送甚麼、給誰核對，以及BO仍適用。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "規劃B",
+      "term": "acceptance／section16A(2)",
+      "avoid": "Apply section 12 for the changed design.",
+      "english": "The amendment is outside Class A but falls within Class B. The person to whom the permission was granted should apply for acceptance of the amendment under section 16A(2), using Form S16A.",
+      "why": "不是改法定圖則的s12A，也不是所有B都重新s16。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "規劃fresh16",
+      "term": "neither／fresh application",
+      "avoid": "Apply for a bigger Class B.",
+      "english": "The amendment falls within neither Class A nor Class B. A fresh application for planning permission under section 16 is therefore required.",
+      "why": "超B範圍不能用同一小修改route。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "規劃基準",
+      "term": "originally approved／aggregate",
+      "avoid": "Calculate the next 10% from the last revised plan.",
+      "english": "Assess the proposed changes against the originally approved development proposal, rather than against an intervening Class A or Class B amendment.",
+      "why": "防止逐次累加放寬。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "規劃文件",
+      "term": "comparison／demonstrate",
+      "avoid": "Submit supporting documents.",
+      "english": "Submit a comparison of the original and proposed development parameters, marked-up plans and the technical assessments necessary to demonstrate that the changes are acceptable.",
+      "why": "依影響補具體assessment；不是一句documents便完。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "規劃部門同意",
+      "term": "agreement／proviso",
+      "avoid": "Class A means no consultation.",
+      "english": "Class A treatment under this limb is conditional upon agreement by the relevant government department. Obtain and document that agreement before relying on the limb.",
+      "why": "A分支中的部門agreement不能省略。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "GBP／施工",
+      "term": "approval of plans／consent to commencement",
+      "avoid": "BA approved it, so start work.",
+      "english": "Approval of the plans alone does not authorise commencement. Obtain consent to the commencement of the works from the Building Authority and satisfy the applicable pre-commencement conditions.",
+      "why": "approval與consent兩個法定關卡分開。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "GBP／跨法例",
+      "term": "does not constitute／separately",
+      "avoid": "Planning approval covers BD and LandsD.",
+      "english": "Planning permission does not constitute approval under the Buildings Ordinance or approval under the lease. Obtain the requisite approvals under each applicable regime separately.",
+      "why": "三套控制互不代替。",
+      "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf"
+    },
+    {
+      "topic": "GBP／圖則協調",
+      "term": "correspond／tally",
+      "avoid": "Submit the structural amendment only.",
+      "english": "Coordinate the amended GBP, structural and drainage plans so that they correspond with one another. Obtain all requisite amended approvals and consents before certifying completion or applying for an OP/TOP.",
+      "why": "結案前圖則要互相一致。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "GBP／defer",
+      "term": "subject to a modification being granted",
+      "avoid": "Minor changes can be approved later.",
+      "english": "Submission may be deferred only where the modification of regulation 33(1) has been granted and the amendment satisfies the applicable conditions, including the exclusions in Appendix G to PNAP ADM-19.",
+      "why": "不是無條件事後補圖權。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "GBP／defer記錄",
+      "term": "documented／deposited／prior to",
+      "avoid": "Keep a drawing and do it first.",
+      "english": "Clearly document the qualifying minor amendments and deposit the records in the site office. Ensure compliance before execution and obtain the required amended approval and consent before completion certification or an OP/TOP application.",
+      "why": "保留施工前合規與completion前批准兩個時點。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "土地",
+      "term": "lease modification／premium",
+      "avoid": "TPB can allow the lease use.",
+      "english": "Where the proposed use is not permitted under the lease, apply to LandsD for the appropriate lease modification or other applicable land arrangement. Approval is discretionary and may be subject to premium and revised conditions.",
+      "why": "不要把premium寫成必定固定金額；temporary waiver是否適用另判。",
+      "source": "https://www.landsd.gov.hk/en/land-disposal-transaction/land-transaction/lease-modification-land-exchange.html/1000"
+    },
+    {
+      "topic": "法定裁量",
+      "term": "may grant／subject to conditions",
+      "avoid": "BA shall grant the concession if under the cap.",
+      "english": "The numerical ceiling is satisfied, but the concession is not automatic. Apply for the relevant exemption or modification and satisfy the applicable prerequisites and conditions.",
+      "why": "數字合格不是必然獲批。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "豁免範圍",
+      "term": "exempt from prior approval and consent",
+      "avoid": "The works are exempt from all laws.",
+      "english": "The works may be exempt from prior approval and consent only if the specific statutory exemption applies. This does not by itself displace other applicable safety requirements or legislation.",
+      "why": "說明豁免的是哪一義務。",
+      "source": "https://www.bd.gov.hk/en/whats-new/press-releases/2011/0519-alteration-and-addition-works-must-comply-with-the-law.html"
+    },
+    {
+      "topic": "MW",
+      "term": "simplified requirements／prescribed personnel",
+      "avoid": "Minor work does not need any submission.",
+      "english": "If the works fall within a designated minor works item, appoint the prescribed personnel and follow the simplified requirements applicable to its class, type and item. Otherwise, follow the applicable approval-and-consent procedure.",
+      "why": "不是所有叫小型的工程都是法定minor works。",
+      "source": "https://www.bd.gov.hk/en/building-works/alterations-and-additions/"
+    },
+    {
+      "topic": "改用途",
+      "term": "notice of intended material change",
+      "avoid": "Apply to BA for change-of-use permission under s25.",
+      "english": "Give the Building Authority the statutory notice of the intended material change in use under section 25. This notice does not itself authorise building works or cure non-compliance with other requirements.",
+      "why": "notice不是permission；適用時另說法定notice period及指定表。",
+      "source": "https://www.devb.gov.hk/en/sdev/press/index_id_6353.html"
+    },
+    {
+      "topic": "PR／composite",
+      "term": "permissible／governing ceiling",
+      "avoid": "The site can get PR15.",
+      "english": "Determine the site classification and the applicable domestic and non-domestic limits. Apply the composite-building formula where appropriate, then compare the result with the separate OZP and lease restrictions to identify the governing ceiling.",
+      "why": "計算不得省略真正控制項。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "消防人數",
+      "term": "assessed occupant capacity",
+      "avoid": "Use GFA divided by a standard factor.",
+      "english": "Determine the occupant capacity for each use from the applicable occupancy basis in Table B1. Check exit provision and staircase discharge capacity separately; the occupancy factor is not itself a discharge value.",
+      "why": "不同用途及不同面積定義不能混。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/fs_code2011.pdf"
+    },
+    {
+      "topic": "L&V",
+      "term": "prescribed window／external air",
+      "avoid": "The room has a window, so it complies.",
+      "english": "Provide the prescribed window area and openable area, and demonstrate that the window faces external air in the manner required by the relevant regulations. A window opening alone does not establish compliance.",
+      "why": "還要具體列面積、RHP及房深等適用條件；這只是入口句。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM019.pdf"
+    },
+    {
+      "topic": "TCP計算",
+      "term": "scale factor／adjusted supervision input",
+      "avoid": "The scale is T3, so one T3.",
+      "english": "For the stated TCFA of 40,000 m², the scale factor is min(40,000/20,000, 2) = 2. Under the AP stream, the T3 and T4 adjusted inputs are 8 and 2 notional man-days per month respectively, requiring twice-weekly and fortnightly attendance for the separate posts.",
+      "why": "2025Q3(a)實際數據；grade來自TM，非scale推導。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+    },
+    {
+      "topic": "TCP違規",
+      "term": "non-conformity／rectification／verification",
+      "avoid": "Tell the contractor to be careful.",
+      "english": "Record the non-conformity and notify the AP and the responsible contractor. Require appropriate rectification, prevent premature concealment of the affected work, and verify and record satisfactory completion of the corrective action.",
+      "why": "寫明對象、指示、驗證與close-out，才是行動答案。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+    },
+    {
+      "topic": "TCP危險",
+      "term": "immediate protective action／affected works",
+      "avoid": "Stop the whole site in every case.",
+      "english": "Where the condition presents an immediate danger, arrange immediate protective measures and cessation of the affected works through the responsible personnel. Escalate the matter and make the required notifications without delay.",
+      "why": "按風險處理受影響工序；不是TCP自行取代BA的法定stop-work order。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+    },
+    {
+      "topic": "專業責任",
+      "term": "does not relieve／statutory duties",
+      "avoid": "The contractor is responsible, so AP has no liability.",
+      "english": "Appointment of TCPs does not relieve the AP of the AP’s statutory duties. Maintain an effective supervision system, issue and follow up appropriate instructions, and retain contemporaneous records.",
+      "why": "不能以合約或委任轉走法定責任。",
+      "source": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+    }
+  ]
+}

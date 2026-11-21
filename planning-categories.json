@@ -1,0 +1,120 @@
+{
+  "version": "2026-11-14",
+  "source": "https://www.tpb.gov.hk/en/forms/Guidelines/TPB_PG_36C.pdf",
+  "categories": [
+    [
+      "1 Site area／boundary",
+      "放線、批地／GBP審批時主管部門要求的界線調整；或site area與GFA相應減少",
+      "其他site area改動≤10%；兩類均不得藉加入須申請的不同zoning或構成material change",
+      "7"
+    ],
+    [
+      "2 Total GFA／PR",
+      "減少；合資格B(P)R22 bonus且OZP Notes容許；Cat1 A(a)引致增加另受條件約束",
+      "只限由Cat1 B引致增加≤min(6000m²,10%)，且OZP及批准條件均無PR／GFA限制；不是一般「加10%GFA」",
+      "8"
+    ],
+    [
+      "3 Units",
+      "減少；一般增加≤min(200,10%)且條件無最高單位數；site擴大且平均單位面積不變另有A(c)",
+      "非A的一般增加≤min(500,20%)；酒店房間亦屬units",
+      "9"
+    ],
+    [
+      "4 Blocks／disposition",
+      "改形、減幢數、minor移位：涉及環境緩解須獲同意；NTEH另限footprint在V zone／village environs比例不可下降",
+      "增加幢數；minor ancillary blocks可按備註不計。不是所有移位均自動A",
+      "10"
+    ],
+    [
+      "5 Height",
+      "減低；加層但不加absolute height且不超OZP層數；一般增高：原條件未定最高高度且不超現OZP；無OZP限高時一般≤10%，低樓（≤30m或10層）分支≤20%；JPN綠化設施另有分支",
+      "非A、OZP無限高：一般增高／層數≤20%，低樓分支≤30%；不增absolute height但超OZP層數另有B(c)。新增地庫若OZP要求申請，不能用A／B繞過",
+      "12"
+    ],
+    [
+      "6 SC",
+      "減少；增加但不超現OZP；OZP無SC限制時一般增加≤10%；JPN、法定bonus、特定site調整另有分支",
+      "非A且OZP無SC限制，增加≤20%。是原SC的百分比，不是加20個百分點",
+      "14"
+    ],
+    [
+      "7 Type／mix of uses",
+      "同一用途大類內；非住宅位置在非住宅部分內變動（不含GIC）；已批准非住宅大類互轉獲部門同意，或≤min(2000m²,10% ND GFA)；已批准D／ND互轉≤5%",
+      "已批准ND大類互轉超A但≤min(4000m²,20%)；已批准D／ND互轉≤10%；GIC轉其他ND另須同意且≤min(2000m²,10%)。兩類均不得違OZP GFA／PR",
+      "16"
+    ],
+    [
+      "8 Internal layout",
+      "內部配置變動：非環境緩解範圍，或涉及緩解但獲部門同意",
+      "此category沒有B；不符A不能自行套其他類的10%",
+      "18"
+    ],
+    [
+      "9 GIC",
+      "主管部門發起增加GIC",
+      "更改種類／位置／面積；非部門發起增加；部門發起刪除須交TPB。私人發起刪除：fresh s16",
+      "19"
+    ],
+    [
+      "10 Public open space",
+      "增加；合條件移位（轉至不同街／level／floor的部分≤5%）；active／passive轉換",
+      "減少但不低於OZP最低要求；包括私人發展內供公眾使用的open space",
+      "20"
+    ],
+    [
+      "11 Private open space",
+      "增加；減少但仍達HKPSG；非緩解範圍的移位或已取得同意",
+      "其他面積／位置改動；公眾用的私人土地open space改查Cat10",
+      "21"
+    ],
+    [
+      "12 Parking／transport",
+      "車位／LUL數量或種類：不低HKPSG或獲部門同意；內路、parking、EVA配置或出入口／運輸設施位置改動須按分支取得同意",
+      "非A的車位／LUL數量種類及出入口／運輸設施改動。TD同意與TPB程序分開記錄",
+      "22"
+    ],
+    [
+      "13 NBA／setback／gap",
+      "擴大；部門發起改位置或大小",
+      "非部門發起改位置或縮小；兩類均不可違現OZP相關限制",
+      "23"
+    ],
+    [
+      "14 Trees／landscape",
+      "多保留／種樹；部門同意景觀設計／實施時間改動；指定不良、病危或死樹移除",
+      "改指定保留樹；非A(c)的砍樹增加≤10%或保留樹減少≤10%。兩類不適用OVT；preservation不包括transplanting",
+      "24"
+    ],
+    [
+      "15 Recreation",
+      "私人康樂設施改動；公眾康樂設施改動獲部門同意",
+      "此category沒有B",
+      "25"
+    ],
+    [
+      "16 Ancillary utility",
+      "獲部門同意在發展內移位或刪除，例如RCP、STP、變電站",
+      "其他位置改動；不代表任意刪除都屬B",
+      "25"
+    ],
+    [
+      "17 Phasing",
+      "不涉及GIC／public open space的時間分期改動；涉及但獲部門同意",
+      "其他影響GIC／public open space供應的minor時間分期改動",
+      "26"
+    ],
+    [
+      "18 開工期限",
+      "沒有A",
+      "延期或累計延期不超原開工期限長度；另循適用延期指引",
+      "26"
+    ],
+    [
+      "19 履行條件期限",
+      "沒有A",
+      "履行批准條件的延期；不是自動延長，另核對適用指引",
+      "26"
+    ]
+  ]
+}

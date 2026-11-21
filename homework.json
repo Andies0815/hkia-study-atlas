@@ -1,0 +1,319 @@
+[
+  {
+    "number": "1",
+    "title": "AP與承建商的監督有何根本分別？",
+    "conclusion": "專業監督／協調，與施工及持續現場監督分開。",
+    "points": [
+      "AP按BO4統籌法定職責、專業監督及重大事項呈報；RSE／RGE各負其專業範圍。",
+      "RGBC／RSC按BO9(5)／(6)負責實際施工及持續監督，透過AS、TCP及現場管理組織執行。",
+      "兩者均須履行SP及適用條文；對方履行責任不會解除自己的責任。"
+    ],
+    "answer": "The AP coordinates the statutory submissions and professional supervision. The registered contractor is responsible for carrying out and continuously supervising the works through its site organisation. Neither duty replaces the other; each stream must comply with its statutory responsibilities and supervision plan.",
+    "sources": [
+      {
+        "title": "BO4及9",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "APP158",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP158.pdf"
+      },
+      {
+        "title": "Site Supervision CoP",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "2",
+    "title": "課堂所說8類BO承建商是哪些？",
+    "conclusion": "1類RGBC＋5類RSC＋2種RMWC身分；不是8本法定名冊。",
+    "points": [
+      "RGBC：registered general building contractor。",
+      "RSC五類：demolition、foundation、site formation、ground investigation field works、ventilation。",
+      "RMWC：company及individual；可做工程還須查其註冊class／type／item。",
+      "消防裝置承辦商及電業承辦商屬其他註冊制度，不能拿來湊BO的8類。"
+    ],
+    "answer": "The BO provides registers of general building contractors, specialist contractors and minor works contractors. The five specialist categories are demolition, foundation, site formation, ground investigation field works and ventilation works. The classroom total of eight counts these five categories, RGBCs and the company/individual categories of RMWCs.",
+    "sources": [
+      {
+        "title": "BD註冊指引",
+        "url": "https://www.bd.gov.hk/en/resources/registration-guides/index.html"
+      },
+      {
+        "title": "PNRC38",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnrc/Pnrc38_c.pdf"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "3",
+    "title": "BA6、GI、RSE委任、site formation、BA21：哪些必須AP endorse？",
+    "conclusion": "不能把所有文件一律標AP；分表格簽署與技術圖則責任。",
+    "points": [
+      "BA6的正式名稱為AP and/or RSE stability certificate；須由就相應穩定性負責者證明，不能由名稱推成每份必須AP＋RSE聯簽。",
+      "Scheduled Area GI：APP141表列RGE簽GI plans及支持報告；AP統籌不等於必須技術聯簽所有頁。非scheduled GI的圖則法定呈交要求不同。",
+      "Site formation：AP簽顯示site範圍及接駁公共排水的general layout；RGE簽岩土／SF部分，RSE簽純結構部分；不是整套僅AP或僅RGE。",
+      "RSE委任用BA4，由委任人及獲聘專業人士完成相應部分；正式AP確認欄按現行表格處理。本次BA4電子表內容未能讀取，未把此選項標成已核實的唯一MC答案。",
+      "Acting RSE用BA21：APP3明文要求按每位AP列項目，其project list須相關AP簽署；原RSE及代任RSE完成提名／接受部分。代任不得再轉提名。"
+    ],
+    "answer": "Distinguish statutory appointment/endorsement from technical responsibility. Under APP-141, the AP signs the site-formation general layout; the RGE and RSE sign the respective geotechnical and structural submissions. Under APP-3, the project list for an acting RSE under each AP is signed by the AP concerned. BA6 is an AP and/or RSE certificate, not an automatic requirement for both signatures.",
+    "sources": [
+      {
+        "title": "APP141（分工表）",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP141.pdf"
+      },
+      {
+        "title": "APP3（BA21）",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP003.pdf"
+      },
+      {
+        "title": "正式BA4／6／21",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      }
+    ],
+    "warning": "這題的BA4必須回到現行表格簽署欄確認；電子表讀取受限，保留此一項查核標記，避免把未核實結論包裝成正確MC答案。"
+  },
+  {
+    "number": "4",
+    "title": "AP何時可以不另聘RSE，簽基礎／結構圖？",
+    "conclusion": "B(A)R12(3)及(4)全部條件須同時符合。",
+    "points": [
+      "高度≤10m。",
+      "任何結構構件跨度≤6m。",
+      "材料為木、砌體、鋼、素混凝土或鋼筋混凝土。",
+      "Spread footing：承壓≤300kPa；基底低於existing ground level≤2m。",
+      "不得涉及改動由RSE設計的既有結構構件；不豁免另需的RGE及其他程序。"
+    ],
+    "answer": "The AP may prepare and sign the relevant foundation and structural submissions only where all the conditions in B(A)R12(3) and (4) are satisfied: height not exceeding 10m, member spans not exceeding 6m, the prescribed materials, spread footings within the 300kPa and 2m limits, and no alteration to existing structural elements designed by an RSE.",
+    "sources": [
+      {
+        "title": "B(A)R12",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "5",
+    "title": "拆卸工程的完整程序及Form20？",
+    "conclusion": "先調查及拆卸圖批准，再consent、監督／安全及開工；完成用拆卸專用表。",
+    "points": [
+      "AP／RSE及registered specialist demolition contractor；survey現有結構、鄰樓、公用管線及石棉等危害。",
+      "提交B(A)R8(3)及(4)拆卸圖：方法、次序、機械／臨時荷載、支撐、鄰樓保護及監測；BA4／BA5及適用BA19。",
+      "取得consent：BA8，滿足條件、SP／SSSP、plant／operator及保護措施；BA10通知委任及開工。",
+      "BA20：按Building(Demolition Works)Reg8通知及在工地展示獲委任監督拆卸的TCP資料；不是一般承建商委任表。",
+      "依批准次序施工，監測及處理偏差；完成用BA14A，符合streamlined條件才用BA14B，附紀錄及證明。"
+    ],
+    "answer": "Appoint the AP/RSE and a registered specialist demolition contractor. Carry out the pre-demolition surveys and obtain approval of the demolition plans and consent to commence. Provide the supervision and safety arrangements, notify commencement and the demolition TCPs using BA10 and BA20 as applicable, and carry out the works in the approved sequence with monitoring and protection. Certify completion using BA14A or, where eligible, BA14B.",
+    "sources": [
+      {
+        "title": "APP21",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP021.pdf"
+      },
+      {
+        "title": "Demolition CoP",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/Demolition_e.pdf"
+      },
+      {
+        "title": "BA20／14A／14B",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "6A",
+    "title": "基礎完成後，如何開始下一施工階段？",
+    "conclusion": "Foundation records＋測試＋BA14＋條件履行；下一階段consent另行取得。",
+    "points": [
+      "APP18 AppendixC：提交as-built foundation records，包括位置、大小、深度／持力層、施工及測試紀錄，與設計對照。",
+      "提交BA14、完成指定load／proof tests及材料測試，並履行BO17下批准／consent條件。",
+      "BA對紀錄、測試及條件滿意後，才可取得適用pilecap／superstructure consent；BA14不自動等於下一階段開工准許。",
+      "測試選樁可先交紀錄／報告加快程序。個別大直徑樁的85% proof drilling特別安排及分期須合資格／獲接受，不能概括成所有測試可欠交。"
+    ],
+    "answer": "Submit satisfactory as-built foundation records, completion certification on BA14, the required proof/load and material test results, and evidence that the relevant conditions have been fulfilled. Obtain the required consent for the pile-cap or superstructure works before commencing that stage. Foundation completion certification is not itself consent for the subsequent works.",
+    "sources": [
+      {
+        "title": "APP18 AppendixC（2026年2月）",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP018.pdf"
+      },
+      {
+        "title": "APP13",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP013.pdf"
+      },
+      {
+        "title": "BO17",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "6B",
+    "title": "BA14名稱、依據、誰簽、簽名代表甚麼？",
+    "conclusion": "不產生新樓宇的工程完工證明，不是新樓OP申請。",
+    "points": [
+      "完整名稱：Certificate on Completion of Building Works Not Resulting in a New Building or of Street Works。",
+      "依B(A)R25的完成證明程序；BO21的新樓佔用則是BA13／BA12的不同程序。",
+      "RC就其所施工及監督工程證明；AP及適用RSE／RGE各就負責範圍簽署／證明。RC簽署應由其獲授權簽署人代表，不是任何工地代表皆可。",
+      "證明工程按批准圖則、適用法例及條件完成，並按各人責任作監督；不能在測試／紀錄不足時僅憑RC口頭保證簽名。",
+      "依reg25按承建商向AP及AP向BA的不同責任／期限辦理，不把BD回覆時間當提交期限；APP13另有streamlined BA14C安排。"
+    ],
+    "answer": "BA14 is the certificate on completion of building works not resulting in a new building or of street works under B(A)R25. The contractor certifies the works carried out, and the AP and the RSE/RGE where applicable certify within their respective responsibilities. Their signatures are substantive certifications of completion and compliance, not merely acknowledgements of receipt. BA14 does not constitute an occupation permit.",
+    "sources": [
+      {
+        "title": "B(A)R25",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      },
+      {
+        "title": "BA14正式入口",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      },
+      {
+        "title": "APP13",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP013.pdf"
+      }
+    ],
+    "warning": "BA14電子PDF本次未能讀取；不可用本頁摘要代替正式表格逐項聲明，尤其RSE／RGE是否適用與刪選項。"
+  },
+  {
+    "number": "7",
+    "title": "Performance Review是甚麼？",
+    "conclusion": "題目PNAP編號有誤：應為APP115。",
+    "points": [
+      "依BO17的approval／consent條件，驗證實際地質、地下水、監測表現與設計假設。",
+      "偏差須工程評估、補救及必要修訂設計，附實際施工／測試證據。",
+      "按APP115須在OP／TOP前令BA滿意；不是僅交一份名為review的文件。"
+    ],
+    "answer": "A performance review verifies the actual ground conditions and performance against the design assumptions using construction, monitoring and test records. Assess deviations and implement the necessary remedial or design-review measures. Satisfy the relevant condition before issue of the OP/TOP.",
+    "sources": [
+      {
+        "title": "APP115",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP115.pdf"
+      },
+      {
+        "title": "BO17及21",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      }
+    ],
+    "warning": "APP155是招牌檢核，並非這題的Performance Review。"
+  },
+  {
+    "number": "8",
+    "title": "首次General Building Plan submission交甚麼？",
+    "conclusion": "按B(A)R8與現行ADM2 AppendixA1逐項套入項目，不是只交四張圖。",
+    "points": [
+      "BA4委任、BA5申請／制備圖則證明；適用時BA6穩定性及BA16修改／豁免申請。",
+      "Block／site plans、floor plans、sections及elevations，尺寸、site boundary、街道／鄰樓／地面標高、用途、樓高及樓層；圖則種類依工程而定。",
+      "Development schedules：site class、site area、高度、PR／SC／GFA、open space、窗及RHP、parking／loading、MOE／MOA／EVA及消防分隔等適用證明。",
+      "所需site ownership／site control文件、planning permission及條件資料、lease相關事項；不能以BO approval代替另外批准。",
+      "按項目附岩土／地盤評估、concession／APP151資料、相關technical assessments、跨部門轉介資料及checklists。"
+    ],
+    "answer": "Submit the prescribed plans and particulars under B(A)R8 with the appointment and plan-approval forms. Include the site/block plans, floor plans, sections and elevations, development and compliance schedules, the applicable certificates and modification applications, and the supporting planning, site-control and technical documents required by ADM-2 Appendix A1.",
+    "sources": [
+      {
+        "title": "B(A)R8",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      },
+      {
+        "title": "ADM2 AppendixA1",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM002.pdf"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "9",
+    "title": "酒店內廁所要修改哪項規例？Permit有甚麼條件？",
+    "conclusion": "B(P)R36的天然照明／通風要求；不是「酒店內廁所自動豁免」。",
+    "points": [
+      "以BO42、BA16申請相應modification／exemption，說明無天然窗的範圍、特殊情況及替代措施。",
+      "酒店guestroom bathroom的替代機械通風按ADM2 AppendixE及Annex2核對：18L/s／room。",
+      "Fresh-air intake依Annex3避開污染、排氣及其他不合適位置；所需平面／剖面及通風資料附上。",
+      "取得BD106 permit並遵守其條件、範圍及有效安排；不能把一個浴室許可延伸至所有房間。"
+    ],
+    "answer": "Apply on BA16 under BO42 for the relevant modification of B(P)R36. Provide the mechanical ventilation scheme and supporting drawings, including the applicable bathroom ventilation provision of 18 litres per second per room and compliant fresh-air intake arrangements under ADM-2 Appendix E. Obtain the permit and comply with its specific conditions.",
+    "sources": [
+      {
+        "title": "B(P)R36",
+        "url": "https://www.elegislation.gov.hk/hk/cap123F"
+      },
+      {
+        "title": "BO42",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "ADM2 AppendixE Annex2／3",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM002.pdf"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "10",
+    "title": "OP前要完成哪些工作？",
+    "conclusion": "用「建成、測試、條件、文件、檢查」五組回答；不是一份通用證件清單。",
+    "points": [
+      "建成：符合批准圖則及已批修訂；處理重大偏差，不能把record plans當補批。",
+      "測試：結構／材料／drainage及FSI等適用試驗、驗收及證明；消防裝置及消防通道準備妥當。",
+      "條件：BO17、performance review、EVA／MOE、barrier-free、concessions／APP151能源與BEAM證據等適用條件履行。",
+      "文件：BA13由RC及AP／適用RSE／RGE按各自責任證明，附所需完成及跨部門資料。BA12是適用TOP的另一程序。",
+      "檢查及決定：配合BD及相關部門查驗，修復缺失；BO21下新樓不可因已交申請便先佔用。CC另屬地契履行，不能取代OP。"
+    ],
+    "answer": "Complete the building in accordance with the approved plans and approved amendments, obtain the required test and inspection certificates, and fulfil the approval/consent and concession conditions. Submit BA13 with the applicable completion certifications and supporting departmental documents. Arrange inspections, rectify outstanding defects and obtain the occupation permit before occupation as required by BO21. Lease compliance certification is a separate matter.",
+    "sources": [
+      {
+        "title": "BO21",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "ADM2",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/ADM/ADM002.pdf"
+      },
+      {
+        "title": "BA12／13",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      },
+      {
+        "title": "APP13",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP013.pdf"
+      }
+    ],
+    "warning": ""
+  },
+  {
+    "number": "11",
+    "title": "BO19急需工程後還要做甚麼？",
+    "conclusion": "BA7、委任及監督、偏離SP呈報、必要後續程序；不能背不存在的通用補批期限。",
+    "points": [
+      "確認真正事故／緊急危險及即時排險所需範圍。",
+      "BA7於授權之前或開工後48小時內，以較早者為準；B(A)R28另查AP／RC委任證明48小時要求。",
+      "記錄支撐／拆卸／make-safe工程、檢查及安全證明；AP儘快呈報因緊急安全需要的SP重大偏離並交修訂SP。",
+      "緊急情況完結後，BA可命停工至consent；普通後續工程依正常批准及consent程序辦理。",
+      "照片所寫「完成後14日內追認批准」不是BO19可推出的通用規定；不得用來替所有未批先建解套。"
+    ],
+    "answer": "Notify the BA using BA7 within the statutory time and arrange the required professional and contractor appointments. Limit the works to the necessary emergency measures, retain supervision and safety records, and report material departures from the supervision plan as soon as practicable with the required revised plan. Obtain the necessary approval and consent for subsequent ordinary works; section 19 is not a general retrospective-approval mechanism.",
+    "sources": [
+      {
+        "title": "BO19",
+        "url": "https://www.elegislation.gov.hk/hk/cap123"
+      },
+      {
+        "title": "B(A)R28",
+        "url": "https://www.elegislation.gov.hk/hk/cap123A"
+      },
+      {
+        "title": "BA7",
+        "url": "https://www.bd.gov.hk/en/resources/forms/form_nbw.html"
+      },
+      {
+        "title": "Site Supervision CoP",
+        "url": "https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/SS2009_e.pdf"
+      }
+    ],
+    "warning": ""
+  }
+]
